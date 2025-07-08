@@ -65,7 +65,7 @@ while (not passed_start_time or not passed_end_time):
             raise Exception("API did not return success")
     except Exception as e:
         print(f"Error fetching reviews: {e}")
-        user_input = input("Connection failed, retrying: ")
+        print("Connection failed, retrying: ")
         time.sleep(1)
         continue  # retry the current iteration after user confirmation
 
