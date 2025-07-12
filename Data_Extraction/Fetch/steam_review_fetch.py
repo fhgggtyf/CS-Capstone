@@ -1,6 +1,7 @@
 from datetime import datetime
 import requests
-import pickle
+import json
+import gzip
 import time
 from pathlib import Path
 
@@ -43,7 +44,7 @@ params = {
 # end_time = datetime.fromtimestamp(1716718910)               # the timestamp in the return result are unix timestamp (GMT+0)
 end_time = datetime.now()
 # start_time = end_time - time_interval
-start_time = datetime(1970, 1, 1, 0, 0, 0)
+start_time = datetime(2025, 6, 1, 0, 0, 0)
 
 print(f"Start time: {start_time}")
 print(f"End time: {end_time}")
@@ -162,11 +163,16 @@ while (not passed_start_time or not passed_end_time):
 # save the selected reviews to a file
 
 foldername = f"{review_appid}_{review_appname}"
-filename = f"{review_appid}_{review_appname}_{LANGUAGE}_reviews_{start_time.strftime('%Y%m%d-%H%M%S')}_{end_time.strftime('%Y%m%d-%H%M%S')}.pkl"
-output_path = Path(
-    foldername, filename
-)
-if not output_path.parent.exists():
-    output_path.parent.mkdir(parents=True)
+filename = f"{review_appid}_{review_appname}_{LANGUAGE}_reviews_{start_time.strftime('%Y%m%d-%H%M%S')}_{end_time.strftime('%Y%m%d-%H%M%S')}.jsonl.gz"
+output_path = Path(foldername, filename)
+output_path.parent.mkdir(parents=True, exist_ok=True)
 
-pickle.dump(selected_reviews, open(output_path, 'wb'))
+try:
+    with gzip.open(output_path, 'wt', encoding='utf-8') as f:
+        for review in selected_reviews:
+            json.dump(review, f, ensure_ascii=False)
+            f.write('\n')
+    print(f"[INFO] Successfully saved {len(selected_reviews)} reviews to: {output_path}")
+except Exception as e:
+    print(f"[ERROR] Failed to write compressed JSONL file: {e}")
+
