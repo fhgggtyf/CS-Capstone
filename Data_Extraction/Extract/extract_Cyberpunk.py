@@ -1,9 +1,9 @@
-import pickle
 import sqlite3
+import json
+import gzip
 
-with open("1091500_CYBERPUNK_2077/1091500_CYBERPUNK_2077_english_reviews_19700101-000000_20250704-105309.pkl", "rb") as f:
-
-    retreived_dict = pickle.load(f)
+with gzip.open("1091500_CYBERPUNK_2077/1091500_CYBERPUNK_2077_english_reviews_20250601-000000_20250712-135723.jsonl.gz", "rt", encoding="utf-8") as f:
+    reviews = [json.loads(line) for line in f]
 
 conn = sqlite3.connect("Data Extraction/Database/CS_Capstone.db")
 cursor = conn.cursor()
@@ -30,7 +30,7 @@ cursor.execute('''
 ''')
 
 # Insert data
-for review in retreived_dict:
+for review in reviews:
     # Make sure score is float if it's accidentally a string
     review["weighted_vote_score"] = float(review["weighted_vote_score"])
 
