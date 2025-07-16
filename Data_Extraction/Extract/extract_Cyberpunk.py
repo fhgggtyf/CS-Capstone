@@ -2,8 +2,12 @@ import sqlite3
 import json
 import gzip
 
-with gzip.open("1091500_CYBERPUNK_2077/1091500_CYBERPUNK_2077_english_reviews_20250601-000000_20250712-135723.jsonl.gz", "rt", encoding="utf-8") as f:
+print("Starting Cyberpunk 2077 data extraction...")
+
+with gzip.open("Data_Extraction/Database/1091500_CYBERPUNK_2077/1091500_CYBERPUNK_2077_english_reviews_19700101-000000_20250714-093127.jsonl.gz", "rt", encoding="utf-8") as f:
     reviews = [json.loads(line) for line in f]
+
+print(f"Loaded {len(reviews)} reviews from the JSONL file.")
 
 conn = sqlite3.connect("Data_Extraction/Database/CS_Capstone.db")
 cursor = conn.cursor()
@@ -29,6 +33,8 @@ cursor.execute('''
     )
 ''')
 
+print("Created table")
+
 # Insert data
 for review in reviews:
     # Make sure score is float if it's accidentally a string
@@ -49,6 +55,8 @@ for review in reviews:
             :received_for_free, :written_during_early_access
         )
     ''', review)
+
+    print(f"Inserted review {review[0]}")
 
 # Commit and close
 conn.commit()
