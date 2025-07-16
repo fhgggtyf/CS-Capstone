@@ -40,7 +40,7 @@ print("Created table")
 
 # Read and insert reviews in batches
 gz_path = "Data_Extraction/Database/1091500_CYBERPUNK_2077/1091500_CYBERPUNK_2077_english_reviews_19700101-000000_20250714-093127.jsonl.gz"
-batch_size = 1000
+batch_size = 10000
 batch = []
 inserted_total = 0
 
