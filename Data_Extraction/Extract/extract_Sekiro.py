@@ -1,34 +1,10 @@
-import pickle
 import sqlite3
-import os
-import sys
-import gc
+import json
+import gzip
 
-PKL_PATH = "814380_SEKIRO_SHADOWS_DIE_TWICE/814380_SEKIRO_SHADOWS_DIE_TWICE_english_reviews_19700101-000000_20250709-010234.pkl"
-DB_PATH = "Data Extraction/Database/CS_Capstone.db"
+print("Starting Sekiro data extraction...")
 
-# Sanity check: 64-bit Python
-if sys.maxsize < 2**32:
-    raise RuntimeError("32-bit Python detected. Please use 64-bit Python to load large .pkl files.")
-
-# Load pkl safely
-print(f"[INFO] Attempting to load: {PKL_PATH} ({os.path.getsize(PKL_PATH) / (1024**3):.2f} GB)")
-
-try:
-    with open(PKL_PATH, "rb") as f:
-        retreived_dict = pickle.load(f)
-
-except (pickle.UnpicklingError, EOFError) as e:
-    raise RuntimeError(f"[ERROR] Failed to load pickle file: {e}")
-
-except MemoryError:
-    raise RuntimeError("[ERROR] Not enough memory to load the pickle file. Consider a machine with more RAM.")
-
-print("[INFO] Pickle file loaded successfully.")
-print(f"[INFO] Total reviews loaded: {len(retreived_dict)}")
-
-# DB setup
-conn = sqlite3.connect(DB_PATH)
+conn = sqlite3.connect("Data_Extraction/Database/CS_Capstone.db")
 cursor = conn.cursor()
 
 cursor.execute('''
@@ -52,13 +28,12 @@ cursor.execute('''
     )
 ''')
 
-# Insert data with validation
-print("[INFO] Inserting into database...")
-inserted = 0
-for i, review in enumerate(retreived_dict):
-    try:
-        review["weighted_vote_score"] = float(review["weighted_vote_score"])
+print("Created table")
 
+with gzip.open("Data_Extraction\Database\814380_SEKIRO_SHADOWS_DIE_TWICE\814380_SEKIRO_SHADOWS_DIE_TWICE_english_reviews_19700101-000000_20250714-092847.jsonl.gz", "rt", encoding="utf-8") as f:
+    for line in f:
+        review = json.loads(line)
+        review["weighted_vote_score"] = float(review["weighted_vote_score"])
         cursor.execute('''
             INSERT OR REPLACE INTO sekiro_steam (
                 recommendationid, author_steamid, playtime_at_review_minutes,
@@ -74,18 +49,8 @@ for i, review in enumerate(retreived_dict):
                 :received_for_free, :written_during_early_access
             )
         ''', review)
+        print(f"Inserted review {review['recommendationid']}")
 
-        inserted += 1
-        if i % 10000 == 0:
-            print(f"[INFO] Inserted {i} reviews...")
-
-    except Exception as e:
-        print(f"[WARN] Skipping entry at index {i} due to error: {e}")
-        continue
-
+# Commit and close
 conn.commit()
 conn.close()
-print(f"[INFO] Done. Total reviews inserted: {inserted}")
-
-# Cleanup
-gc.collect()
