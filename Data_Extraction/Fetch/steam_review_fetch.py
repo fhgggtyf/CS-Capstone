@@ -44,7 +44,7 @@ params = {
 # end_time = datetime.fromtimestamp(1716718910)               # the timestamp in the return result are unix timestamp (GMT+0)
 end_time = datetime.now()
 # start_time = end_time - time_interval
-start_time = datetime(2025, 6, 1, 0, 0, 0)
+start_time = datetime(1970, 1, 1, 0, 0, 0)
 
 print(f"Start time: {start_time}")
 print(f"End time: {end_time}")
@@ -53,126 +53,100 @@ print(start_time.timestamp(), end_time.timestamp())
 passed_start_time = False
 passed_end_time = False
 
-selected_reviews = []
-
-while (not passed_start_time or not passed_end_time):
-    print("fetching reviews...")
-    try:
-        reviews_response = get_user_reviews(review_appid, params)
-        # not success?
-        if reviews_response["success"] != 1:
-            print("Not a success")
-            print(reviews_response)
-            raise Exception("API did not return success")
-    except Exception as e:
-        print(f"Error fetching reviews: {e}")
-        print("Connection failed, retrying: ")
-        time.sleep(1)
-        continue  # retry the current iteration after user confirmation
-
-    # not success?
-    if reviews_response["success"] != 1:
-        print("Not a success")
-        print(reviews_response)
-
-    if reviews_response["query_summary"]['num_reviews'] == 0:
-        print("No reviews.")
-        print(reviews_response)
-
-    for review in reviews_response["reviews"]:
-        recommendation_id = review['recommendationid']
-        
-        timestamp_created = review['timestamp_created']
-        timestamp_updated = review['timestamp_updated']
-
-        # skip the comments that beyond end_time
-        if not passed_end_time:
-            if timestamp_created > end_time.timestamp():
-                continue
-            else:
-                passed_end_time = True
-                
-        # exit the loop once detected a comment that before start_time
-        if not passed_start_time:
-            if timestamp_created < start_time.timestamp():
-                passed_start_time = True
-                break
-
-        # extract the useful (to me) data
-        author_steamid = review['author'].get('steamid', '')
-        playtime_forever = review['author'].get('playtime_forever', 0)
-        playtime_last_two_weeks = review['author'].get('playtime_last_two_weeks', 0)
-        playtime_at_review_minutes = review['author'].get('playtime_at_review', 0)
-        last_played = review['author'].get('last_played', 0)
-
-        review_text = review['review']
-        voted_up = review['voted_up']
-        votes_up = review['votes_up']
-        votes_funny = review['votes_funny']
-        weighted_vote_score = review['weighted_vote_score']
-        steam_purchase = review['steam_purchase']
-        received_for_free = review['received_for_free']
-        written_during_early_access = review['written_during_early_access']
-
-        my_review_dict = {
-            'recommendationid': recommendation_id,
-            'author_steamid': author_steamid,
-            'playtime_at_review_minutes': playtime_at_review_minutes,
-            'playtime_forever_minutes': playtime_forever,
-            'playtime_last_two_weeks_minutes': playtime_last_two_weeks,
-            'last_played': last_played,
-
-            'review_text': review_text,
-            'timestamp_created': timestamp_created,
-            'timestamp_updated': timestamp_updated,
-
-            'voted_up': voted_up,
-            'votes_up': votes_up,
-            'votes_funny': votes_funny,
-            'weighted_vote_score': weighted_vote_score,
-            'steam_purchase': steam_purchase,
-            'received_for_free': received_for_free,
-            'written_during_early_access': written_during_early_access,
-        }
-
-        selected_reviews.append(my_review_dict)
-
-    # go to next page
-    try:
-        cursor = reviews_response['cursor']         # cursor field does not exist in the last page
-    except Exception as e:
-        cursor = ''
-
-    # no next page
-    # exit the loop
-    if not cursor:
-        print("Reached the end of all comments.")
-        break
-
-    if reviews_response["query_summary"]['num_reviews'] == 0:
-        print("No reviews.")
-        print(reviews_response)
-        break 
-    
-    
-    # set the cursor object to move to next page to continue
-    params['cursor'] = cursor
-    print('To next page. Next page cursor:', cursor)
-    
-    
-# save the selected reviews to a file
+# ...existing imports and setup...
 
 foldername = f"{review_appid}_{review_appname}"
 filename = f"{review_appid}_{review_appname}_{LANGUAGE}_reviews_{start_time.strftime('%Y%m%d-%H%M%S')}_{end_time.strftime('%Y%m%d-%H%M%S')}.jsonl.gz"
 output_path = Path(foldername, filename)
 output_path.parent.mkdir(parents=True, exist_ok=True)
 
-try:
-    with gzip.open(output_path, 'wt', encoding='utf-8') as f:
-        for review in selected_reviews:
-            json.dump(review, f, ensure_ascii=False)
+with gzip.open(output_path, 'wt', encoding='utf-8') as f:
+    while (not passed_start_time or not passed_end_time):
+        print("fetching reviews...")
+        try:
+            reviews_response = get_user_reviews(review_appid, params)
+            if reviews_response["success"] != 1:
+                print("Not a success")
+                print(reviews_response)
+                raise Exception("API did not return success")
+        except Exception as e:
+            print(f"Error fetching reviews: {e}")
+            print("Connection failed, retrying: ")
+            time.sleep(1)
+            continue
+
+        if reviews_response["query_summary"]['num_reviews'] == 0:
+            print("No reviews.")
+            print(reviews_response)
+            break
+
+        for review in reviews_response["reviews"]:
+            recommendation_id = review['recommendationid']
+            timestamp_created = review['timestamp_created']
+            timestamp_updated = review['timestamp_updated']
+
+            # skip the comments that beyond end_time
+            if not passed_end_time:
+                if timestamp_created > end_time.timestamp():
+                    continue
+                else:
+                    passed_end_time = True
+
+            # exit the loop once detected a comment that before start_time
+            if not passed_start_time:
+                if timestamp_created < start_time.timestamp():
+                    passed_start_time = True
+                    break
+
+            author_steamid = review['author'].get('steamid', '')
+            playtime_forever = review['author'].get('playtime_forever', 0)
+            playtime_last_two_weeks = review['author'].get('playtime_last_two_weeks', 0)
+            playtime_at_review_minutes = review['author'].get('playtime_at_review', 0)
+            last_played = review['author'].get('last_played', 0)
+
+            review_text = review['review']
+            voted_up = review['voted_up']
+            votes_up = review['votes_up']
+            votes_funny = review['votes_funny']
+            weighted_vote_score = review['weighted_vote_score']
+            steam_purchase = review['steam_purchase']
+            received_for_free = review['received_for_free']
+            written_during_early_access = review['written_during_early_access']
+
+            my_review_dict = {
+                'recommendationid': recommendation_id,
+                'author_steamid': author_steamid,
+                'playtime_at_review_minutes': playtime_at_review_minutes,
+                'playtime_forever_minutes': playtime_forever,
+                'playtime_last_two_weeks_minutes': playtime_last_two_weeks,
+                'last_played': last_played,
+                'review_text': review_text,
+                'timestamp_created': timestamp_created,
+                'timestamp_updated': timestamp_updated,
+                'voted_up': voted_up,
+                'votes_up': votes_up,
+                'votes_funny': votes_funny,
+                'weighted_vote_score': weighted_vote_score,
+                'steam_purchase': steam_purchase,
+                'received_for_free': received_for_free,
+                'written_during_early_access': written_during_early_access,
+            }
+
+            json.dump(my_review_dict, f, ensure_ascii=False)
             f.write('\n')
-    print(f"[INFO] Successfully saved {len(selected_reviews)} reviews to: {output_path}")
-except Exception as e:
-    print(f"[ERROR] Failed to write compressed JSONL file: {e}")
+
+        # go to next page
+        try:
+            cursor = reviews_response['cursor']
+        except Exception:
+            cursor = ''
+
+        if not cursor:
+            print("Reached the end of all comments.")
+            break
+
+        params['cursor'] = cursor
+        print('To next page. Next page cursor:', cursor)
+
+print(f"[INFO] Finished saving reviews to: {output_path}")
 
