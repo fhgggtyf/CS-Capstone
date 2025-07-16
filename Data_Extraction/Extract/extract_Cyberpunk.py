@@ -5,7 +5,7 @@ import gzip
 with gzip.open("1091500_CYBERPUNK_2077/1091500_CYBERPUNK_2077_english_reviews_20250601-000000_20250712-135723.jsonl.gz", "rt", encoding="utf-8") as f:
     reviews = [json.loads(line) for line in f]
 
-conn = sqlite3.connect("Data Extraction/Database/CS_Capstone.db")
+conn = sqlite3.connect("Data_Extraction/Database/CS_Capstone.db")
 cursor = conn.cursor()
 
 cursor.execute('''
