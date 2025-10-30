@@ -1,0 +1,10 @@
+[INFO] Logging to logs/run_2025-10-29_00-11-49.log
+[INFO] No previous logs to rotate
+[INFO] Creating virtual environment
+[INFO] Virtual environment activated
+[INFO] stdbuf not found; continuing without line-buffering for pip
+[INFO] Installing dependencies from requirements.txt
+
+[notice] A new release of pip is available: 25.2 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'

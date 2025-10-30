@@ -1,0 +1,2080 @@
+[INFO] Logging to logs/run_2025-10-30_10-06-46.log
+[INFO] Log rotation: nothing to delete (have 5, keep 10)
+[INFO] Creating virtual environment
+[INFO] Virtual environment activated
+[INFO] stdbuf not found; continuing without line-buffering for pip
+[INFO] Installing dependencies from requirements.txt
+Requirement already satisfied: praw==7.8.1 in ./.venv/lib/python3.13/site-packages (from -r Data_Extraction/Fetch/reddit_reviews_agent/requirements.txt (line 1)) (7.8.1)
+Requirement already satisfied: PyYAML==6.0.2 in ./.venv/lib/python3.13/site-packages (from -r Data_Extraction/Fetch/reddit_reviews_agent/requirements.txt (line 2)) (6.0.2)
+Requirement already satisfied: pytz==2024.1 in ./.venv/lib/python3.13/site-packages (from -r Data_Extraction/Fetch/reddit_reviews_agent/requirements.txt (line 3)) (2024.1)
+Requirement already satisfied: tenacity==8.5.0 in ./.venv/lib/python3.13/site-packages (from -r Data_Extraction/Fetch/reddit_reviews_agent/requirements.txt (line 4)) (8.5.0)
+Requirement already satisfied: prawcore<3,>=2.4 in ./.venv/lib/python3.13/site-packages (from praw==7.8.1->-r Data_Extraction/Fetch/reddit_reviews_agent/requirements.txt (line 1)) (2.4.0)
+Requirement already satisfied: update_checker>=0.18 in ./.venv/lib/python3.13/site-packages (from praw==7.8.1->-r Data_Extraction/Fetch/reddit_reviews_agent/requirements.txt (line 1)) (0.18.0)
+Requirement already satisfied: websocket-client>=0.54.0 in ./.venv/lib/python3.13/site-packages (from praw==7.8.1->-r Data_Extraction/Fetch/reddit_reviews_agent/requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: requests<3.0,>=2.6.0 in ./.venv/lib/python3.13/site-packages (from prawcore<3,>=2.4->praw==7.8.1->-r Data_Extraction/Fetch/reddit_reviews_agent/requirements.txt (line 1)) (2.32.5)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.13/site-packages (from requests<3.0,>=2.6.0->prawcore<3,>=2.4->praw==7.8.1->-r Data_Extraction/Fetch/reddit_reviews_agent/requirements.txt (line 1)) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.13/site-packages (from requests<3.0,>=2.6.0->prawcore<3,>=2.4->praw==7.8.1->-r Data_Extraction/Fetch/reddit_reviews_agent/requirements.txt (line 1)) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.13/site-packages (from requests<3.0,>=2.6.0->prawcore<3,>=2.4->praw==7.8.1->-r Data_Extraction/Fetch/reddit_reviews_agent/requirements.txt (line 1)) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.13/site-packages (from requests<3.0,>=2.6.0->prawcore<3,>=2.4->praw==7.8.1->-r Data_Extraction/Fetch/reddit_reviews_agent/requirements.txt (line 1)) (2025.10.5)
+
+[notice] A new release of pip is available: 25.2 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+[INFO] Starting reddit_ingest.py
+2025-10-30 10:06:47,348 INFO Starting collection run...
+2025-10-30 10:06:47,628 INFO [Baldur's Gate 3] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table baldur_s_gate_3_reddit_game_reviews
+2025-10-30 10:07:41,133 INFO [Baldur's Gate 3] kept posts in batch: 70
+2025-10-30 10:07:42,112 INFO [Baldur's Gate 3] kept posts in batch: 1
+2025-10-30 10:07:54,615 INFO [Baldur's Gate 3] kept posts in batch: 19
+2025-10-30 10:07:54,938 INFO [Baldur's Gate 3] kept posts in batch: 0
+2025-10-30 10:08:13,228 INFO [Baldur's Gate 3] kept posts in batch: 11
+2025-10-30 10:08:14,588 INFO [Baldur's Gate 3] kept posts in batch: 1
+2025-10-30 10:08:25,480 INFO [Baldur's Gate 3] kept posts in batch: 7
+2025-10-30 10:08:25,898 INFO [Baldur's Gate 3] kept posts in batch: 0
+2025-10-30 10:09:15,097 INFO [Baldur's Gate 3] kept posts in batch: 82
+2025-10-30 10:09:22,844 INFO [Baldur's Gate 3] kept posts in batch: 18
+2025-10-30 10:09:49,722 INFO [Baldur's Gate 3] kept posts in batch: 41
+2025-10-30 10:10:39,088 INFO [Baldur's Gate 3] kept posts in batch: 79
+2025-10-30 10:11:10,747 INFO [Baldur's Gate 3] kept posts in batch: 23
+2025-10-30 10:11:11,015 INFO [Baldur's Gate 3] kept posts in batch: 0
+2025-10-30 10:11:11,270 INFO [Baldur's Gate 3] kept posts in batch: 0
+2025-10-30 10:11:12,098 INFO [Baldur's Gate 3] kept posts in batch: 1
+2025-10-30 10:11:36,989 INFO [Baldur's Gate 3] kept posts in batch: 41
+2025-10-30 10:11:38,414 INFO [Baldur's Gate 3] kept posts in batch: 0
+2025-10-30 10:11:50,505 INFO [Baldur's Gate 3] kept posts in batch: 4
+2025-10-30 10:11:51,133 INFO [Baldur's Gate 3] kept posts in batch: 0
+2025-10-30 10:12:21,845 INFO [Baldur's Gate 3] kept posts in batch: 23
+2025-10-30 10:12:24,829 INFO [Baldur's Gate 3] kept posts in batch: 3
+2025-10-30 10:12:39,044 INFO [Baldur's Gate 3] kept posts in batch: 4
+2025-10-30 10:12:44,089 INFO [Baldur's Gate 3] kept posts in batch: 3
+2025-10-30 10:14:52,606 INFO [Baldur's Gate 3] kept posts in batch: 106
+2025-10-30 10:14:52,933 INFO [Baldur's Gate 3] kept posts in batch: 0
+2025-10-30 10:15:05,486 INFO [Baldur's Gate 3] kept posts in batch: 9
+2025-10-30 10:15:11,175 INFO [Baldur's Gate 3] kept posts in batch: 3
+2025-10-30 10:15:42,132 INFO [Baldur's Gate 3] kept posts in batch: 43
+2025-10-30 10:15:43,743 INFO [Baldur's Gate 3] kept posts in batch: 1
+2025-10-30 10:15:59,631 INFO [Baldur's Gate 3] kept posts in batch: 20
+2025-10-30 10:16:00,208 INFO [Baldur's Gate 3] kept posts in batch: 0
+2025-10-30 10:16:33,229 INFO [Baldur's Gate 3] kept posts in batch: 67
+2025-10-30 10:16:55,350 INFO [Baldur's Gate 3] kept posts in batch: 32
+2025-10-30 10:17:22,521 INFO [Baldur's Gate 3] kept posts in batch: 18
+2025-10-30 10:17:22,956 INFO [Baldur's Gate 3] kept posts in batch: 0
+2025-10-30 10:19:11,805 INFO [Baldur's Gate 3] kept posts in batch: 64
+2025-10-30 10:19:12,753 INFO [Baldur's Gate 3] kept posts in batch: 0
+2025-10-30 10:19:15,445 INFO [Baldur's Gate 3] kept posts in batch: 2
+2025-10-30 10:19:16,656 INFO [Baldur's Gate 3] kept posts in batch: 1
+2025-10-30 10:19:16,656 INFO [Counter-Strike 2] Subreddits: ['GlobalOffensive', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table counter_strike_2_reddit_game_reviews
+2025-10-30 10:20:04,061 INFO [Counter-Strike 2] kept posts in batch: 59
+2025-10-30 10:20:12,962 INFO [Counter-Strike 2] kept posts in batch: 10
+2025-10-30 10:20:44,110 INFO [Counter-Strike 2] kept posts in batch: 43
+2025-10-30 10:20:56,283 INFO [Counter-Strike 2] kept posts in batch: 6
+2025-10-30 10:21:06,853 INFO [Counter-Strike 2] kept posts in batch: 3
+2025-10-30 10:21:07,380 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:21:10,622 INFO [Counter-Strike 2] kept posts in batch: 2
+2025-10-30 10:21:10,915 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:21:20,046 INFO [Counter-Strike 2] kept posts in batch: 1
+2025-10-30 10:21:21,051 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:21:26,023 INFO [Counter-Strike 2] kept posts in batch: 1
+2025-10-30 10:21:26,316 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:21:44,600 INFO [Counter-Strike 2] kept posts in batch: 1
+2025-10-30 10:21:46,577 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:21:55,796 INFO [Counter-Strike 2] kept posts in batch: 1
+2025-10-30 10:21:56,093 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:22:07,069 INFO [Counter-Strike 2] kept posts in batch: 2
+2025-10-30 10:22:07,326 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:22:07,593 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:22:07,900 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:22:17,870 INFO [Counter-Strike 2] kept posts in batch: 4
+2025-10-30 10:22:19,213 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:22:24,916 INFO [Counter-Strike 2] kept posts in batch: 1
+2025-10-30 10:22:25,217 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:22:40,836 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:22:42,501 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:22:49,961 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:22:50,301 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:23:52,302 INFO [Counter-Strike 2] kept posts in batch: 2
+2025-10-30 10:23:52,598 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:23:57,272 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:23:57,566 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:24:09,324 INFO [Counter-Strike 2] kept posts in batch: 3
+2025-10-30 10:24:10,751 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:24:15,870 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:24:16,209 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:24:31,456 INFO [Counter-Strike 2] kept posts in batch: 8
+2025-10-30 10:24:39,925 INFO [Counter-Strike 2] kept posts in batch: 3
+2025-10-30 10:24:47,180 INFO [Counter-Strike 2] kept posts in batch: 1
+2025-10-30 10:24:47,802 INFO [Counter-Strike 2] kept posts in batch: 1
+2025-10-30 10:25:53,230 INFO [Counter-Strike 2] kept posts in batch: 1
+2025-10-30 10:25:54,102 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:25:55,914 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:25:56,217 INFO [Counter-Strike 2] kept posts in batch: 0
+2025-10-30 10:25:56,218 INFO [Valorant] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'VALORANT', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table valorant_reddit_game_reviews
+2025-10-30 10:26:05,308 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:26:05,770 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:26:07,879 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:26:08,578 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:26:17,419 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:26:18,498 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:26:23,026 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:26:23,347 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:26:42,324 INFO [Valorant] kept posts in batch: 1
+2025-10-30 10:26:44,774 INFO [Valorant] kept posts in batch: 1
+2025-10-30 10:26:54,321 INFO [Valorant] kept posts in batch: 1
+2025-10-30 10:26:54,617 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:27:29,796 INFO [Valorant] kept posts in batch: 46
+2025-10-30 10:27:37,259 INFO [Valorant] kept posts in batch: 9
+2025-10-30 10:27:54,857 INFO [Valorant] kept posts in batch: 17
+2025-10-30 10:28:51,890 INFO [Valorant] kept posts in batch: 144
+2025-10-30 10:29:01,231 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:29:01,491 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:29:01,746 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:29:02,045 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:29:10,279 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:29:11,558 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:29:16,610 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:29:16,982 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:29:32,057 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:29:33,663 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:29:41,147 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:29:41,579 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:30:43,338 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:30:43,627 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:30:48,248 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:30:48,551 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:30:59,113 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:31:00,482 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:31:05,749 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:31:06,112 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:31:19,700 INFO [Valorant] kept posts in batch: 2
+2025-10-30 10:31:27,646 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:31:35,722 INFO [Valorant] kept posts in batch: 1
+2025-10-30 10:31:36,883 INFO [Valorant] kept posts in batch: 4
+2025-10-30 10:32:40,913 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:32:41,784 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:32:43,617 INFO [Valorant] kept posts in batch: 0
+2025-10-30 10:32:44,026 INFO [Valorant] kept posts in batch: 1
+2025-10-30 10:32:44,028 INFO [Cyberpunk 2077] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table cyberpunk_2077_reddit_game_reviews
+2025-10-30 10:32:52,528 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:32:52,999 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:32:54,921 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:32:57,975 INFO [Cyberpunk 2077] kept posts in batch: 1
+2025-10-30 10:33:06,950 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:33:07,984 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:33:12,559 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:33:14,675 INFO [Cyberpunk 2077] kept posts in batch: 1
+2025-10-30 10:33:46,231 INFO [Cyberpunk 2077] kept posts in batch: 23
+2025-10-30 10:33:49,247 INFO [Cyberpunk 2077] kept posts in batch: 2
+2025-10-30 10:34:04,711 INFO [Cyberpunk 2077] kept posts in batch: 11
+2025-10-30 10:35:22,796 INFO [Cyberpunk 2077] kept posts in batch: 131
+2025-10-30 10:35:32,121 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:35:32,381 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:35:32,649 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:35:34,699 INFO [Cyberpunk 2077] kept posts in batch: 2
+2025-10-30 10:35:43,445 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:35:44,812 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:35:50,079 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:35:51,939 INFO [Cyberpunk 2077] kept posts in batch: 2
+2025-10-30 10:36:06,557 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:36:08,145 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:36:15,838 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:36:23,727 INFO [Cyberpunk 2077] kept posts in batch: 6
+2025-10-30 10:37:27,457 INFO [Cyberpunk 2077] kept posts in batch: 2
+2025-10-30 10:37:27,756 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:37:32,354 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:37:41,947 INFO [Cyberpunk 2077] kept posts in batch: 6
+2025-10-30 10:37:51,940 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:37:53,324 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:37:58,433 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:38:01,480 INFO [Cyberpunk 2077] kept posts in batch: 2
+2025-10-30 10:38:14,776 INFO [Cyberpunk 2077] kept posts in batch: 1
+2025-10-30 10:38:22,388 INFO [Cyberpunk 2077] kept posts in batch: 1
+2025-10-30 10:38:29,273 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:38:30,601 INFO [Cyberpunk 2077] kept posts in batch: 3
+2025-10-30 10:39:39,432 INFO [Cyberpunk 2077] kept posts in batch: 4
+2025-10-30 10:39:40,305 INFO [Cyberpunk 2077] kept posts in batch: 0
+2025-10-30 10:39:42,718 INFO [Cyberpunk 2077] kept posts in batch: 1
+2025-10-30 10:39:43,794 INFO [Cyberpunk 2077] kept posts in batch: 1
+2025-10-30 10:39:43,795 INFO [Genshin Impact] Subreddits: ['Genshin_Impact', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table genshin_impact_reddit_game_reviews
+2025-10-30 10:40:09,617 INFO [Genshin Impact] kept posts in batch: 17
+2025-10-30 10:40:22,159 INFO [Genshin Impact] kept posts in batch: 8
+2025-10-30 10:40:44,232 INFO [Genshin Impact] kept posts in batch: 8
+2025-10-30 10:41:19,848 INFO [Genshin Impact] kept posts in batch: 60
+2025-10-30 10:41:28,578 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:41:29,032 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:41:31,028 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:41:31,359 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:41:41,206 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:41:42,249 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:41:46,947 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:41:47,452 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:42:06,893 INFO [Genshin Impact] kept posts in batch: 1
+2025-10-30 10:42:08,997 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:42:17,959 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:42:18,655 INFO [Genshin Impact] kept posts in batch: 1
+2025-10-30 10:42:28,465 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:42:28,720 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:42:28,975 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:42:29,268 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:42:38,063 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:42:39,354 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:42:44,616 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:42:44,974 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:43:00,709 INFO [Genshin Impact] kept posts in batch: 1
+2025-10-30 10:43:02,346 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:43:10,032 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:43:11,083 INFO [Genshin Impact] kept posts in batch: 1
+2025-10-30 10:44:13,293 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:44:13,576 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:44:18,256 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:44:20,210 INFO [Genshin Impact] kept posts in batch: 1
+2025-10-30 10:44:31,187 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:44:32,565 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:44:37,763 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:44:38,086 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:44:50,791 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:44:58,463 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:45:05,430 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:45:05,728 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:46:11,895 INFO [Genshin Impact] kept posts in batch: 1
+2025-10-30 10:46:12,770 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:46:14,826 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:46:15,397 INFO [Genshin Impact] kept posts in batch: 0
+2025-10-30 10:46:15,398 INFO [PUBG: Battlegrounds] Subreddits: ['NintendoSwitch', 'PS5', 'PUBG', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table pubg_battlegrounds_reddit_game_reviews
+2025-10-30 10:46:24,593 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:46:25,049 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:46:27,158 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:46:27,625 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:46:37,452 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:46:38,620 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:46:43,265 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:46:43,562 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:47:00,951 INFO [PUBG: Battlegrounds] kept posts in batch: 21
+2025-10-30 10:47:02,201 INFO [PUBG: Battlegrounds] kept posts in batch: 3
+2025-10-30 10:47:06,120 INFO [PUBG: Battlegrounds] kept posts in batch: 5
+2025-10-30 10:47:06,409 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:47:25,342 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:47:27,461 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:47:36,576 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:47:36,872 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:47:47,030 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:47:47,289 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:47:47,543 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:47:47,834 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:47:56,770 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:47:58,103 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:48:03,844 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:48:04,128 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:48:20,100 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:48:21,714 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:48:29,328 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:48:29,654 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:49:32,575 INFO [PUBG: Battlegrounds] kept posts in batch: 1
+2025-10-30 10:49:32,866 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:49:37,527 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:49:37,820 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:49:48,286 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:49:49,769 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:49:55,071 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:49:55,371 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:50:11,128 INFO [PUBG: Battlegrounds] kept posts in batch: 1
+2025-10-30 10:50:18,550 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:50:25,411 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:50:25,716 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:51:32,327 INFO [PUBG: Battlegrounds] kept posts in batch: 1
+2025-10-30 10:51:33,226 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:51:35,295 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:51:35,587 INFO [PUBG: Battlegrounds] kept posts in batch: 0
+2025-10-30 10:51:35,587 INFO [Overwatch 2] Subreddits: ['NintendoSwitch', 'Overwatch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table overwatch_2_reddit_game_reviews
+2025-10-30 10:51:44,769 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:51:45,234 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:51:47,380 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:51:47,672 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:52:12,741 INFO [Overwatch 2] kept posts in batch: 10
+2025-10-30 10:52:21,460 INFO [Overwatch 2] kept posts in batch: 4
+2025-10-30 10:52:31,849 INFO [Overwatch 2] kept posts in batch: 1
+2025-10-30 10:52:51,952 INFO [Overwatch 2] kept posts in batch: 27
+2025-10-30 10:53:01,687 INFO [Overwatch 2] kept posts in batch: 1
+2025-10-30 10:53:03,340 INFO [Overwatch 2] kept posts in batch: 1
+2025-10-30 10:53:08,960 INFO [Overwatch 2] kept posts in batch: 1
+2025-10-30 10:53:09,345 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:53:29,306 INFO [Overwatch 2] kept posts in batch: 2
+2025-10-30 10:53:31,355 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:53:41,588 INFO [Overwatch 2] kept posts in batch: 1
+2025-10-30 10:53:41,915 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:53:51,312 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:53:51,611 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:53:51,861 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:53:52,207 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:54:01,083 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:54:02,491 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:54:07,703 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:54:08,172 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:54:25,274 INFO [Overwatch 2] kept posts in batch: 1
+2025-10-30 10:54:29,309 INFO [Overwatch 2] kept posts in batch: 1
+2025-10-30 10:54:39,103 INFO [Overwatch 2] kept posts in batch: 1
+2025-10-30 10:54:39,540 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:55:42,670 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:55:42,954 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:55:48,009 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:55:48,308 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:55:58,982 INFO [Overwatch 2] kept posts in batch: 1
+2025-10-30 10:56:00,393 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:56:06,200 INFO [Overwatch 2] kept posts in batch: 1
+2025-10-30 10:56:06,553 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:56:19,589 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:56:27,307 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:56:34,359 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:56:34,667 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:57:40,283 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:57:41,150 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:57:43,101 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:57:43,399 INFO [Overwatch 2] kept posts in batch: 0
+2025-10-30 10:57:43,399 INFO [Helldivers 2] Subreddits: ['Helldivers', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table helldivers_2_reddit_game_reviews
+2025-10-30 10:58:04,403 INFO [Helldivers 2] kept posts in batch: 6
+2025-10-30 10:58:15,446 INFO [Helldivers 2] kept posts in batch: 3
+2025-10-30 10:58:27,910 INFO [Helldivers 2] kept posts in batch: 2
+2025-10-30 10:59:20,732 INFO [Helldivers 2] kept posts in batch: 113
+2025-10-30 10:59:29,768 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 10:59:30,206 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 10:59:32,200 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 10:59:32,500 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 10:59:42,235 INFO [Helldivers 2] kept posts in batch: 1
+2025-10-30 10:59:43,178 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 10:59:48,153 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 10:59:49,993 INFO [Helldivers 2] kept posts in batch: 1
+2025-10-30 11:00:09,417 INFO [Helldivers 2] kept posts in batch: 4
+2025-10-30 11:00:11,535 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:00:20,814 INFO [Helldivers 2] kept posts in batch: 1
+2025-10-30 11:00:43,684 INFO [Helldivers 2] kept posts in batch: 52
+2025-10-30 11:00:55,327 INFO [Helldivers 2] kept posts in batch: 1
+2025-10-30 11:00:55,598 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:00:55,855 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:00:56,170 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:01:05,480 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:01:06,805 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:01:11,660 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:01:12,702 INFO [Helldivers 2] kept posts in batch: 1
+2025-10-30 11:01:28,116 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:01:29,902 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:01:37,417 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:01:38,708 INFO [Helldivers 2] kept posts in batch: 2
+2025-10-30 11:02:41,099 INFO [Helldivers 2] kept posts in batch: 1
+2025-10-30 11:02:41,389 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:02:46,571 INFO [Helldivers 2] kept posts in batch: 1
+2025-10-30 11:02:46,861 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:02:57,428 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:02:58,734 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:03:04,117 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:03:04,565 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:03:18,690 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:03:26,019 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:03:32,518 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:03:37,420 INFO [Helldivers 2] kept posts in batch: 5
+2025-10-30 11:04:46,146 INFO [Helldivers 2] kept posts in batch: 4
+2025-10-30 11:04:47,008 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:04:48,825 INFO [Helldivers 2] kept posts in batch: 0
+2025-10-30 11:04:49,866 INFO [Helldivers 2] kept posts in batch: 1
+2025-10-30 11:04:49,867 INFO [Assassin's Creed Unity] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'assassinscreed', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table assassin_s_creed_unity_reddit_game_reviews
+2025-10-30 11:04:58,323 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:04:58,766 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:00,667 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:01,045 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:10,840 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:11,849 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:16,628 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:16,923 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:35,708 INFO [Assassin's Creed Unity] kept posts in batch: 1
+2025-10-30 11:05:37,783 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:46,983 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:47,510 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:56,867 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:57,127 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:57,384 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:05:57,730 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:06:47,741 INFO [Assassin's Creed Unity] kept posts in batch: 13
+2025-10-30 11:06:48,458 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:06:58,766 INFO [Assassin's Creed Unity] kept posts in batch: 2
+2025-10-30 11:07:09,514 INFO [Assassin's Creed Unity] kept posts in batch: 15
+2025-10-30 11:07:18,082 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:07:19,367 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:07:24,739 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:07:25,239 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:07:40,328 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:07:42,092 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:07:49,994 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:07:51,390 INFO [Assassin's Creed Unity] kept posts in batch: 2
+2025-10-30 11:08:55,703 INFO [Assassin's Creed Unity] kept posts in batch: 1
+2025-10-30 11:08:56,015 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:09:00,655 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:09:01,816 INFO [Assassin's Creed Unity] kept posts in batch: 1
+2025-10-30 11:09:12,452 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:09:13,825 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:09:19,133 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:09:19,516 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:09:32,259 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:09:39,617 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:09:46,427 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:09:46,832 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:10:53,009 INFO [Assassin's Creed Unity] kept posts in batch: 1
+2025-10-30 11:10:53,928 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:10:56,066 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:10:56,393 INFO [Assassin's Creed Unity] kept posts in batch: 0
+2025-10-30 11:10:56,393 INFO [Sekiro: Shadows Die Twice] Subreddits: ['NintendoSwitch', 'PS5', 'Sekiro', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table sekiro_shadows_die_twice_reddit_game_reviews
+2025-10-30 11:11:08,240 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:11:08,678 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:11:10,704 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:11:11,017 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:11:19,976 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:11:20,895 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:11:25,932 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:11:26,237 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:12:01,070 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 45
+2025-10-30 11:12:04,132 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 5
+2025-10-30 11:12:20,294 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 19
+2025-10-30 11:12:24,760 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 6
+2025-10-30 11:12:44,251 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 3
+2025-10-30 11:12:46,281 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:12:55,619 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 1
+2025-10-30 11:13:01,239 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 6
+2025-10-30 11:13:10,981 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:13:11,234 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:13:11,499 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:13:11,930 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:13:20,918 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:13:22,223 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:13:27,256 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:13:27,689 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:13:43,208 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:13:44,849 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:13:52,221 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:13:52,928 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:14:58,302 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 4
+2025-10-30 11:14:58,619 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:15:03,239 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:15:07,314 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 4
+2025-10-30 11:15:18,131 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:15:19,490 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:15:25,043 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:15:25,427 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:15:37,993 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:15:45,369 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:15:52,186 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:15:52,501 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:17:01,247 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 4
+2025-10-30 11:17:02,412 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:17:04,448 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:17:04,761 INFO [Sekiro: Shadows Die Twice] kept posts in batch: 0
+2025-10-30 11:17:04,762 INFO [League of Legends] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'leagueoflegends', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table league_of_legends_reddit_game_reviews
+2025-10-30 11:17:13,543 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:17:14,020 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:17:15,880 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:17:16,212 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:17:25,379 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:17:26,353 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:17:31,171 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:17:31,507 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:17:50,627 INFO [League of Legends] kept posts in batch: 1
+2025-10-30 11:17:52,774 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:02,422 INFO [League of Legends] kept posts in batch: 1
+2025-10-30 11:18:02,829 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:12,199 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:12,460 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:12,716 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:13,061 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:21,853 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:23,148 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:28,905 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:29,413 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:44,820 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:46,540 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:54,072 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:18:54,749 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:19:36,008 INFO [League of Legends] kept posts in batch: 12
+2025-10-30 11:19:48,367 INFO [League of Legends] kept posts in batch: 2
+2025-10-30 11:20:13,303 INFO [League of Legends] kept posts in batch: 5
+2025-10-30 11:20:55,068 INFO [League of Legends] kept posts in batch: 86
+2025-10-30 11:21:57,527 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:21:57,819 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:22:02,509 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:22:03,296 INFO [League of Legends] kept posts in batch: 1
+2025-10-30 11:22:13,814 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:22:15,256 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:22:20,689 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:22:21,137 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:22:33,907 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:22:41,630 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:22:48,446 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:22:48,907 INFO [League of Legends] kept posts in batch: 1
+2025-10-30 11:23:57,536 INFO [League of Legends] kept posts in batch: 4
+2025-10-30 11:23:58,632 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:24:00,654 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:24:01,012 INFO [League of Legends] kept posts in batch: 0
+2025-10-30 11:24:01,013 INFO [Escape From Tarkov] Subreddits: ['EscapefromTarkov', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table escape_from_tarkov_reddit_game_reviews
+2025-10-30 11:24:25,572 INFO [Escape From Tarkov] kept posts in batch: 18
+2025-10-30 11:24:30,169 INFO [Escape From Tarkov] kept posts in batch: 3
+2025-10-30 11:24:42,476 INFO [Escape From Tarkov] kept posts in batch: 6
+2025-10-30 11:24:52,401 INFO [Escape From Tarkov] kept posts in batch: 15
+2025-10-30 11:25:06,976 INFO [Escape From Tarkov] kept posts in batch: 5
+2025-10-30 11:25:07,423 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:25:09,882 INFO [Escape From Tarkov] kept posts in batch: 1
+2025-10-30 11:25:10,176 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:25:21,124 INFO [Escape From Tarkov] kept posts in batch: 2
+2025-10-30 11:25:22,103 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:25:27,913 INFO [Escape From Tarkov] kept posts in batch: 1
+2025-10-30 11:25:28,202 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:25:47,361 INFO [Escape From Tarkov] kept posts in batch: 2
+2025-10-30 11:25:49,337 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:25:58,991 INFO [Escape From Tarkov] kept posts in batch: 1
+2025-10-30 11:26:02,037 INFO [Escape From Tarkov] kept posts in batch: 6
+2025-10-30 11:26:13,721 INFO [Escape From Tarkov] kept posts in batch: 4
+2025-10-30 11:26:13,972 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:26:14,225 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:26:14,534 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:26:27,755 INFO [Escape From Tarkov] kept posts in batch: 4
+2025-10-30 11:26:29,771 INFO [Escape From Tarkov] kept posts in batch: 1
+2025-10-30 11:26:39,067 INFO [Escape From Tarkov] kept posts in batch: 3
+2025-10-30 11:26:39,400 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:26:59,234 INFO [Escape From Tarkov] kept posts in batch: 5
+2025-10-30 11:27:01,458 INFO [Escape From Tarkov] kept posts in batch: 1
+2025-10-30 11:27:10,818 INFO [Escape From Tarkov] kept posts in batch: 1
+2025-10-30 11:27:11,263 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:28:45,693 INFO [Escape From Tarkov] kept posts in batch: 53
+2025-10-30 11:28:46,325 INFO [Escape From Tarkov] kept posts in batch: 1
+2025-10-30 11:28:52,334 INFO [Escape From Tarkov] kept posts in batch: 4
+2025-10-30 11:28:52,625 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:29:04,608 INFO [Escape From Tarkov] kept posts in batch: 2
+2025-10-30 11:29:06,008 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:29:11,393 INFO [Escape From Tarkov] kept posts in batch: 1
+2025-10-30 11:29:12,378 INFO [Escape From Tarkov] kept posts in batch: 1
+2025-10-30 11:29:26,232 INFO [Escape From Tarkov] kept posts in batch: 3
+2025-10-30 11:29:33,244 INFO [Escape From Tarkov] kept posts in batch: 1
+2025-10-30 11:29:46,170 INFO [Escape From Tarkov] kept posts in batch: 4
+2025-10-30 11:29:48,833 INFO [Escape From Tarkov] kept posts in batch: 1
+2025-10-30 11:31:12,742 INFO [Escape From Tarkov] kept posts in batch: 24
+2025-10-30 11:31:14,191 INFO [Escape From Tarkov] kept posts in batch: 1
+2025-10-30 11:31:17,992 INFO [Escape From Tarkov] kept posts in batch: 3
+2025-10-30 11:31:18,297 INFO [Escape From Tarkov] kept posts in batch: 0
+2025-10-30 11:31:18,298 INFO [Crash Bandicoot 4: It's About Time] Subreddits: ['CrashBandicoot', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table crash_bandicoot_4_it_s_about_time_reddit_game_reviews
+2025-10-30 11:31:38,869 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 14
+2025-10-30 11:31:40,061 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:31:46,020 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 3
+2025-10-30 11:31:48,059 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 3
+2025-10-30 11:31:57,942 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 1
+2025-10-30 11:31:58,386 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:00,367 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:00,668 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:10,453 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:11,442 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:16,032 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:16,349 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:35,319 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:37,406 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:46,521 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:46,816 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:57,044 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:57,354 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:57,619 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:32:57,913 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:33:07,075 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:33:08,549 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:33:13,662 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:33:14,055 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:33:29,135 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:33:30,864 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:33:38,436 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:33:38,730 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:34:41,491 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:34:41,809 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:34:46,499 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:34:46,798 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:34:57,400 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:34:58,765 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:35:04,169 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:35:04,499 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:35:17,921 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:35:25,242 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:35:32,251 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:35:32,544 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:36:38,457 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:36:39,585 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:36:41,644 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:36:41,939 INFO [Crash Bandicoot 4: It's About Time] kept posts in batch: 0
+2025-10-30 11:36:41,939 INFO [Dark Souls (Remastered)] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'darksouls', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table dark_souls_remastered_reddit_game_reviews
+2025-10-30 11:36:50,517 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:36:50,926 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:36:52,971 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:36:53,413 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:37:02,619 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:37:03,615 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:37:08,072 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:37:08,410 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:37:27,075 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:37:29,171 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:37:38,707 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:37:41,260 INFO [Dark Souls (Remastered)] kept posts in batch: 1
+2025-10-30 11:37:50,474 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:37:50,736 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:37:50,987 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:37:51,302 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:38:11,593 INFO [Dark Souls (Remastered)] kept posts in batch: 3
+2025-10-30 11:38:13,184 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:38:22,156 INFO [Dark Souls (Remastered)] kept posts in batch: 1
+2025-10-30 11:38:44,366 INFO [Dark Souls (Remastered)] kept posts in batch: 45
+2025-10-30 11:38:53,287 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:38:54,596 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:38:59,522 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:38:59,827 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:39:15,186 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:39:16,968 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:39:24,957 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:39:25,403 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:40:27,181 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:40:27,481 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:40:32,222 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:40:32,872 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:40:44,401 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:40:45,802 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:40:51,271 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:40:51,762 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:41:04,792 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:41:11,513 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:41:18,462 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:41:18,763 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:42:24,668 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:42:25,748 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:42:27,696 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:42:27,988 INFO [Dark Souls (Remastered)] kept posts in batch: 0
+2025-10-30 11:42:27,988 INFO [Cuphead] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'cuphead', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table cuphead_reddit_game_reviews
+2025-10-30 11:42:37,323 INFO [Cuphead] kept posts in batch: 1
+2025-10-30 11:42:37,779 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:42:39,701 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:42:40,609 INFO [Cuphead] kept posts in batch: 1
+2025-10-30 11:42:49,477 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:42:50,485 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:42:55,051 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:42:55,410 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:43:15,279 INFO [Cuphead] kept posts in batch: 3
+2025-10-30 11:43:17,352 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:43:27,079 INFO [Cuphead] kept posts in batch: 2
+2025-10-30 11:43:33,359 INFO [Cuphead] kept posts in batch: 15
+2025-10-30 11:43:42,958 INFO [Cuphead] kept posts in batch: 1
+2025-10-30 11:43:43,215 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:43:43,488 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:43:43,784 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:43:59,817 INFO [Cuphead] kept posts in batch: 16
+2025-10-30 11:44:00,421 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:44:05,708 INFO [Cuphead] kept posts in batch: 4
+2025-10-30 11:44:31,675 INFO [Cuphead] kept posts in batch: 62
+2025-10-30 11:44:40,321 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:44:41,685 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:44:47,225 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:44:47,928 INFO [Cuphead] kept posts in batch: 1
+2025-10-30 11:45:04,349 INFO [Cuphead] kept posts in batch: 1
+2025-10-30 11:45:05,945 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:45:15,334 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:45:16,522 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:46:18,837 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:46:19,121 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:46:23,774 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:46:24,704 INFO [Cuphead] kept posts in batch: 1
+2025-10-30 11:46:35,179 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:46:36,578 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:46:42,163 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:46:42,544 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:46:56,399 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:47:03,117 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:47:10,160 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:47:10,513 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:48:16,573 INFO [Cuphead] kept posts in batch: 2
+2025-10-30 11:48:17,423 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:48:19,262 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:48:19,583 INFO [Cuphead] kept posts in batch: 0
+2025-10-30 11:48:19,584 INFO [Super Meat Boy] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'SuperMeatBoy', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table super_meat_boy_reddit_game_reviews
+2025-10-30 11:48:28,177 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:48:28,610 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:48:30,588 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:48:31,043 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:48:39,933 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:48:40,914 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:48:45,696 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:48:45,985 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:04,363 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:06,423 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:15,344 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:15,745 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:27,294 INFO [Super Meat Boy] kept posts in batch: 5
+2025-10-30 11:49:27,596 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:28,234 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:29,387 INFO [Super Meat Boy] kept posts in batch: 2
+2025-10-30 11:49:38,466 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:38,731 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:38,996 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:39,298 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:48,117 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:49,417 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:54,487 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:49:57,630 INFO [Super Meat Boy] kept posts in batch: 2
+2025-10-30 11:50:13,241 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:50:14,978 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:50:23,552 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:50:24,654 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:51:27,053 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:51:27,340 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:51:31,979 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:51:33,995 INFO [Super Meat Boy] kept posts in batch: 3
+2025-10-30 11:51:44,388 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:51:45,849 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:51:51,298 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:51:51,597 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:52:04,648 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:52:11,923 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:52:18,762 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:52:19,160 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:53:24,093 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:53:24,981 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:53:26,825 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:53:27,174 INFO [Super Meat Boy] kept posts in batch: 0
+2025-10-30 11:53:27,174 INFO [Devil May Cry 5] Subreddits: ['DevilMayCry', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table devil_may_cry_5_reddit_game_reviews
+2025-10-30 11:53:56,452 INFO [Devil May Cry 5] kept posts in batch: 18
+2025-10-30 11:53:57,966 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:54:09,301 INFO [Devil May Cry 5] kept posts in batch: 5
+2025-10-30 11:54:17,890 INFO [Devil May Cry 5] kept posts in batch: 14
+2025-10-30 11:54:27,101 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:54:27,568 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:54:29,469 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:54:29,769 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:54:38,752 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:54:39,769 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:54:44,666 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:54:44,967 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:55:05,215 INFO [Devil May Cry 5] kept posts in batch: 4
+2025-10-30 11:55:07,297 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:55:16,595 INFO [Devil May Cry 5] kept posts in batch: 1
+2025-10-30 11:55:21,016 INFO [Devil May Cry 5] kept posts in batch: 10
+2025-10-30 11:55:30,322 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:55:30,580 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:55:30,849 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:55:31,244 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:55:42,258 INFO [Devil May Cry 5] kept posts in batch: 1
+2025-10-30 11:55:45,210 INFO [Devil May Cry 5] kept posts in batch: 1
+2025-10-30 11:55:52,299 INFO [Devil May Cry 5] kept posts in batch: 1
+2025-10-30 11:55:52,821 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:56:08,616 INFO [Devil May Cry 5] kept posts in batch: 1
+2025-10-30 11:56:11,079 INFO [Devil May Cry 5] kept posts in batch: 1
+2025-10-30 11:56:19,443 INFO [Devil May Cry 5] kept posts in batch: 1
+2025-10-30 11:56:19,947 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:57:22,758 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:57:23,053 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:57:27,779 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:57:28,319 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:57:39,432 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:57:40,808 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:57:46,496 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:57:46,931 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:58:00,091 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:58:06,698 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:58:13,669 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:58:14,012 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:59:21,975 INFO [Devil May Cry 5] kept posts in batch: 2
+2025-10-30 11:59:22,826 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:59:24,650 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:59:24,955 INFO [Devil May Cry 5] kept posts in batch: 0
+2025-10-30 11:59:24,955 INFO [Battlefield 4] Subreddits: ['Battlefield_4', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table battlefield_4_reddit_game_reviews
+2025-10-30 11:59:42,759 INFO [Battlefield 4] kept posts in batch: 23
+2025-10-30 11:59:43,311 INFO [Battlefield 4] kept posts in batch: 1
+2025-10-30 11:59:47,416 INFO [Battlefield 4] kept posts in batch: 4
+2025-10-30 11:59:52,930 INFO [Battlefield 4] kept posts in batch: 7
+2025-10-30 12:00:01,630 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:00:02,166 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:00:04,312 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:00:04,937 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:00:13,967 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:00:14,967 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:00:19,770 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:00:20,069 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:00:38,810 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:00:41,159 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:00:50,409 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:00:53,383 INFO [Battlefield 4] kept posts in batch: 1
+2025-10-30 12:01:03,285 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:01:03,551 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:01:03,822 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:01:04,131 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:01:13,465 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:01:14,833 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:01:20,447 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:01:20,802 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:01:36,653 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:01:38,383 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:01:46,640 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:01:47,513 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:02:50,726 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:02:51,039 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:02:55,723 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:02:56,310 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:03:07,854 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:03:09,271 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:03:14,846 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:03:15,320 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:03:28,356 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:03:35,610 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:03:42,938 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:03:43,515 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:04:50,151 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:04:51,039 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:04:52,830 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:04:53,189 INFO [Battlefield 4] kept posts in batch: 0
+2025-10-30 12:04:53,190 INFO [Halo: The Master Chief Collection] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'halo', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table halo_the_master_chief_collection_reddit_game_reviews
+2025-10-30 12:05:03,465 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:05:03,935 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:05:06,131 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:05:06,437 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:05:16,845 INFO [Halo: The Master Chief Collection] kept posts in batch: 1
+2025-10-30 12:05:17,749 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:05:23,901 INFO [Halo: The Master Chief Collection] kept posts in batch: 1
+2025-10-30 12:05:24,201 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:05:43,386 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:05:45,515 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:05:55,054 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:05:56,405 INFO [Halo: The Master Chief Collection] kept posts in batch: 2
+2025-10-30 12:06:05,875 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:06:06,143 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:06:06,410 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:06:06,736 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:06:15,739 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:06:17,114 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:06:22,725 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:06:23,064 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:06:38,461 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:06:40,200 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:06:48,839 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:06:49,234 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:07:21,168 INFO [Halo: The Master Chief Collection] kept posts in batch: 14
+2025-10-30 12:07:31,032 INFO [Halo: The Master Chief Collection] kept posts in batch: 8
+2025-10-30 12:07:47,547 INFO [Halo: The Master Chief Collection] kept posts in batch: 3
+2025-10-30 12:07:49,377 INFO [Halo: The Master Chief Collection] kept posts in batch: 1
+2025-10-30 12:08:53,541 INFO [Halo: The Master Chief Collection] kept posts in batch: 2
+2025-10-30 12:08:53,850 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:08:58,502 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:08:58,960 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:09:09,980 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:09:11,306 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:09:16,928 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:09:17,226 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:09:30,874 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:09:38,699 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:09:46,305 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:09:46,605 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:10:54,571 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:10:55,474 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:10:57,300 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:10:57,591 INFO [Halo: The Master Chief Collection] kept posts in batch: 0
+2025-10-30 12:10:57,592 INFO [Fallout 76] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'fo76', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table fallout_76_reddit_game_reviews
+2025-10-30 12:11:08,494 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:11:09,004 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:11:11,571 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:11:11,897 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:11:24,656 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:11:25,812 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:11:31,252 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:11:31,663 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:11:50,529 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:11:52,637 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:12:02,098 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:12:05,472 INFO [Fallout 76] kept posts in batch: 6
+2025-10-30 12:12:16,954 INFO [Fallout 76] kept posts in batch: 1
+2025-10-30 12:12:17,212 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:12:17,469 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:12:17,831 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:12:45,554 INFO [Fallout 76] kept posts in batch: 22
+2025-10-30 12:12:56,360 INFO [Fallout 76] kept posts in batch: 7
+2025-10-30 12:13:15,513 INFO [Fallout 76] kept posts in batch: 17
+2025-10-30 12:13:48,547 INFO [Fallout 76] kept posts in batch: 49
+2025-10-30 12:13:57,682 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:13:59,047 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:14:04,184 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:14:04,865 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:14:20,830 INFO [Fallout 76] kept posts in batch: 1
+2025-10-30 12:14:22,605 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:14:30,482 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:14:34,141 INFO [Fallout 76] kept posts in batch: 2
+2025-10-30 12:15:37,292 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:15:37,579 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:15:42,230 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:15:43,698 INFO [Fallout 76] kept posts in batch: 1
+2025-10-30 12:15:54,539 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:15:55,925 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:16:01,270 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:16:01,878 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:16:14,964 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:16:22,700 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:16:29,941 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:16:30,386 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:17:35,332 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:17:36,247 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:17:38,065 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:17:38,448 INFO [Fallout 76] kept posts in batch: 0
+2025-10-30 12:17:38,449 INFO [Mass Effect: Andromeda] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'masseffect', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table mass_effect_andromeda_reddit_game_reviews
+2025-10-30 12:17:47,065 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:17:47,548 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:17:49,523 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:17:49,815 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:17:58,556 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:17:59,461 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:18:03,904 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:18:04,195 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:18:22,539 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:18:24,620 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:18:33,942 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:18:36,035 INFO [Mass Effect: Andromeda] kept posts in batch: 3
+2025-10-30 12:18:45,667 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:18:45,923 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:18:46,176 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:18:46,520 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:18:55,291 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:18:56,635 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:19:01,662 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:19:02,283 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:19:17,527 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:19:19,229 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:19:26,894 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:19:28,950 INFO [Mass Effect: Andromeda] kept posts in batch: 1
+2025-10-30 12:20:00,614 INFO [Mass Effect: Andromeda] kept posts in batch: 11
+2025-10-30 12:20:04,220 INFO [Mass Effect: Andromeda] kept posts in batch: 3
+2025-10-30 12:20:20,010 INFO [Mass Effect: Andromeda] kept posts in batch: 5
+2025-10-30 12:20:40,850 INFO [Mass Effect: Andromeda] kept posts in batch: 30
+2025-10-30 12:21:43,622 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:21:43,949 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:21:48,618 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:21:53,591 INFO [Mass Effect: Andromeda] kept posts in batch: 4
+2025-10-30 12:22:04,256 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:22:05,572 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:22:11,029 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:22:11,406 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:22:24,926 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:22:32,162 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:22:39,214 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:22:39,539 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:23:44,499 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:23:45,380 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:23:47,215 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:23:47,609 INFO [Mass Effect: Andromeda] kept posts in batch: 0
+2025-10-30 12:23:47,609 INFO [Battlefield 2042] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'battlefield2042', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table battlefield_2042_reddit_game_reviews
+2025-10-30 12:23:56,441 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:23:56,868 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:23:58,849 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:23:59,148 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:24:07,967 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:24:08,942 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:24:13,582 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:24:13,953 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:24:32,904 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:24:35,001 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:24:43,992 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:24:47,048 INFO [Battlefield 2042] kept posts in batch: 7
+2025-10-30 12:24:56,298 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:24:56,558 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:24:56,819 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:24:57,200 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:25:15,449 INFO [Battlefield 2042] kept posts in batch: 11
+2025-10-30 12:25:15,987 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:25:19,321 INFO [Battlefield 2042] kept posts in batch: 3
+2025-10-30 12:25:28,201 INFO [Battlefield 2042] kept posts in batch: 11
+2025-10-30 12:25:37,110 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:25:38,604 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:25:43,753 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:25:44,151 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:25:59,100 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:26:00,864 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:26:08,608 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:26:09,113 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:27:11,598 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:27:11,895 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:27:16,531 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:27:17,017 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:27:27,805 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:27:29,076 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:27:34,506 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:27:34,905 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:27:47,745 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:27:54,646 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:28:01,870 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:28:02,661 INFO [Battlefield 2042] kept posts in batch: 1
+2025-10-30 12:29:07,693 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:29:08,557 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:29:10,375 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:29:10,671 INFO [Battlefield 2042] kept posts in batch: 0
+2025-10-30 12:29:10,671 INFO [Batman: Arkham Knight] Subreddits: ['BatmanArkham', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table batman_arkham_knight_reddit_game_reviews
+2025-10-30 12:29:20,607 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:29:22,589 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:29:27,478 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:29:31,285 INFO [Batman: Arkham Knight] kept posts in batch: 6
+2025-10-30 12:29:39,818 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:29:40,247 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:29:42,120 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:29:42,446 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:29:51,149 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:29:52,097 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:29:56,609 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:29:56,909 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:30:15,187 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:30:17,387 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:30:26,389 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:30:27,264 INFO [Batman: Arkham Knight] kept posts in batch: 1
+2025-10-30 12:30:36,789 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:30:37,092 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:30:37,355 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:30:37,651 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:30:46,295 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:30:47,661 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:30:52,620 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:30:53,058 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:31:08,275 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:31:10,009 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:31:17,693 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:31:18,509 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:32:20,868 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:32:21,172 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:32:25,858 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:32:28,480 INFO [Batman: Arkham Knight] kept posts in batch: 2
+2025-10-30 12:32:39,285 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:32:40,637 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:32:46,012 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:32:46,419 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:33:00,402 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:33:07,418 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:33:14,562 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:33:15,016 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:34:20,810 INFO [Batman: Arkham Knight] kept posts in batch: 1
+2025-10-30 12:34:21,657 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:34:23,501 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:34:23,833 INFO [Batman: Arkham Knight] kept posts in batch: 0
+2025-10-30 12:34:23,834 INFO [No Man's Sky] Subreddits: ['NintendoSwitch', 'NoMansSkyTheGame', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table no_man_s_sky_reddit_game_reviews
+2025-10-30 12:34:33,196 INFO [No Man's Sky] kept posts in batch: 1
+2025-10-30 12:34:34,033 INFO [No Man's Sky] kept posts in batch: 1
+2025-10-30 12:34:36,332 INFO [No Man's Sky] kept posts in batch: 1
+2025-10-30 12:34:36,712 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:34:54,344 INFO [No Man's Sky] kept posts in batch: 5
+2025-10-30 12:34:57,736 WARNING Retrying due to 500 status: GET https://oauth.reddit.com/r/NoMansSkyTheGame/top
+2025-10-30 12:35:04,213 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:35:17,313 INFO [No Man's Sky] kept posts in batch: 2
+2025-10-30 12:35:41,434 INFO [No Man's Sky] kept posts in batch: 44
+2025-10-30 12:35:50,775 INFO [No Man's Sky] kept posts in batch: 1
+2025-10-30 12:35:51,752 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:35:56,900 INFO [No Man's Sky] kept posts in batch: 1
+2025-10-30 12:35:57,233 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:36:19,037 INFO [No Man's Sky] kept posts in batch: 7
+2025-10-30 12:36:21,106 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:36:32,196 INFO [No Man's Sky] kept posts in batch: 4
+2025-10-30 12:36:46,411 INFO [No Man's Sky] kept posts in batch: 29
+2025-10-30 12:36:55,580 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:36:55,840 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:36:56,093 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:36:56,459 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:37:04,947 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:37:06,263 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:37:11,362 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:37:12,009 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:37:27,248 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:37:28,947 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:37:36,902 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:37:40,680 INFO [No Man's Sky] kept posts in batch: 2
+2025-10-30 12:38:45,189 INFO [No Man's Sky] kept posts in batch: 1
+2025-10-30 12:38:45,473 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:38:50,140 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:38:52,865 INFO [No Man's Sky] kept posts in batch: 2
+2025-10-30 12:39:04,136 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:39:05,539 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:39:11,171 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:39:11,741 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:39:25,378 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:39:32,482 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:39:39,269 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:39:39,946 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:40:46,322 INFO [No Man's Sky] kept posts in batch: 1
+2025-10-30 12:40:47,209 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:40:48,958 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:40:49,321 INFO [No Man's Sky] kept posts in batch: 0
+2025-10-30 12:40:49,321 INFO [Star Wars Battlefront II] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'StarWarsBattlefront', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table star_wars_battlefront_ii_reddit_game_reviews
+2025-10-30 12:40:58,858 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:40:59,299 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:41:01,286 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:41:01,586 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:41:10,860 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:41:12,199 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:41:17,281 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:41:17,583 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:41:36,624 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:41:38,634 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:41:47,634 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:41:48,488 INFO [Star Wars Battlefront II] kept posts in batch: 1
+2025-10-30 12:42:10,496 INFO [Star Wars Battlefront II] kept posts in batch: 6
+2025-10-30 12:42:11,797 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:42:17,313 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:42:20,474 INFO [Star Wars Battlefront II] kept posts in batch: 4
+2025-10-30 12:42:29,982 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:42:30,245 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:42:30,493 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:42:30,790 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:42:39,613 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:42:40,917 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:42:45,849 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:42:46,406 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:43:02,054 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:43:03,771 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:43:11,452 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:43:11,854 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:44:14,910 INFO [Star Wars Battlefront II] kept posts in batch: 1
+2025-10-30 12:44:15,188 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:44:19,758 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:44:20,196 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:44:30,607 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:44:32,003 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:44:37,474 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:44:38,041 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:44:51,510 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:44:58,562 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:45:05,176 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:45:05,630 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:46:11,058 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:46:11,930 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:46:13,749 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:46:14,042 INFO [Star Wars Battlefront II] kept posts in batch: 0
+2025-10-30 12:46:14,042 INFO [SimCity (2013)] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'SimCity', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table simcity_2013_reddit_game_reviews
+2025-10-30 12:46:22,714 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:46:23,303 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:46:25,187 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:46:25,494 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:46:34,667 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:46:35,661 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:46:40,364 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:46:40,680 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:46:59,613 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:01,606 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:10,657 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:11,026 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:29,788 INFO [SimCity (2013)] kept posts in batch: 22
+2025-10-30 12:47:30,033 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:30,893 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:32,688 INFO [SimCity (2013)] kept posts in batch: 2
+2025-10-30 12:47:41,998 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:42,281 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:42,535 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:42,833 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:51,751 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:53,121 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:58,053 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:47:58,379 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:48:13,768 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:48:15,452 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:48:24,199 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:48:24,577 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:49:27,196 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:49:27,470 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:49:32,117 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:49:32,413 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:49:43,023 INFO [SimCity (2013)] kept posts in batch: 1
+2025-10-30 12:49:44,309 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:49:50,459 INFO [SimCity (2013)] kept posts in batch: 1
+2025-10-30 12:49:50,802 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:50:03,744 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:50:11,036 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:50:18,279 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:50:18,568 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:51:25,504 INFO [SimCity (2013)] kept posts in batch: 2
+2025-10-30 12:51:26,384 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:51:28,192 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:51:28,637 INFO [SimCity (2013)] kept posts in batch: 0
+2025-10-30 12:51:28,637 INFO [Mighty No. 9] Subreddits: ['MightyNo9', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table mighty_no_9_reddit_game_reviews
+2025-10-30 12:51:35,557 INFO [Mighty No. 9] kept posts in batch: 4
+2025-10-30 12:51:35,861 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:51:36,169 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:51:36,897 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:51:45,732 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:51:46,268 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:51:48,188 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:51:48,693 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:51:57,539 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:51:58,563 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:52:03,488 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:52:03,788 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:52:22,485 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:52:24,478 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:52:33,518 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:52:33,852 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:52:44,364 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:52:44,674 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:52:44,943 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:52:45,242 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:52:53,951 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:52:55,285 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:53:00,675 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:53:01,076 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:53:16,613 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:53:18,397 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:53:26,165 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:53:26,566 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:54:28,499 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:54:28,789 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:54:33,475 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:54:33,792 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:54:44,947 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:54:46,374 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:54:51,766 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:54:52,091 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:55:04,924 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:55:11,529 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:55:18,982 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:55:19,317 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:56:24,361 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:56:25,230 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:56:27,074 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:56:27,382 INFO [Mighty No. 9] kept posts in batch: 0
+2025-10-30 12:56:27,382 INFO [Fortnite] Subreddits: ['Fortnite', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table fortnite_reddit_game_reviews
+2025-10-30 12:56:49,335 INFO [Fortnite] kept posts in batch: 18
+2025-10-30 12:56:50,703 INFO [Fortnite] kept posts in batch: 1
+2025-10-30 12:56:59,268 INFO [Fortnite] kept posts in batch: 8
+2025-10-30 12:57:07,405 INFO [Fortnite] kept posts in batch: 10
+2025-10-30 12:57:15,768 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:57:16,220 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:57:18,032 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:57:19,068 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:57:28,463 INFO [Fortnite] kept posts in batch: 1
+2025-10-30 12:57:29,421 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:57:34,002 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:57:34,385 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:57:53,837 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:57:55,844 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:58:04,834 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:58:05,670 INFO [Fortnite] kept posts in batch: 1
+2025-10-30 12:58:16,037 INFO [Fortnite] kept posts in batch: 1
+2025-10-30 12:58:16,293 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:58:16,553 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:58:17,477 INFO [Fortnite] kept posts in batch: 1
+2025-10-30 12:58:26,095 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:58:27,347 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:58:32,397 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:58:32,804 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:58:49,051 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:58:50,831 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:58:58,434 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 12:59:00,485 INFO [Fortnite] kept posts in batch: 3
+2025-10-30 13:00:03,514 INFO [Fortnite] kept posts in batch: 1
+2025-10-30 13:00:03,819 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 13:00:08,478 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 13:00:08,892 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 13:00:20,050 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 13:00:21,465 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 13:00:27,066 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 13:00:27,485 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 13:00:41,255 INFO [Fortnite] kept posts in batch: 1
+2025-10-30 13:00:48,340 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 13:00:55,360 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 13:00:59,000 INFO [Fortnite] kept posts in batch: 10
+2025-10-30 13:02:07,727 INFO [Fortnite] kept posts in batch: 6
+2025-10-30 13:02:08,607 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 13:02:10,498 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 13:02:10,841 INFO [Fortnite] kept posts in batch: 0
+2025-10-30 13:02:10,841 INFO [DOTA 2] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table dota_2_reddit_game_reviews
+2025-10-30 13:02:19,288 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:02:19,798 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:02:21,688 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:02:21,970 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:02:30,640 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:02:31,627 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:02:36,474 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:02:36,768 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:02:56,082 INFO [DOTA 2] kept posts in batch: 1
+2025-10-30 13:02:58,112 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:03:08,442 INFO [DOTA 2] kept posts in batch: 1
+2025-10-30 13:03:08,768 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:03:18,796 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:03:19,055 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:03:19,312 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:03:19,612 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:03:28,356 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:03:29,667 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:03:34,577 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:03:35,075 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:03:51,077 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:03:52,839 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:04:00,394 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:04:00,983 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:05:03,210 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:05:03,501 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:05:08,191 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:05:08,485 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:05:18,791 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:05:20,159 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:05:26,259 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:05:26,627 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:05:39,616 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:05:46,551 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:05:54,524 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:05:54,942 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:07:02,544 INFO [DOTA 2] kept posts in batch: 2
+2025-10-30 13:07:03,416 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:07:05,222 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:07:05,540 INFO [DOTA 2] kept posts in batch: 0
+2025-10-30 13:07:05,541 INFO [Rainbow 6: Siege] Subreddits: ['NintendoSwitch', 'PS5', 'Rainbow6', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table rainbow_6_siege_reddit_game_reviews
+2025-10-30 13:07:14,069 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:07:14,581 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:07:16,883 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:07:17,184 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:07:26,344 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:07:27,227 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:07:31,908 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:07:32,254 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:07:50,210 INFO [Rainbow 6: Siege] kept posts in batch: 4
+2025-10-30 13:07:53,330 INFO [Rainbow 6: Siege] kept posts in batch: 1
+2025-10-30 13:08:02,474 INFO [Rainbow 6: Siege] kept posts in batch: 2
+2025-10-30 13:08:03,593 INFO [Rainbow 6: Siege] kept posts in batch: 1
+2025-10-30 13:08:51,326 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:08:58,137 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:09:33,763 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:09:34,593 INFO [Rainbow 6: Siege] kept posts in batch: 1
+2025-10-30 13:10:01,622 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:10:01,889 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:10:02,146 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:10:02,454 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:10:26,758 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:10:30,410 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:10:43,072 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:10:43,409 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:11:31,913 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:11:36,743 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:11:59,166 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:11:59,551 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:15:43,656 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:15:43,985 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:15:59,939 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:16:00,256 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:16:28,100 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:16:31,944 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:16:46,555 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:16:46,859 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:17:27,117 INFO [Rainbow 6: Siege] kept posts in batch: 1
+2025-10-30 13:17:44,180 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:18:00,562 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:18:00,969 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:22:00,052 INFO [Rainbow 6: Siege] kept posts in batch: 2
+2025-10-30 13:22:02,761 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:22:09,152 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:22:09,450 INFO [Rainbow 6: Siege] kept posts in batch: 0
+2025-10-30 13:22:09,463 INFO [The Binding of Isaac: Repentance] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'bindingofisaac', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table the_binding_of_isaac_repentance_reddit_game_reviews
+2025-10-30 13:22:28,891 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:22:29,644 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:22:33,931 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:22:34,220 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:22:53,315 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:22:54,951 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:23:04,559 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:23:04,862 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:23:55,010 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:24:00,018 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:24:23,892 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:24:24,250 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:24:45,088 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:24:45,363 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:24:45,609 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:24:45,907 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:25:13,518 INFO [The Binding of Isaac: Repentance] kept posts in batch: 1
+2025-10-30 13:25:21,651 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:25:33,863 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:25:34,669 INFO [The Binding of Isaac: Repentance] kept posts in batch: 1
+2025-10-30 13:25:53,994 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:25:56,642 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:26:07,542 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:26:07,836 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:26:47,156 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:26:51,352 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:27:11,741 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:27:12,041 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:30:23,802 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:30:24,143 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:30:38,679 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:30:38,998 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:31:04,780 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:31:08,070 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:31:20,268 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:31:20,602 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:31:56,766 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:32:13,827 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:32:29,784 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:32:30,126 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:36:18,149 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:36:20,159 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:36:24,813 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:36:25,107 INFO [The Binding of Isaac: Repentance] kept posts in batch: 0
+2025-10-30 13:36:25,113 INFO [Getting Over It with Bennett Foddy] Subreddits: ['GettingOverIt', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table getting_over_it_with_bennett_foddy_reddit_game_reviews
+2025-10-30 13:36:29,468 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:36:29,809 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:36:30,210 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:36:30,502 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:36:49,061 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:36:49,724 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:36:53,947 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:36:54,246 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:37:15,093 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:37:16,968 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:37:26,992 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:37:27,303 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:38:23,116 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:38:29,865 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:38:56,180 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:38:56,508 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:39:18,213 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:39:18,500 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:39:18,753 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:39:19,040 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:39:40,540 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:39:43,588 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:39:55,908 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:39:56,223 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:40:40,197 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:40:44,581 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:41:06,139 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:41:06,544 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:44:38,831 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 1
+2025-10-30 13:44:39,163 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:44:54,075 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:44:54,406 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:45:20,253 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:45:23,727 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:45:38,118 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:45:38,461 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:46:15,808 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:46:32,813 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:46:47,545 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:46:48,218 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:50:27,737 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 1
+2025-10-30 13:50:30,228 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:50:35,232 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:50:35,529 INFO [Getting Over It with Bennett Foddy] kept posts in batch: 0
+2025-10-30 13:50:35,537 INFO [Furi] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'furi', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table furi_reddit_game_reviews
+2025-10-30 13:50:54,889 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:50:55,461 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:50:59,775 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:51:00,239 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:51:21,972 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:51:23,756 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:51:34,400 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:51:34,721 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:52:30,726 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:52:35,896 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:53:03,138 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:53:03,598 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:53:26,489 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:53:26,821 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:53:27,076 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:53:27,369 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:53:39,445 INFO [Furi] kept posts in batch: 7
+2025-10-30 13:53:39,749 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:53:41,461 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:53:42,390 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:54:03,952 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:54:07,040 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:54:19,290 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:54:19,613 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:55:04,203 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:55:08,975 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:55:30,765 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:55:31,239 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:59:03,699 INFO [Furi] kept posts in batch: 7
+2025-10-30 13:59:04,013 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:59:18,249 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:59:19,170 INFO [Furi] kept posts in batch: 1
+2025-10-30 13:59:47,144 INFO [Furi] kept posts in batch: 0
+2025-10-30 13:59:50,694 INFO [Furi] kept posts in batch: 0
+2025-10-30 14:00:04,422 INFO [Furi] kept posts in batch: 0
+2025-10-30 14:00:04,983 INFO [Furi] kept posts in batch: 0
+2025-10-30 14:00:39,987 INFO [Furi] kept posts in batch: 0
+2025-10-30 14:00:56,156 INFO [Furi] kept posts in batch: 0
+2025-10-30 14:01:10,314 INFO [Furi] kept posts in batch: 0
+2025-10-30 14:01:10,619 INFO [Furi] kept posts in batch: 0
+2025-10-30 14:04:39,717 INFO [Furi] kept posts in batch: 2
+2025-10-30 14:04:41,823 INFO [Furi] kept posts in batch: 0
+2025-10-30 14:04:46,722 INFO [Furi] kept posts in batch: 0
+2025-10-30 14:04:47,016 INFO [Furi] kept posts in batch: 0
+2025-10-30 14:04:47,024 INFO [Jump King] Subreddits: ['JumpKing', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table jump_king_reddit_game_reviews
+2025-10-30 14:04:53,370 INFO [Jump King] kept posts in batch: 1
+2025-10-30 14:04:53,708 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:04:53,961 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:04:54,374 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:05:14,555 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:05:15,237 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:05:19,690 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:05:19,991 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:05:40,821 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:05:42,601 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:05:52,317 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:05:52,619 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:06:46,180 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:06:51,234 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:07:17,945 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:07:18,334 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:07:40,343 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:07:40,629 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:07:40,897 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:07:41,235 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:08:02,395 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:08:05,419 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:08:17,415 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:08:17,759 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:09:01,392 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:09:05,604 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:09:26,571 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:09:26,974 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:12:52,633 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:12:53,013 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:13:06,655 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:13:06,991 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:13:33,160 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:13:37,252 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:13:57,409 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:13:58,014 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:14:42,566 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:15:02,456 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:15:18,966 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:15:20,467 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:19:05,613 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:19:08,089 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:19:13,913 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:19:14,507 INFO [Jump King] kept posts in batch: 0
+2025-10-30 14:19:14,513 INFO [Mortal Shell] Subreddits: ['MortalShell', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table mortal_shell_reddit_game_reviews
+2025-10-30 14:20:14,390 INFO [Mortal Shell] kept posts in batch: 22
+2025-10-30 14:20:14,934 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:20:15,402 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:20:21,101 INFO [Mortal Shell] kept posts in batch: 6
+2025-10-30 14:20:45,157 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:20:46,110 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:20:51,851 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:20:52,337 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:21:16,665 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:21:18,597 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:21:30,443 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:21:30,992 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:22:26,706 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:22:32,227 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:23:00,664 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:23:01,276 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:23:27,035 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:23:27,601 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:23:27,922 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:23:28,305 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:23:52,333 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:23:55,308 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:24:07,567 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:24:09,392 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:25:00,870 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:25:06,398 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:25:29,700 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:25:30,402 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:29:22,636 INFO [Mortal Shell] kept posts in batch: 1
+2025-10-30 14:29:23,058 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:29:38,207 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:29:40,761 INFO [Mortal Shell] kept posts in batch: 3
+2025-10-30 14:30:14,435 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:30:18,947 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:30:36,187 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:30:36,682 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:31:19,171 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:31:40,072 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:31:57,936 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:31:58,613 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:35:49,638 INFO [Mortal Shell] kept posts in batch: 1
+2025-10-30 14:35:51,921 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:35:56,965 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:35:57,346 INFO [Mortal Shell] kept posts in batch: 0
+2025-10-30 14:35:57,368 INFO [Street Fighter V] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'StreetFighter', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table street_fighter_v_reddit_game_reviews
+2025-10-30 14:36:22,197 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:36:23,139 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:36:27,616 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:36:27,971 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:36:49,657 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:36:51,443 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:37:04,495 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:37:04,964 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:38:06,524 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:38:13,542 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:38:45,322 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:38:46,021 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:39:50,308 INFO [Street Fighter V] kept posts in batch: 2
+2025-10-30 14:40:00,265 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:40:30,984 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:40:36,909 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:41:01,944 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:41:04,375 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:41:05,089 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:41:05,486 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:41:32,399 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:41:36,280 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:41:52,079 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:41:52,759 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:42:39,996 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:42:45,296 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:43:09,542 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:43:10,187 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:46:49,671 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:46:50,265 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:47:05,430 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:47:06,018 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:47:38,097 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:47:41,725 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:47:58,566 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:47:59,025 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:48:41,229 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:48:59,306 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:49:08,898 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:49:09,313 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:53:10,542 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:53:12,986 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:53:18,849 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:53:19,216 INFO [Street Fighter V] kept posts in batch: 0
+2025-10-30 14:53:19,225 INFO [APEX Legends] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'apexlegends', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table apex_legends_reddit_game_reviews
+2025-10-30 14:53:44,067 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:53:44,806 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:53:49,302 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:53:49,737 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:54:16,454 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:54:18,936 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:54:31,607 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:54:35,324 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:55:35,830 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:55:40,701 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:56:08,038 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:56:08,417 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:56:30,430 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:56:30,760 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:56:31,017 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:56:31,350 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:57:28,551 INFO [APEX Legends] kept posts in batch: 28
+2025-10-30 14:57:33,020 INFO [APEX Legends] kept posts in batch: 3
+2025-10-30 14:58:03,289 INFO [APEX Legends] kept posts in batch: 13
+2025-10-30 14:58:52,335 INFO [APEX Legends] kept posts in batch: 68
+2025-10-30 14:59:12,825 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:59:16,469 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:59:29,092 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 14:59:29,502 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:00:12,987 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:00:16,403 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:00:37,694 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:00:38,602 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:04:07,937 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:04:08,253 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:04:23,309 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:04:23,659 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:04:48,798 INFO [APEX Legends] kept posts in batch: 2
+2025-10-30 15:04:50,239 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:05:03,961 INFO [APEX Legends] kept posts in batch: 1
+2025-10-30 15:05:04,381 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:05:30,993 INFO [APEX Legends] kept posts in batch: 1
+2025-10-30 15:05:38,326 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:05:45,534 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:05:45,881 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:09:05,004 INFO [APEX Legends] kept posts in batch: 1
+2025-10-30 15:09:06,981 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:09:12,051 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:09:12,372 INFO [APEX Legends] kept posts in batch: 0
+2025-10-30 15:09:12,376 INFO [Call of Duty: Warzone] Subreddits: ['CODWarzone', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table call_of_duty_warzone_reddit_game_reviews
+2025-10-30 15:09:49,463 INFO [Call of Duty: Warzone] kept posts in batch: 2
+2025-10-30 15:09:52,760 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:10:11,065 INFO [Call of Duty: Warzone] kept posts in batch: 2
+2025-10-30 15:10:12,261 INFO [Call of Duty: Warzone] kept posts in batch: 1
+2025-10-30 15:10:31,635 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:10:32,220 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:10:36,472 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:10:36,766 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:10:56,641 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:10:58,295 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:11:07,971 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:11:08,332 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:12:00,646 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:12:04,746 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:12:28,964 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:12:29,267 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:12:50,655 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:12:50,912 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:12:51,173 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:12:51,487 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:13:11,307 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:13:13,308 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:13:24,292 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:13:24,617 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:14:05,250 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:14:09,670 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:14:32,995 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:14:33,331 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:18:05,764 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:18:06,090 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:18:19,501 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:18:19,845 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:18:46,748 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:18:49,969 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:19:02,441 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:19:02,777 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:19:37,476 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:19:53,747 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:20:07,923 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:20:08,287 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:23:20,494 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:23:21,360 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:23:23,926 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:23:24,223 INFO [Call of Duty: Warzone] kept posts in batch: 0
+2025-10-30 15:23:24,325 INFO [Hogwarts Legacy] Subreddits: ['HarryPotterGame', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table hogwarts_legacy_reddit_game_reviews
+2025-10-30 15:24:26,309 INFO [Hogwarts Legacy] kept posts in batch: 27
+2025-10-30 15:24:30,916 INFO [Hogwarts Legacy] kept posts in batch: 2
+2025-10-30 15:24:54,820 INFO [Hogwarts Legacy] kept posts in batch: 10
+2025-10-30 15:25:54,320 INFO [Hogwarts Legacy] kept posts in batch: 104
+2025-10-30 15:26:16,930 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:26:17,580 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:26:22,247 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:26:22,595 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:26:46,642 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:26:48,787 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:27:00,585 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:27:01,637 INFO [Hogwarts Legacy] kept posts in batch: 1
+2025-10-30 15:28:08,015 INFO [Hogwarts Legacy] kept posts in batch: 4
+2025-10-30 15:28:12,954 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:28:44,005 INFO [Hogwarts Legacy] kept posts in batch: 2
+2025-10-30 15:29:00,433 INFO [Hogwarts Legacy] kept posts in batch: 36
+2025-10-30 15:29:24,103 INFO [Hogwarts Legacy] kept posts in batch: 1
+2025-10-30 15:29:24,358 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:29:24,621 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:29:25,179 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:29:48,182 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:29:51,085 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:30:04,356 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:30:04,953 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:30:56,588 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:31:02,530 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:31:26,917 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:31:28,419 INFO [Hogwarts Legacy] kept posts in batch: 3
+2025-10-30 15:35:18,099 INFO [Hogwarts Legacy] kept posts in batch: 1
+2025-10-30 15:35:18,438 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:35:35,444 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:35:48,907 INFO [Hogwarts Legacy] kept posts in batch: 7
+2025-10-30 15:36:19,795 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:36:23,638 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:36:38,557 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:36:39,083 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:37:16,669 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:37:36,028 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:37:53,066 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:37:53,795 INFO [Hogwarts Legacy] kept posts in batch: 1
+2025-10-30 15:41:52,337 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:41:54,727 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:42:00,580 INFO [Hogwarts Legacy] kept posts in batch: 0
+2025-10-30 15:42:01,663 INFO [Hogwarts Legacy] kept posts in batch: 1
+2025-10-30 15:42:01,666 INFO [PalWorld] Subreddits: ['NintendoSwitch', 'PS5', 'Palworld', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table palworld_reddit_game_reviews
+2025-10-30 15:42:23,530 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:42:24,268 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:42:28,560 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:42:28,922 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:42:50,839 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:42:52,892 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:43:03,791 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:43:04,536 INFO [PalWorld] kept posts in batch: 1
+2025-10-30 15:43:55,637 INFO [PalWorld] kept posts in batch: 14
+2025-10-30 15:44:00,400 INFO [PalWorld] kept posts in batch: 1
+2025-10-30 15:44:24,397 INFO [PalWorld] kept posts in batch: 5
+2025-10-30 15:45:18,043 INFO [PalWorld] kept posts in batch: 106
+2025-10-30 15:46:16,998 INFO [PalWorld] kept posts in batch: 2
+2025-10-30 15:46:22,339 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:46:51,068 INFO [PalWorld] kept posts in batch: 1
+2025-10-30 15:46:55,896 INFO [PalWorld] kept posts in batch: 11
+2025-10-30 15:47:18,864 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:47:19,144 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:47:19,404 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:47:20,438 INFO [PalWorld] kept posts in batch: 1
+2025-10-30 15:47:43,746 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:47:46,177 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:47:59,248 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:48:00,499 INFO [PalWorld] kept posts in batch: 1
+2025-10-30 15:48:48,738 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:48:53,909 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:49:17,193 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:49:19,712 INFO [PalWorld] kept posts in batch: 2
+2025-10-30 15:53:20,047 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:53:20,340 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:53:35,795 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:53:36,110 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:54:04,863 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:54:08,218 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:54:22,225 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:54:24,318 INFO [PalWorld] kept posts in batch: 2
+2025-10-30 15:55:03,222 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:55:22,453 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:55:38,847 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:55:39,509 INFO [PalWorld] kept posts in batch: 1
+2025-10-30 15:58:45,183 INFO [PalWorld] kept posts in batch: 1
+2025-10-30 15:58:47,463 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:58:52,311 INFO [PalWorld] kept posts in batch: 0
+2025-10-30 15:58:53,503 INFO [PalWorld] kept posts in batch: 1
+2025-10-30 15:58:53,506 INFO [The Lord of the Rings: Gollum] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'lotr', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table the_lord_of_the_rings_gollum_reddit_game_reviews
+2025-10-30 15:59:13,183 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 15:59:13,869 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 15:59:18,061 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 15:59:18,359 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 15:59:37,395 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 15:59:39,364 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 15:59:48,607 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 15:59:48,984 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:00:41,315 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:00:45,389 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:01:09,000 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:01:09,303 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:01:29,429 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:01:29,686 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:01:29,941 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:01:30,300 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:01:49,787 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:01:52,572 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:02:04,380 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:02:04,710 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:02:43,872 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:02:48,225 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:03:07,975 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:03:08,378 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:04:22,562 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:04:28,115 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:04:56,537 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:04:56,853 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:08:10,658 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:08:10,939 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:08:22,384 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:08:22,681 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:08:46,225 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:08:48,908 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:09:02,003 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:09:02,351 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:09:33,750 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:09:49,511 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:10:03,274 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:10:03,582 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:13:34,647 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:13:36,705 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:13:42,267 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:13:42,569 INFO [The Lord of the Rings: Gollum] kept posts in batch: 0
+2025-10-30 16:13:42,576 INFO [Call of Duty: Modern Warfare III] Subreddits: ['ModernWarfareIII', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table call_of_duty_modern_warfare_iii_reddit_game_reviews
+2025-10-30 16:14:18,277 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 22
+2025-10-30 16:14:18,905 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 1
+2025-10-30 16:14:22,268 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 2
+2025-10-30 16:14:24,264 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 2
+2025-10-30 16:14:42,963 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:14:43,642 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:14:47,756 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:14:48,043 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:15:06,474 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:15:07,955 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:15:17,744 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:15:18,079 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:16:11,100 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:16:15,070 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:16:40,857 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:16:41,165 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:17:03,146 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:17:03,418 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:17:03,673 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:17:04,006 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:17:23,230 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:17:25,422 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:17:35,584 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:17:35,890 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:18:18,129 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:18:23,104 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:18:44,259 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:18:44,560 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:22:05,671 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:22:05,989 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:22:18,557 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:22:18,852 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:22:42,556 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:22:45,803 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:22:58,361 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:22:58,773 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:23:31,490 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:23:47,279 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:24:00,896 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:24:01,188 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:27:28,524 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:27:30,815 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:27:36,700 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:27:36,995 INFO [Call of Duty: Modern Warfare III] kept posts in batch: 0
+2025-10-30 16:27:37,004 INFO [Warcraft III: Reforged] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming', 'warcraft3'] -> table warcraft_iii_reforged_reddit_game_reviews
+2025-10-30 16:27:56,211 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:27:56,849 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:28:01,542 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:28:01,857 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:28:25,323 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:28:27,256 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:28:37,962 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:28:38,262 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:29:32,568 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:29:36,844 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:30:03,968 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:30:04,309 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:30:27,788 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:30:28,046 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:30:28,310 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:30:28,614 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:30:48,055 INFO [Warcraft III: Reforged] kept posts in batch: 2
+2025-10-30 16:30:50,058 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:31:01,258 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:31:01,602 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:31:39,703 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:31:43,279 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:32:04,711 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:32:05,025 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:35:25,282 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:35:25,614 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:35:39,266 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:35:39,557 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:36:03,821 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:36:06,950 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:36:20,137 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:36:20,485 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:36:52,167 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:37:07,510 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:37:20,507 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:37:20,803 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:40:40,390 INFO [Warcraft III: Reforged] kept posts in batch: 1
+2025-10-30 16:40:42,636 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:40:47,711 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:40:48,004 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:41:42,584 INFO [Warcraft III: Reforged] kept posts in batch: 29
+2025-10-30 16:41:43,914 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:41:51,667 INFO [Warcraft III: Reforged] kept posts in batch: 5
+2025-10-30 16:41:52,259 INFO [Warcraft III: Reforged] kept posts in batch: 0
+2025-10-30 16:41:52,261 INFO [War Thunder] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'Warthunder', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table war_thunder_reddit_game_reviews
+2025-10-30 16:42:11,775 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:42:12,397 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:42:16,249 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:42:16,536 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:42:36,992 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:42:38,700 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:42:47,507 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:42:47,809 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:43:38,779 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:43:42,974 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:44:07,189 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:44:07,562 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:44:54,650 INFO [War Thunder] kept posts in batch: 7
+2025-10-30 16:45:18,728 INFO [War Thunder] kept posts in batch: 3
+2025-10-30 16:45:38,157 INFO [War Thunder] kept posts in batch: 1
+2025-10-30 16:46:16,076 INFO [War Thunder] kept posts in batch: 75
+2025-10-30 16:46:36,235 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:46:36,483 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:46:36,738 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:46:37,078 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:46:57,530 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:46:59,765 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:47:11,652 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:47:12,012 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:47:53,755 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:47:58,722 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:48:18,596 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:48:19,016 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:50:04,466 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:50:04,772 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:50:09,367 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:50:09,669 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:50:20,770 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:50:22,049 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:50:27,531 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:50:27,992 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:50:41,352 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:50:48,406 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:50:55,337 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:50:55,663 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:52:01,870 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:52:02,751 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:52:04,620 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:52:04,907 INFO [War Thunder] kept posts in batch: 0
+2025-10-30 16:52:04,917 INFO [Delta Force (2024)] Subreddits: ['NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table delta_force_2024_reddit_game_reviews
+2025-10-30 16:52:13,752 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:52:14,253 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:52:16,207 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:52:16,498 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:52:25,639 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:52:27,033 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:52:31,865 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:52:32,158 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:52:50,704 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:52:52,456 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:01,406 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:02,556 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:12,188 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:12,448 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:12,704 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:13,010 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:22,011 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:23,414 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:28,694 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:28,998 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:44,417 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:46,595 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:54,336 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:53:54,640 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:56:13,912 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:56:14,211 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:56:27,208 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:56:27,525 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:56:38,529 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:56:39,912 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:56:54,815 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:56:55,128 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:57:32,485 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:57:47,593 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:58:01,638 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 16:58:01,951 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 17:01:26,856 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 17:01:28,993 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 17:01:33,514 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 17:01:33,809 INFO [Delta Force (2024)] kept posts in batch: 0
+2025-10-30 17:01:33,810 INFO [EA SPORTS FC™ 25] Subreddits: ['EASportsFC', 'NintendoSwitch', 'PS5', 'ShouldIbuythisgame', 'XboxSeriesX', 'games', 'gaming', 'patientgamers', 'pcgaming', 'pcmasterrace', 'truegaming'] -> table ea_sports_fc_25_reddit_game_reviews
+2025-10-30 17:02:32,125 INFO [EA SPORTS FC™ 25] kept posts in batch: 4
+2025-10-30 17:02:42,017 INFO [EA SPORTS FC™ 25] kept posts in batch: 3
+2025-10-30 17:03:19,620 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:03:21,557 INFO [EA SPORTS FC™ 25] kept posts in batch: 4
+2025-10-30 17:03:40,964 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:03:41,610 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:03:45,412 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:03:45,785 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:04:05,906 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:04:08,390 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:04:18,229 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:04:18,555 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:05:09,643 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:05:13,613 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:05:42,945 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:05:43,237 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:06:04,114 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:06:04,369 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:06:04,626 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:06:04,935 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:06:23,043 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:06:24,905 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:06:36,407 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:06:36,707 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:07:14,980 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:07:19,428 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:07:39,787 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:07:40,073 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:10:48,103 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:10:48,391 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:11:02,514 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:11:02,819 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:11:27,633 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:11:31,571 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:11:44,961 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:11:45,257 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:12:19,058 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:12:34,716 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:12:48,607 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:12:48,904 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:16:01,513 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:16:03,466 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:16:08,055 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:16:08,345 INFO [EA SPORTS FC™ 25] kept posts in batch: 0
+2025-10-30 17:16:08,357 INFO Done.
+[INFO] Completed at Thu Oct 30 17:16:08 +04 2025 with exit code 0
