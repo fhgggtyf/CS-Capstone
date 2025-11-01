@@ -104,10 +104,10 @@ def prompt_user() -> tuple[str, str, int, int]:
     # Ask the user for a start and end date.  The user may enter 'y' for
     # both prompts to automatically select a three‑year period ending today.
     start_date_str = input(
-        "Enter the start date (YYYY‑MM‑DD) – reviews older than this will be ignored (or 'y' for automatic 3‑year range): "
+        "Enter the start date (YYYY‑MM‑DD) – reviews older than this will be ignored (or 'y' for automatic 2‑year range): "
     ).strip().lower()
     end_date_str = input(
-        "Enter the end date (YYYY‑MM‑DD) – reviews newer than this will be skipped (or 'y' for automatic 3‑year range): "
+        "Enter the end date (YYYY‑MM‑DD) – reviews newer than this will be skipped (or 'y' for automatic 2‑year range): "
     ).strip().lower()
 
     # If the user opted for automatic selection for both values, compute a
@@ -118,10 +118,10 @@ def prompt_user() -> tuple[str, str, int, int]:
             now = datetime.now(tz)
         else:
             now = datetime.now()
-        # Start three years prior to now.  Using 365 days per year for
+        # Start two years prior to now.  Using 365 days per year for
         # simplicity.  This avoids dependency on external libraries like
         # dateutil.
-        start_dt = now - timedelta(days=365 * 3)
+        start_dt = now - timedelta(days=365 * 2)
         end_dt = now
         # Convert to timestamps.  We do not adjust to the end of the day
         # because ``now`` already includes the current time.
@@ -405,7 +405,7 @@ def main() -> None:
     # Use the specified relative database path.  This location is expected to
     # reside under the project directory.  The directory will be created if
     # necessary.
-    db_path = Path("Data_Extraction/Database/CS_Capstone.db")
+    db_path = Path("Data_Extraction/Database/Raw_Reviews.db")
     conn = create_database(db_path, table_name)
 
     print(

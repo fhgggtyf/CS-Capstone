@@ -159,7 +159,7 @@ def extract_page_data(url):
 
 def save_to_database(data):
     # Connect to SQLite database (or create it if it doesn't exist)
-    conn = sqlite3.connect('Data_Extraction\Database\CS_Capstone.db')
+    conn = sqlite3.connect('Data_Extraction/Database/Raw_Reviews.db')
     cursor = conn.cursor()
     
     # Create a table if it doesn't exist
