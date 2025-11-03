@@ -18,24 +18,24 @@ import sys
 from datetime import datetime, timezone
 
 # ====== CONFIG ======
-DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment.db"
+DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment_time_filtered.db"
 
 # Columns to keep at the front (from your combine logic)
 BASE_FINAL_COLS = ["main_text", "comment_platform", "time", "game_name"]
 
 # Version -> sentiment columns to preserve (and used to determine "negative")
 VERSION_EXTRA_COLS = {
-    "frustrated_sentiment_emotions": [
-        "dominant_emotion",
-        "dominant_score",
-        "top_emotions",
-        "emotions_json",
-        "final_label",
-    ],
-    "frustrated_sentiment_pos_neg_v1": [
-        "sentiment_label",
-        "sentiment_score",
-    ],
+    # "frustrated_sentiment_emotions": [
+    #     "dominant_emotion",
+    #     "dominant_score",
+    #     "top_emotions",
+    #     "emotions_json",
+    #     "final_label",
+    # ],
+    # "frustrated_sentiment_pos_neg_v1": [
+    #     "sentiment_label",
+    #     "sentiment_score",
+    # ],
     "frustrated_sentiment_pos_neg_v2": [
         "final_label",
         "transformer_label",
@@ -265,8 +265,7 @@ def main():
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
     cur.execute("SELECT name FROM sqlite_master WHERE type='table'")
-    all_names = [r[0] for r in cur.fetchall()]
-
+    all_names = [r[0] for r in cur.fetchall() if r[0] not in ('frustrated_sentiment_pos_neg_v2_sentiment_combined', 'frustrated_sentiment_pos_neg_v2_sentiment_combined_english_only')]
     # Count all input tables across all versions for the progress bar
     total_tables = 0
     version_to_tables = {}

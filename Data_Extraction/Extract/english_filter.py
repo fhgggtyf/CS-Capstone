@@ -6,7 +6,7 @@ from tqdm import tqdm
 DetectorFactory.seed = 42
 
 # Parameters
-DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment.db"
+DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment_time_filtered.db"
 SOURCE_TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined_negative_only"
 OUTPUT_TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined_negative_only_english_only"
 

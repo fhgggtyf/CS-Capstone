@@ -615,12 +615,12 @@ def main() -> None:
     # Determine date range
     if start_input == 'y' and end_input == 'y':
         end_date = today
-        start_date = end_date - timedelta(days=365 * 3)
+        start_date = end_date - timedelta(days=365 * 2)
     else:
         try:
             # Parse start date
             if start_input == 'y':
-                start_date = today - timedelta(days=365 * 3)
+                start_date = today - timedelta(days=365 * 2)
             else:
                 start_date = datetime.strptime(start_input, "%Y %m %d").date()
             # Parse end date
@@ -639,7 +639,7 @@ def main() -> None:
         f"{game_slug}_{start_date.strftime('%Y%m%d')}_{end_date.strftime('%Y%m%d')}_metacritic"
     )
     # Database path
-    db_path = os.path.join('Data_Extraction', 'Database', 'CS_Capstone.db')
+    db_path = os.path.join('Data_Extraction', 'Database', 'Raw_Reviews.db')
     # Set up headless Chrome
     chrome_options = Options()
     # chrome_options.add_argument('--headless')

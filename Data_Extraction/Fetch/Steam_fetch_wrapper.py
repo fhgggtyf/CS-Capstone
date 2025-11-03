@@ -39,7 +39,8 @@ game_list = [
     # ['Helldivers_2',553850],
     # ['Overwatch_2',2357570],
     # ['Delta_Force',2507950],
-    ['EA_SPORTS_FC_25',2669320]
+    # ['EA_SPORTS_FC_25',2669320]
+    ["furi", 423230]
     # Add more as needed
 ]
 

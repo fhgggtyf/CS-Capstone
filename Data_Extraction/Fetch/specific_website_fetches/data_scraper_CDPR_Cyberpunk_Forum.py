@@ -82,7 +82,7 @@ def extract_response_data(response_text):
 
 def save_to_database(data, version_number):
     # Connect to SQLite database (or create it if it doesn't exist)
-    conn = sqlite3.connect('Data_Extraction\Database\CS_Capstone.db')
+    conn = sqlite3.connect('Data_Extraction/Database/Raw_Reviews.db')
     cursor = conn.cursor()
     
     # Create a table if it doesn't exist

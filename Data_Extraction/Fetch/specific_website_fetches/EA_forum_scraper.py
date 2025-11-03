@@ -60,14 +60,14 @@ BASE_VARIABLES = {
 }
 
 # Copy the "Authorization: Bearer ..." from your DevTools (keep it fresh)
-AUTH_BEARER = "Bearer HoUrA5qejdagsXSimNeX8x4RC2kI1SyiWtjEwTQu/Wc="
+AUTH_BEARER = "Bearer vkhhyOPbRJdRCmHBLRLYwdzSSH53y22LQJUIv6xmCPM="
 
 # Copy the ENTIRE Cookie header from the successful request in DevTools (keep it fresh)
-COOKIE_HEADER = "ealocale=en-us; _gcl_au=1.1.1832194846.1754835600; _ga=GA1.1.759818092.1754835600; _scid=lmEkvbKPQXpzevq_MSl3wKx24D1TF9jS; _fbp=fb.1.1754835608274.624281566436461516; _tt_enable_cookie=1; _ttp=01K2A5MSFXJMVB91YKPFFFCJAJ_.tt.1; notice_location=ae; notice_behavior=implied,us; _ScCbts=%5B%221%3Bchrome.2%3A2%3A5%22%2C%22183%3Bchrome.2%3A2%3A5%22%5D; _sctr=1%7C1756584000000; csrf-aurora=e6925f4a16edb648ba98162937d33cf0f319ff979af460d32545f9d27024aaa409ab7a22b7b6391ae4738fc709e3b6ea434d23b4b648f82153a55c030e1653ad%7Ca621610e27f04e2e065661702639bd4b0b1c8a368fc78c0efe5eb6bd0d7dbd15; notice_location=ae; notice_behavior=implied,us; notice_preferences=2:; notice_gdpr_prefs=0,1,2:; notice_poptime=1599001200000; cmapi_gtm_bl=; cmapi_cookie_privacy=permit 1,2,3; _scid_r=oeEkvbKPQXpzevq_MSl3wKx24D1TF9jS_BGEAQ; ttcsid=1756661620697::QXjTnCoOJpU8_Xrw9ReF.2.1756661877352; notice_preferences=2:; notice_gdpr_prefs=0,1,2:; notice_poptime=1599001200000; cmapi_gtm_bl=; cmapi_cookie_privacy=permit 1,2,3; ttcsid_D1NCOORC77U9OS2TO8P0=1756661620697::m0tXZiSydtgfT3_FBlFc.2.1756661909591; _ga_Q3MDF068TF=GS2.1.s1756661620$o3$g1$t1756665028$j54$l0$h0; _sg_b_n=1756680058921; close_eaforum_survey_disable=true; LithiumLocalePreferences=en-US; LithiumTimezonePreferences=US%2FPacific; LiSESSIONID=617D94F5E319AAB2F2A00AA23E1546C0; TAsessionID=95981110-e64c-4089-85a6-b01b8a2b12f4,EXISTING; _sg_b_v=11%3B84222%3B1756764346; AWSALB=XZcG6st+IMP6U+fDBPmNH5hpK8w7jqFUeJFdcehUIaaXXbxGYEfbhYx+spoyg/6+K6hjP2LrwRSYyEvVBfVNqHoftV+isPu4mehKLAzpMSraSNR9WycSae3D/E3d; AWSALBCORS=XZcG6st+IMP6U+fDBPmNH5hpK8w7jqFUeJFdcehUIaaXXbxGYEfbhYx+spoyg/6+K6hjP2LrwRSYyEvVBfVNqHoftV+isPu4mehKLAzpMSraSNR9WycSae3D/E3d; LithiumVisitor=~2wjQT9lEPK1yp8JuD~N7YM9hyUcmXdxT0PM1AXw1S7fkXdxl0UEIFvQSLs8wBNu5k0hfpLZ3Rmuu0srYrWjvAEgDdJCoAe9dPAvDUEjA..; _sg_b_p=%2Fcategory%2Ffc-25-en%2C%2Fcategory%2Fapex-legends-en%2C%2Fcategory%2Fapex-legends-en%2Fdiscussions%2Fapex-legends-general-discussion-en%2C%2Fcategory%2Fapex-legends-en%2C%2Fcategory%2Fapex-legends-en%2Fdiscussions%2Fapex-legends-feedback-en%2C%2Fcategory%2Fapex-legends-en%2C%2Fcategory%2Fapex-legends-en%2Fdiscussions%2Fapex-legends-general-discussion-en%2C%2Fcategory%2Fapex-legends-en%2Fdiscussions%2Fapex-legends-general-discussion-en%2C%2Fcategory%2Ffc-25-en%2Fdiscussions%2Ffc-25-general-discussion-en%2C%2Fcategory%2Ffc-25-en%2Fdiscussions%2Ffc-25-general-discussion-en; _ga_P5SW3QHCQJ=GS2.1.s1756764344$o8$g1$t1756765320$j56$l0$h0"
+COOKIE_HEADER = "ealocale=en-us; _gcl_au=1.1.1832194846.1754835600; _ga=GA1.1.759818092.1754835600; _scid=lmEkvbKPQXpzevq_MSl3wKx24D1TF9jS; _fbp=fb.1.1754835608274.624281566436461516; _tt_enable_cookie=1; _ttp=01K2A5MSFXJMVB91YKPFFFCJAJ_.tt.1; _sctr=1%7C1756584000000; notice_preferences=2:; notice_gdpr_prefs=0,1,2:; notice_poptime=1599001200000; cmapi_gtm_bl=; cmapi_cookie_privacy=permit 1,2,3; _scid_r=oeEkvbKPQXpzevq_MSl3wKx24D1TF9jS_BGEAQ; ttcsid=1756661620697::QXjTnCoOJpU8_Xrw9ReF.2.1756661877352; notice_preferences=2:; notice_gdpr_prefs=0,1,2:; notice_poptime=1599001200000; cmapi_gtm_bl=; cmapi_cookie_privacy=permit 1,2,3; ttcsid_D1NCOORC77U9OS2TO8P0=1756661620697::m0tXZiSydtgfT3_FBlFc.2.1756661909591; _ga_Q3MDF068TF=GS2.1.s1756965410$o4$g0$t1756965410$j60$l0$h0; csrf-aurora=8d23bfffff756d9f227477b6e382cd63b10dbf0d7594053b46d9a4156590e1235504e5d7a872729ea54d9e5688709ce2f37a1ff96656477e8980d1c7449ac916%7C5e7d594f96adc674f5d3e8c7f20dab71a1c744d3af3a2447eba39e733363459d; notice_behavior=implied,us; notice_location=ae; LithiumLocalePreferences=en-US; LithiumTimezonePreferences=US%2FPacific; TAsessionID=dfc4e272-fdfd-4a1f-8770-d193392b6963|EXISTING; LiSESSIONID=B608D180A9CEE51EE4E9310E48612FB1; _sg_b_v=16%3B290468%3B1761997588; _sg_b_p=%2Fcategory%2Ffc-25-en%2Fdiscussions%2Ffc-25-general-discussion-en; _sg_b_n=1761997588176; AWSALB=QY2XdFX8zim2qzOzyXV+f6YnVO/oVZSpybR7Il9U/5lXhR5VDn8pFKhGiWgFGKah2pgROQ4RllMokn7judzZbzTQVKw/+E0K3f0UWKmk0Egk5B1TuO8fgBunJlwa; AWSALBCORS=QY2XdFX8zim2qzOzyXV+f6YnVO/oVZSpybR7Il9U/5lXhR5VDn8pFKhGiWgFGKah2pgROQ4RllMokn7judzZbzTQVKw/+E0K3f0UWKmk0Egk5B1TuO8fgBunJlwa; LithiumVisitor=~2pjCJXNnkcoWWPqyn~C6TycurjNh6h2hntFTLpMctSGZfVAmp-siPK-YmgUlUUJ5p1slQr4RbYMWNU6qsH38ok4vmHQjnm_-AvPtAnzA..; _ga_P5SW3QHCQJ=GS2.1.s1761996284$o12$g1$t1761997594$j53$l0$h0"
 
 # DB target and table
-DB_PATH = r"Data_Extraction/Database/CS_Capstone.db"
-TABLE_NAME = "fc_25_general_discussion_en_official_EA_forum_posts"
+DB_PATH = r"Data_Extraction/Database/Raw_Reviews.db"
+TABLE_NAME = "ea_fc_25_general_discussion_en_official_EA_forum_posts"
 
 # Throttle between requests (avoid hammering)
 REQUEST_DELAY_SEC = 0.4
@@ -89,12 +89,12 @@ def parse_iso(ts: Optional[str]) -> Optional[datetime]:
     except Exception:
         return None
 
-def three_year_cutoff(now_utc: Optional[datetime] = None) -> datetime:
+def two_year_cutoff(now_utc: Optional[datetime] = None) -> datetime:
     now_utc = now_utc or datetime.now(timezone.utc)
     if relativedelta:
-        return now_utc - relativedelta(years=3)
+        return now_utc - relativedelta(years=2)
     # fallback if dateutil not installed
-    return now_utc - timedelta(days=365*3)
+    return now_utc - timedelta(days=365*2)
 
 def ensure_table(db_path: str, table_name: str) -> None:
     conn = sqlite3.connect(db_path)
@@ -255,15 +255,15 @@ def fetch_page(session, after_cursor=None, page_size=None):
 
     return edges, end_cursor, has_next
 
-def collect_until_3y(session, page_size=50):
+def collect_until_2y(session, page_size=50):
     """
     Fetch pages (DESC by postTime) and stop as soon as we
-    encounter a post older than 3 years.
+    encounter a post older than 2 years.
     Returns the rows kept (only within range).
     """
     rows_all = []
     cursor = None
-    cutoff = three_year_cutoff()  # now - 3 years (UTC)
+    cutoff = two_year_cutoff()  # now - 2 years (UTC)
 
     while True:
         edges, cursor, has_next = fetch_page(session, after_cursor=cursor, page_size=page_size)
@@ -272,6 +272,7 @@ def collect_until_3y(session, page_size=50):
 
         keep_edges = []
         hit_cutoff = False
+        cutoff_counter = 0
 
         # edges are newest→oldest (postTime DESC)
         for e in edges:
@@ -286,8 +287,12 @@ def collect_until_3y(session, page_size=50):
                 dt = dt.replace(tzinfo=timezone.utc)
 
             if dt < cutoff:
-                hit_cutoff = True
-                break
+                cutoff_counter += 1
+                print(f"⏳ Hit post older than 2 years: {dt.isoformat()} < {cutoff.isoformat()}, {cutoff_counter} so far in batch.")
+                if cutoff_counter >= 40:
+                    hit_cutoff = True
+                    print("🚫 Reached cutoff threshold for this batch, stopping further fetches.")
+                    break
 
             keep_edges.append(e)
 
@@ -295,7 +300,7 @@ def collect_until_3y(session, page_size=50):
         insert_rows(DB_PATH, TABLE_NAME, batch_rows)
         rows_all.extend(batch_rows)
 
-        print(f"Fetched {len(edges)} posts, kept {len(keep_edges)} within 3 years, total now {len(rows_all)}.")
+        print(f"Fetched {len(edges)} posts, kept {len(keep_edges)} within 2 years, total now {len(rows_all)}.")
 
         if hit_cutoff or not has_next:
             break
@@ -315,8 +320,8 @@ def main():
     session.headers.pop("cookie", None)
 
     # Fetch until crossing the 3-year cutoff
-    rows = collect_until_3y(session, page_size=50)  # set your desired per-page size
-    print(f"Inserted {len(rows)} reviews within 3 years.")
+    rows = collect_until_2y(session, page_size=50)  # set your desired per-page size
+    print(f"Inserted {len(rows)} reviews within 2 years.")
 
 if __name__ == "__main__":
     main()

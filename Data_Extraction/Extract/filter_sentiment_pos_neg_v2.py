@@ -14,7 +14,7 @@ MAIN_TEXT_FIELD_MAP = {
     "steam": "review",
     "ea forum posts": "body text",
     "baldur’s gate 3 official forum": "content",
-    "cyberpunk 2077 official forum": "main text",
+    # "cyberpunk 2077 official forum": "main text",
     "escape from tarkov official forum posts": "main text",
     "escape from tarkov official forum replies": "main text",
     "escape from tarkov official forum": "main text",
@@ -59,10 +59,14 @@ def is_valid_text_length(text: str) -> bool:
 # Custom lists for lexicon-based heuristics
 NEGATIVE_KEYWORDS = [
     "not interesting",
-    "no desire to spend money",
-    "no desire to spend",
+    "no desire",
     "waste of money",
-    "too expensive",
+    "regret buying",
+    "never playing",
+    "hate this",
+    "terrible experience",
+    "awful experience",
+    "poorly made",
 ]
 ASPECT_NEGATIVE_CUES = [
     "bad game",
@@ -74,8 +78,9 @@ ASPECT_NEGATIVE_CUES = [
     "glitch",
     "bug",
     "crash",
-    "battle pass",
-    "season pass",
+    "fucked up",
+    "unplayable",
+    "disappointing",
 ]
 
 def hybrid_sentiment(text):
@@ -221,9 +226,9 @@ def main():
     Run the hybrid sentiment analysis (VADER and transformer) across all
     applicable tables.  Results are stored in a separate output database
     `CS_Capstone_Sentiment.db` located alongside the original
-    `CS_Capstone.db`.
+    `Raw_Reviews.db`.
     """
-    input_db_path = "Data_Extraction/Database/CS_Capstone.db"
+    input_db_path = "Data_Extraction/Database/Raw_Reviews.db"
     output_db_path = "Data_Extraction/Database/CS_Capstone_Sentiment.db"
 
     conn_in = sqlite3.connect(input_db_path)

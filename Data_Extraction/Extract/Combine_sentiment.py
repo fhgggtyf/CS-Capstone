@@ -11,7 +11,7 @@ from datetime import datetime, timedelta, timezone
 # is produced by the individual sentiment filtering scripts (e.g.,
 # filter_sentiment_emotion.py).  The combine logic will read from this
 # database and write the combined sentiment tables back into it.
-DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment.db"
+DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment_time_filtered.db"
 
 # In the original non‑sentiment version of this script the combined output table
 # was fixed as ``frustrated_reviews_sentiment_combined`` and included a
@@ -462,15 +462,44 @@ for version_prefix, extra_cols in VERSION_EXTRA_COLS.items():
             # Ensure consistent column order: base columns first, then extra sentiment columns.
             final_cols = BASE_FINAL_COLS + extra_cols
             df = df.reindex(columns=final_cols)
+            df["__source_table__"] = table  # Tag source
             all_rows.append(df)
+
 
     # After processing all tables for this version, combine and write the result
     if all_rows:
         combined = pd.concat(all_rows, ignore_index=True)
+
+        # 🔹 Detect and log empty entries before removing them
+        empty_mask = combined.isna() | (combined.astype(str).apply(lambda x: x.str.strip()) == "")
+        empty_rows_df = combined[empty_mask.any(axis=1)]
+
+        if not empty_rows_df.empty:
+            # Count how many empty entries came from each original table
+            source_counts = empty_rows_df["__source_table__"].value_counts().to_dict()
+
+            print(f"⚪ Found {len(empty_rows_df)} rows with empty fields in '{target_name}':")
+            for src, count in source_counts.items():
+                total_src_rows = (combined["__source_table__"] == src).sum()
+                if count == total_src_rows:
+                    print(f"   ⚠️ All {count} rows from '{src}' were empty and removed entirely.")
+                else:
+                    print(f"   • {src}: {count} rows removed")
+
+            # Remove empty rows
+            combined = combined[~empty_mask.any(axis=1)]
+        else:
+            print(f"✅ No empty rows found in '{target_name}'.")
+
+        # Drop the helper column before saving
+        combined = combined.drop(columns="__source_table__", errors="ignore")
+
         combined.to_sql(target_name, conn, if_exists="replace", index=False)
         print(f"✅ Combined table saved as '{target_name}' with {len(combined)} rows.")
     else:
         print(f"No data found to combine for version '{version_prefix}'.")
+        
+
 
 # Close the connection when finished
 conn.close()

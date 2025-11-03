@@ -3,7 +3,7 @@
 import sqlite3
 
 # Path to your SQLite database
-DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment.db"
+DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment_time_filtered.db"
 
 # Table names
 SOURCE_TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined"
