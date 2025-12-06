@@ -35,7 +35,8 @@ TEXT_COL = "main_text"
 # inside here.  Each subdirectory name encodes the parameter
 # combination used for the run.
 ts = time.strftime("%Y%m%d_%H%M%S")
-OUTROOT = ROOT / "Data_Extraction" / "Analysis" / "Results" / f"runs_improved_{ts}"
+title = "lda_all"
+OUTROOT = ROOT / "Data_Extraction" / "Analysis" / "Results" / f"runs_improved_{title}_{ts}"
 OUTROOT.mkdir(parents=True, exist_ok=True)
 
 # Common command-line arguments passed to every invocation of the LDA
@@ -58,13 +59,14 @@ common_args = [
     "--pyldavis-sample", "20000",
     "--scatter-sample", "25000",
     "--assign-themes", "simple",
+    "--output-dir", "outputs_all"
 ]
 
 # Parameter grids.  Tweak these lists to explore different settings.
 # Each combination of values produces a separate run.  For example,
 # with three K values and two eta values, you'll get six runs.  If you
 # only want to vary K, set the other lists to single-element lists.
-k_values = list(range(2, 21))      # Number of topics to try (2 through 20)
+k_values = list(range(16, 21))      # Number of topics to try (2 through 20)
 eta_values = [0.1, 0.05, 0.02]    # Dirichlet prior for topic-word sparsity
 drop_topn_values = [0, 50]         # How many of the most frequent tokens to drop
 bigram_options = [False, True]     # Whether to enable bigram detection
@@ -88,8 +90,8 @@ for k in k_values:
                 # "--use-bigrams".
                 cmd = [sys.executable] + common_args + [
                     "--k", str(k),
-                    "--eta", str(eta),
                     "--alpha", str(alpha_value),
+                    "--eta", str(eta) if eta is not None else "auto",
                     "--drop-top-n", str(drop_top_n),
                     "--seed", str(1000 + k)  # ensure reproducibility across runs
                 ]
@@ -115,7 +117,7 @@ for k in k_values:
                         continue
 
                 # Move contents of the outputs directory into this run's directory
-                out_outputs = SCRIPT.parent / "outputs"
+                out_outputs = SCRIPT.parent / "outputs_all"
                 if out_outputs.exists():
                     for f in out_outputs.iterdir():
                         # Use rename to move the file; if destination exists, overwrite

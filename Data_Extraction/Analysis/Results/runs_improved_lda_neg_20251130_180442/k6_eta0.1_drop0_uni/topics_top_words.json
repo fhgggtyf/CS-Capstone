@@ -1,0 +1,398 @@
+[
+  {
+    "topic": 0,
+    "label": "play_get_cheater",
+    "words": [
+      {
+        "term": "play",
+        "weight": 0.026553524658083916
+      },
+      {
+        "term": "get",
+        "weight": 0.015109560452401638
+      },
+      {
+        "term": "cheater",
+        "weight": 0.012867934070527554
+      },
+      {
+        "term": "shit",
+        "weight": 0.010793233290314674
+      },
+      {
+        "term": "like",
+        "weight": 0.010721541941165924
+      },
+      {
+        "term": "dont",
+        "weight": 0.010533015243709087
+      },
+      {
+        "term": "time",
+        "weight": 0.009685096330940723
+      },
+      {
+        "term": "playing",
+        "weight": 0.009000344201922417
+      },
+      {
+        "term": "want",
+        "weight": 0.008622241206467152
+      },
+      {
+        "term": "hate",
+        "weight": 0.008070298470556736
+      },
+      {
+        "term": "even",
+        "weight": 0.007631975691765547
+      },
+      {
+        "term": "make",
+        "weight": 0.0076216282323002815
+      },
+      {
+        "term": "got",
+        "weight": 0.007380552589893341
+      },
+      {
+        "term": "hour",
+        "weight": 0.0072594801895320415
+      },
+      {
+        "term": "money",
+        "weight": 0.007249224465340376
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "account_steam_play",
+    "words": [
+      {
+        "term": "account",
+        "weight": 0.03375642001628876
+      },
+      {
+        "term": "steam",
+        "weight": 0.018233587965369225
+      },
+      {
+        "term": "play",
+        "weight": 0.012843539007008076
+      },
+      {
+        "term": "sony",
+        "weight": 0.012362833134829998
+      },
+      {
+        "term": "data",
+        "weight": 0.010010480880737305
+      },
+      {
+        "term": "refund",
+        "weight": 0.009067052975296974
+      },
+      {
+        "term": "psn",
+        "weight": 0.008952595293521881
+      },
+      {
+        "term": "support",
+        "weight": 0.007288467604666948
+      },
+      {
+        "term": "playstation",
+        "weight": 0.007012875750660896
+      },
+      {
+        "term": "access",
+        "weight": 0.006826953496783972
+      },
+      {
+        "term": "one",
+        "weight": 0.006054926663637161
+      },
+      {
+        "term": "people",
+        "weight": 0.005980977788567543
+      },
+      {
+        "term": "player",
+        "weight": 0.005861131940037012
+      },
+      {
+        "term": "bought",
+        "weight": 0.005823193117976189
+      },
+      {
+        "term": "user",
+        "weight": 0.005734115373343229
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "label": "like_good_feel",
+    "words": [
+      {
+        "term": "like",
+        "weight": 0.018549228087067604
+      },
+      {
+        "term": "good",
+        "weight": 0.014227590523660183
+      },
+      {
+        "term": "feel",
+        "weight": 0.009721553884446621
+      },
+      {
+        "term": "story",
+        "weight": 0.007782745640724897
+      },
+      {
+        "term": "really",
+        "weight": 0.007345254998654127
+      },
+      {
+        "term": "much",
+        "weight": 0.0068847970105707645
+      },
+      {
+        "term": "bad",
+        "weight": 0.006758131552487612
+      },
+      {
+        "term": "time",
+        "weight": 0.0067234463058412075
+      },
+      {
+        "term": "gameplay",
+        "weight": 0.0065546496771276
+      },
+      {
+        "term": "get",
+        "weight": 0.006279196124523878
+      },
+      {
+        "term": "grind",
+        "weight": 0.005853273440152407
+      },
+      {
+        "term": "character",
+        "weight": 0.005788363981992006
+      },
+      {
+        "term": "one",
+        "weight": 0.0054140412248671055
+      },
+      {
+        "term": "long",
+        "weight": 0.005300511606037617
+      },
+      {
+        "term": "hard",
+        "weight": 0.004968270659446716
+      }
+    ]
+  },
+  {
+    "topic": 3,
+    "label": "sony_psn_review",
+    "words": [
+      {
+        "term": "sony",
+        "weight": 0.046143852174282074
+      },
+      {
+        "term": "psn",
+        "weight": 0.02661040984094143
+      },
+      {
+        "term": "review",
+        "weight": 0.02148560620844364
+      },
+      {
+        "term": "democracy",
+        "weight": 0.01724332571029663
+      },
+      {
+        "term": "account",
+        "weight": 0.01384078711271286
+      },
+      {
+        "term": "helldivers",
+        "weight": 0.011981725692749023
+      },
+      {
+        "term": "edit",
+        "weight": 0.011571599170565605
+      },
+      {
+        "term": "back",
+        "weight": 0.010980446822941303
+      },
+      {
+        "term": "bug",
+        "weight": 0.010344904847443104
+      },
+      {
+        "term": "country",
+        "weight": 0.010248477570712566
+      },
+      {
+        "term": "arrowhead",
+        "weight": 0.009208490140736103
+      },
+      {
+        "term": "super",
+        "weight": 0.008900418877601624
+      },
+      {
+        "term": "community",
+        "weight": 0.008807978592813015
+      },
+      {
+        "term": "good",
+        "weight": 0.0077026705257594585
+      },
+      {
+        "term": "negative",
+        "weight": 0.007508005481213331
+      }
+    ]
+  },
+  {
+    "topic": 4,
+    "label": "issue_time_play",
+    "words": [
+      {
+        "term": "issue",
+        "weight": 0.013642407953739166
+      },
+      {
+        "term": "time",
+        "weight": 0.0130842300131917
+      },
+      {
+        "term": "play",
+        "weight": 0.012940052896738052
+      },
+      {
+        "term": "get",
+        "weight": 0.011017031967639923
+      },
+      {
+        "term": "fun",
+        "weight": 0.0106236906722188
+      },
+      {
+        "term": "bug",
+        "weight": 0.010082880035042763
+      },
+      {
+        "term": "even",
+        "weight": 0.009723135270178318
+      },
+      {
+        "term": "update",
+        "weight": 0.009473567828536034
+      },
+      {
+        "term": "server",
+        "weight": 0.00924742128700018
+      },
+      {
+        "term": "fix",
+        "weight": 0.008625127375125885
+      },
+      {
+        "term": "still",
+        "weight": 0.008192095905542374
+      },
+      {
+        "term": "crash",
+        "weight": 0.008157653734087944
+      },
+      {
+        "term": "every",
+        "weight": 0.006277431733906269
+      },
+      {
+        "term": "new",
+        "weight": 0.006223408970981836
+      },
+      {
+        "term": "like",
+        "weight": 0.0057661994360387325
+      }
+    ]
+  },
+  {
+    "topic": 5,
+    "label": "player_like_get",
+    "words": [
+      {
+        "term": "player",
+        "weight": 0.01354196760803461
+      },
+      {
+        "term": "like",
+        "weight": 0.012818378396332264
+      },
+      {
+        "term": "get",
+        "weight": 0.009802700020372868
+      },
+      {
+        "term": "team",
+        "weight": 0.009022645652294159
+      },
+      {
+        "term": "one",
+        "weight": 0.008417992852628231
+      },
+      {
+        "term": "tank",
+        "weight": 0.007579421158879995
+      },
+      {
+        "term": "even",
+        "weight": 0.006646724417805672
+      },
+      {
+        "term": "make",
+        "weight": 0.006473807152360678
+      },
+      {
+        "term": "people",
+        "weight": 0.006207426078617573
+      },
+      {
+        "term": "time",
+        "weight": 0.005916725378483534
+      },
+      {
+        "term": "hero",
+        "weight": 0.005764110013842583
+      },
+      {
+        "term": "play",
+        "weight": 0.0057428739964962006
+      },
+      {
+        "term": "would",
+        "weight": 0.005632434505969286
+      },
+      {
+        "term": "enemy",
+        "weight": 0.005626605357974768
+      },
+      {
+        "term": "damage",
+        "weight": 0.0053350250236690044
+      }
+    ]
+  }
+]

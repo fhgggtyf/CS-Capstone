@@ -1,0 +1,28 @@
+{
+  "num_docs": 840347,
+  "num_topics": 2,
+  "vocab_size": 19143,
+  "engine": "lda_multicore",
+  "coherence": {
+    "c_v": 0.622016284462239,
+    "c_npmi": -0.0026651313384473446,
+    "u_mass": -2.167909495917481
+  },
+  "perplexity": 2579.505588311738,
+  "topic_diversity": {
+    "unique_word_ratio": 0.7333333333333333,
+    "avg_pairwise_jaccard": 0.36363636363636365
+  },
+  "topic_size_proxy": {
+    "counts_estimated": [
+      541795.770465099,
+      298551.2295349009
+    ],
+    "proportions": [
+      0.6447286305122754,
+      0.35527136948772464
+    ],
+    "entropy_bits": 0.9386879300576071,
+    "gini": 0.14472863051227525
+  }
+}

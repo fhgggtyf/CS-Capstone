@@ -1,0 +1,200 @@
+[
+  {
+    "topic": 0,
+    "label": "cheater_crash_dont",
+    "words": [
+      {
+        "term": "cheater",
+        "weight": 0.004620580468326807
+      },
+      {
+        "term": "crash",
+        "weight": 0.003639708738774061
+      },
+      {
+        "term": "dont",
+        "weight": 0.0036015252117067575
+      },
+      {
+        "term": "year",
+        "weight": 0.0035354620777070522
+      },
+      {
+        "term": "nothing",
+        "weight": 0.003061156254261732
+      },
+      {
+        "term": "ever",
+        "weight": 0.0030006910674273968
+      },
+      {
+        "term": "fucking",
+        "weight": 0.002953588031232357
+      },
+      {
+        "term": "love",
+        "weight": 0.002932577161118388
+      },
+      {
+        "term": "day",
+        "weight": 0.002932408358901739
+      },
+      {
+        "term": "feel",
+        "weight": 0.002915197517722845
+      },
+      {
+        "term": "problem",
+        "weight": 0.0029092717450112104
+      },
+      {
+        "term": "run",
+        "weight": 0.002825990552082658
+      },
+      {
+        "term": "suck",
+        "weight": 0.00278115994296968
+      },
+      {
+        "term": "gameplay",
+        "weight": 0.0027362562250345945
+      },
+      {
+        "term": "experience",
+        "weight": 0.0027218894101679325
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "account_review_edit",
+    "words": [
+      {
+        "term": "account",
+        "weight": 0.014470014721155167
+      },
+      {
+        "term": "review",
+        "weight": 0.010795350186526775
+      },
+      {
+        "term": "edit",
+        "weight": 0.010701377876102924
+      },
+      {
+        "term": "psn",
+        "weight": 0.009548284113407135
+      },
+      {
+        "term": "psn_account",
+        "weight": 0.008865670301020145
+      },
+      {
+        "term": "steam",
+        "weight": 0.008757566101849079
+      },
+      {
+        "term": "democracy",
+        "weight": 0.008514896035194397
+      },
+      {
+        "term": "helldivers",
+        "weight": 0.008324399590492249
+      },
+      {
+        "term": "country",
+        "weight": 0.007805433589965105
+      },
+      {
+        "term": "arrowhead",
+        "weight": 0.00759885273873806
+      },
+      {
+        "term": "hate",
+        "weight": 0.006366434507071972
+      },
+      {
+        "term": "community",
+        "weight": 0.00604942487552762
+      },
+      {
+        "term": "refund",
+        "weight": 0.005914103705435991
+      },
+      {
+        "term": "fuck",
+        "weight": 0.005779573693871498
+      },
+      {
+        "term": "change",
+        "weight": 0.0057626524940133095
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "label": "team_tank_hero",
+    "words": [
+      {
+        "term": "team",
+        "weight": 0.011304750107228756
+      },
+      {
+        "term": "tank",
+        "weight": 0.011081523261964321
+      },
+      {
+        "term": "hero",
+        "weight": 0.00824328139424324
+      },
+      {
+        "term": "damage",
+        "weight": 0.007846999913454056
+      },
+      {
+        "term": "season",
+        "weight": 0.006687058601528406
+      },
+      {
+        "term": "match",
+        "weight": 0.006402142345905304
+      },
+      {
+        "term": "overwatch",
+        "weight": 0.00619050906971097
+      },
+      {
+        "term": "skin",
+        "weight": 0.005880434066057205
+      },
+      {
+        "term": "change",
+        "weight": 0.0053786104544997215
+      },
+      {
+        "term": "weapon",
+        "weight": 0.0052964468486607075
+      },
+      {
+        "term": "support",
+        "weight": 0.005219044629484415
+      },
+      {
+        "term": "enemy",
+        "weight": 0.0052176229655742645
+      },
+      {
+        "term": "kill",
+        "weight": 0.0046500032767653465
+      },
+      {
+        "term": "point",
+        "weight": 0.004528895020484924
+      },
+      {
+        "term": "win",
+        "weight": 0.00448155403137207
+      }
+    ]
+  }
+]

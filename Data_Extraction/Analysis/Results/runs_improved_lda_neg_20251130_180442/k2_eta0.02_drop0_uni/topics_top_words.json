@@ -1,0 +1,134 @@
+[
+  {
+    "topic": 0,
+    "label": "like_play_get",
+    "words": [
+      {
+        "term": "like",
+        "weight": 0.012343271635472775
+      },
+      {
+        "term": "play",
+        "weight": 0.012175511568784714
+      },
+      {
+        "term": "get",
+        "weight": 0.01070126798003912
+      },
+      {
+        "term": "time",
+        "weight": 0.008772317320108414
+      },
+      {
+        "term": "even",
+        "weight": 0.0072000776417553425
+      },
+      {
+        "term": "player",
+        "weight": 0.006334479432553053
+      },
+      {
+        "term": "one",
+        "weight": 0.00624740170314908
+      },
+      {
+        "term": "fun",
+        "weight": 0.005815338343381882
+      },
+      {
+        "term": "make",
+        "weight": 0.005736626219004393
+      },
+      {
+        "term": "would",
+        "weight": 0.00538576440885663
+      },
+      {
+        "term": "playing",
+        "weight": 0.004968947730958462
+      },
+      {
+        "term": "still",
+        "weight": 0.004834460560232401
+      },
+      {
+        "term": "good",
+        "weight": 0.004635474178940058
+      },
+      {
+        "term": "every",
+        "weight": 0.004596000071614981
+      },
+      {
+        "term": "people",
+        "weight": 0.004495586268603802
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "sony_account_psn",
+    "words": [
+      {
+        "term": "sony",
+        "weight": 0.027577940374612808
+      },
+      {
+        "term": "account",
+        "weight": 0.02027185447514057
+      },
+      {
+        "term": "psn",
+        "weight": 0.016594359651207924
+      },
+      {
+        "term": "review",
+        "weight": 0.013262796215713024
+      },
+      {
+        "term": "good",
+        "weight": 0.011225379072129726
+      },
+      {
+        "term": "bug",
+        "weight": 0.009255164302885532
+      },
+      {
+        "term": "democracy",
+        "weight": 0.00837473664432764
+      },
+      {
+        "term": "play",
+        "weight": 0.008281359449028969
+      },
+      {
+        "term": "steam",
+        "weight": 0.00798928365111351
+      },
+      {
+        "term": "edit",
+        "weight": 0.0075171105563640594
+      },
+      {
+        "term": "helldivers",
+        "weight": 0.006356333382427692
+      },
+      {
+        "term": "back",
+        "weight": 0.006034750957041979
+      },
+      {
+        "term": "cheat",
+        "weight": 0.005930587649345398
+      },
+      {
+        "term": "bad",
+        "weight": 0.005835126154124737
+      },
+      {
+        "term": "money",
+        "weight": 0.005717960186302662
+      }
+    ]
+  }
+]

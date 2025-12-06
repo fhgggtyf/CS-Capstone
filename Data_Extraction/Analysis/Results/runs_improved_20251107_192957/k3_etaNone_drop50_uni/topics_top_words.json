@@ -1,0 +1,200 @@
+[
+  {
+    "topic": 0,
+    "label": "account_psn_community",
+    "words": [
+      {
+        "term": "account",
+        "weight": 0.010066252201795578
+      },
+      {
+        "term": "psn",
+        "weight": 0.00950040202587843
+      },
+      {
+        "term": "community",
+        "weight": 0.007652100641280413
+      },
+      {
+        "term": "super",
+        "weight": 0.006746199913322926
+      },
+      {
+        "term": "helldivers",
+        "weight": 0.0065683950670063496
+      },
+      {
+        "term": "issue",
+        "weight": 0.006392990704625845
+      },
+      {
+        "term": "server",
+        "weight": 0.006277712527662516
+      },
+      {
+        "term": "money",
+        "weight": 0.005982028786092997
+      },
+      {
+        "term": "cheater",
+        "weight": 0.0057170637883245945
+      },
+      {
+        "term": "buy",
+        "weight": 0.005344695411622524
+      },
+      {
+        "term": "devs",
+        "weight": 0.005311604589223862
+      },
+      {
+        "term": "shit",
+        "weight": 0.004919372498989105
+      },
+      {
+        "term": "fix",
+        "weight": 0.004862275905907154
+      },
+      {
+        "term": "life",
+        "weight": 0.004747272469103336
+      },
+      {
+        "term": "dont",
+        "weight": 0.004599832929670811
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "world_experience_character",
+    "words": [
+      {
+        "term": "world",
+        "weight": 0.00804394856095314
+      },
+      {
+        "term": "experience",
+        "weight": 0.007238108664751053
+      },
+      {
+        "term": "character",
+        "weight": 0.007056292146444321
+      },
+      {
+        "term": "gameplay",
+        "weight": 0.006947185844182968
+      },
+      {
+        "term": "pretty",
+        "weight": 0.005140002351254225
+      },
+      {
+        "term": "combat",
+        "weight": 0.004796935711055994
+      },
+      {
+        "term": "worth",
+        "weight": 0.004249334800988436
+      },
+      {
+        "term": "graphic",
+        "weight": 0.00409264862537384
+      },
+      {
+        "term": "pokemon",
+        "weight": 0.003917923662811518
+      },
+      {
+        "term": "different",
+        "weight": 0.003908517770469189
+      },
+      {
+        "term": "content",
+        "weight": 0.0036879652179777622
+      },
+      {
+        "term": "far",
+        "weight": 0.0035471359733492136
+      },
+      {
+        "term": "pal",
+        "weight": 0.003519961377605796
+      },
+      {
+        "term": "everything",
+        "weight": 0.003479687962681055
+      },
+      {
+        "term": "think",
+        "weight": 0.003429534612223506
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "label": "team_match_enemy",
+    "words": [
+      {
+        "term": "team",
+        "weight": 0.007631300482898951
+      },
+      {
+        "term": "match",
+        "weight": 0.006111498922109604
+      },
+      {
+        "term": "enemy",
+        "weight": 0.00600809371098876
+      },
+      {
+        "term": "weapon",
+        "weight": 0.005844274070113897
+      },
+      {
+        "term": "tank",
+        "weight": 0.005253196693956852
+      },
+      {
+        "term": "map",
+        "weight": 0.004851414356380701
+      },
+      {
+        "term": "mode",
+        "weight": 0.004816572181880474
+      },
+      {
+        "term": "skin",
+        "weight": 0.004454607143998146
+      },
+      {
+        "term": "think",
+        "weight": 0.004335589241236448
+      },
+      {
+        "term": "hero",
+        "weight": 0.004295488353818655
+      },
+      {
+        "term": "kill",
+        "weight": 0.004151398781687021
+      },
+      {
+        "term": "point",
+        "weight": 0.003889672225341201
+      },
+      {
+        "term": "know",
+        "weight": 0.0038074913900345564
+      },
+      {
+        "term": "getting",
+        "weight": 0.0036633540876209736
+      },
+      {
+        "term": "damage",
+        "weight": 0.003465633373707533
+      }
+    ]
+  }
+]

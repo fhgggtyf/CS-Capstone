@@ -1,0 +1,134 @@
+[
+  {
+    "topic": 0,
+    "label": "server_dont_friend",
+    "words": [
+      {
+        "term": "server",
+        "weight": 0.004873592872172594
+      },
+      {
+        "term": "dont",
+        "weight": 0.004400038160383701
+      },
+      {
+        "term": "friend",
+        "weight": 0.004057828336954117
+      },
+      {
+        "term": "lot",
+        "weight": 0.0034946557134389877
+      },
+      {
+        "term": "crash",
+        "weight": 0.0034345921594649553
+      },
+      {
+        "term": "first",
+        "weight": 0.0034297446254640818
+      },
+      {
+        "term": "hate",
+        "weight": 0.0033622144255787134
+      },
+      {
+        "term": "life",
+        "weight": 0.0033337175846099854
+      },
+      {
+        "term": "work",
+        "weight": 0.0032174717634916306
+      },
+      {
+        "term": "gameplay",
+        "weight": 0.0031966143287718296
+      },
+      {
+        "term": "buy",
+        "weight": 0.003167305374518037
+      },
+      {
+        "term": "nothing",
+        "weight": 0.003159748623147607
+      },
+      {
+        "term": "hard",
+        "weight": 0.003151956247165799
+      },
+      {
+        "term": "match",
+        "weight": 0.0031106448732316494
+      },
+      {
+        "term": "map",
+        "weight": 0.0030869729816913605
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "change_team_tank",
+    "words": [
+      {
+        "term": "change",
+        "weight": 0.007276033982634544
+      },
+      {
+        "term": "team",
+        "weight": 0.005987105425447226
+      },
+      {
+        "term": "tank",
+        "weight": 0.005731170531362295
+      },
+      {
+        "term": "democracy",
+        "weight": 0.005714807193726301
+      },
+      {
+        "term": "support",
+        "weight": 0.005298576783388853
+      },
+      {
+        "term": "edit",
+        "weight": 0.004646284505724907
+      },
+      {
+        "term": "community",
+        "weight": 0.004521080758422613
+      },
+      {
+        "term": "helldivers",
+        "weight": 0.004392656963318586
+      },
+      {
+        "term": "hero",
+        "weight": 0.004307392984628677
+      },
+      {
+        "term": "steam",
+        "weight": 0.004274097736924887
+      },
+      {
+        "term": "damage",
+        "weight": 0.004102073144167662
+      },
+      {
+        "term": "weapon",
+        "weight": 0.0038719940930604935
+      },
+      {
+        "term": "country",
+        "weight": 0.0038455412723124027
+      },
+      {
+        "term": "arrowhead",
+        "weight": 0.0038039423525333405
+      },
+      {
+        "term": "devs",
+        "weight": 0.00358421728014946
+      }
+    ]
+  }
+]

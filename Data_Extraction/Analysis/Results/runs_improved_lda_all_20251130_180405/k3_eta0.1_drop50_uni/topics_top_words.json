@@ -1,0 +1,200 @@
+[
+  {
+    "topic": 0,
+    "label": "account_psn_community",
+    "words": [
+      {
+        "term": "account",
+        "weight": 0.009578161872923374
+      },
+      {
+        "term": "psn",
+        "weight": 0.009039570577442646
+      },
+      {
+        "term": "community",
+        "weight": 0.007611285429447889
+      },
+      {
+        "term": "issue",
+        "weight": 0.0065982528030872345
+      },
+      {
+        "term": "super",
+        "weight": 0.006557535845786333
+      },
+      {
+        "term": "helldivers",
+        "weight": 0.00624992186203599
+      },
+      {
+        "term": "server",
+        "weight": 0.005976489279419184
+      },
+      {
+        "term": "cheater",
+        "weight": 0.005662797950208187
+      },
+      {
+        "term": "devs",
+        "weight": 0.005411367863416672
+      },
+      {
+        "term": "buy",
+        "weight": 0.005131221376359463
+      },
+      {
+        "term": "fix",
+        "weight": 0.004874504636973143
+      },
+      {
+        "term": "shit",
+        "weight": 0.004680791404098272
+      },
+      {
+        "term": "dont",
+        "weight": 0.004575799684971571
+      },
+      {
+        "term": "money",
+        "weight": 0.00452795485034585
+      },
+      {
+        "term": "day",
+        "weight": 0.004380788188427687
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "gameplay_world_experience",
+    "words": [
+      {
+        "term": "gameplay",
+        "weight": 0.00872375350445509
+      },
+      {
+        "term": "world",
+        "weight": 0.008434814400970936
+      },
+      {
+        "term": "experience",
+        "weight": 0.007317598443478346
+      },
+      {
+        "term": "character",
+        "weight": 0.00730904471129179
+      },
+      {
+        "term": "worth",
+        "weight": 0.005666591227054596
+      },
+      {
+        "term": "pretty",
+        "weight": 0.005325043573975563
+      },
+      {
+        "term": "combat",
+        "weight": 0.005042361561208963
+      },
+      {
+        "term": "graphic",
+        "weight": 0.004945502150803804
+      },
+      {
+        "term": "long",
+        "weight": 0.004135431721806526
+      },
+      {
+        "term": "pokemon",
+        "weight": 0.004118438810110092
+      },
+      {
+        "term": "different",
+        "weight": 0.0039656260050833225
+      },
+      {
+        "term": "could",
+        "weight": 0.003715985920280218
+      },
+      {
+        "term": "pal",
+        "weight": 0.0036996062844991684
+      },
+      {
+        "term": "content",
+        "weight": 0.0036933147348463535
+      },
+      {
+        "term": "hard",
+        "weight": 0.003589559579268098
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "label": "team_weapon_enemy",
+    "words": [
+      {
+        "term": "team",
+        "weight": 0.00787393469363451
+      },
+      {
+        "term": "weapon",
+        "weight": 0.006881751120090485
+      },
+      {
+        "term": "enemy",
+        "weight": 0.006740518379956484
+      },
+      {
+        "term": "match",
+        "weight": 0.006304062437266111
+      },
+      {
+        "term": "tank",
+        "weight": 0.005421712063252926
+      },
+      {
+        "term": "map",
+        "weight": 0.005357315298169851
+      },
+      {
+        "term": "mode",
+        "weight": 0.00529408548027277
+      },
+      {
+        "term": "skin",
+        "weight": 0.00459778867661953
+      },
+      {
+        "term": "think",
+        "weight": 0.004575557541102171
+      },
+      {
+        "term": "hero",
+        "weight": 0.004433277528733015
+      },
+      {
+        "term": "kill",
+        "weight": 0.004171854816377163
+      },
+      {
+        "term": "point",
+        "weight": 0.004130928311496973
+      },
+      {
+        "term": "know",
+        "weight": 0.0036790035665035248
+      },
+      {
+        "term": "getting",
+        "weight": 0.003627136815339327
+      },
+      {
+        "term": "damage",
+        "weight": 0.003576774150133133
+      }
+    ]
+  }
+]

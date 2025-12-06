@@ -1,0 +1,200 @@
+[
+  {
+    "topic": 0,
+    "label": "account_psn_community",
+    "words": [
+      {
+        "term": "account",
+        "weight": 0.00962630845606327
+      },
+      {
+        "term": "psn",
+        "weight": 0.009084707126021385
+      },
+      {
+        "term": "community",
+        "weight": 0.007654152810573578
+      },
+      {
+        "term": "issue",
+        "weight": 0.006629589479416609
+      },
+      {
+        "term": "super",
+        "weight": 0.006596549414098263
+      },
+      {
+        "term": "helldivers",
+        "weight": 0.006280164234340191
+      },
+      {
+        "term": "server",
+        "weight": 0.0060056038200855255
+      },
+      {
+        "term": "cheater",
+        "weight": 0.005690098740160465
+      },
+      {
+        "term": "devs",
+        "weight": 0.005427123047411442
+      },
+      {
+        "term": "buy",
+        "weight": 0.0051566725596785545
+      },
+      {
+        "term": "fix",
+        "weight": 0.004886584356427193
+      },
+      {
+        "term": "shit",
+        "weight": 0.004704413004219532
+      },
+      {
+        "term": "dont",
+        "weight": 0.004584554582834244
+      },
+      {
+        "term": "money",
+        "weight": 0.004548880271613598
+      },
+      {
+        "term": "day",
+        "weight": 0.004390194080770016
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "gameplay_world_experience",
+    "words": [
+      {
+        "term": "gameplay",
+        "weight": 0.008732948452234268
+      },
+      {
+        "term": "world",
+        "weight": 0.00844143982976675
+      },
+      {
+        "term": "experience",
+        "weight": 0.007313601206988096
+      },
+      {
+        "term": "character",
+        "weight": 0.007312310393899679
+      },
+      {
+        "term": "worth",
+        "weight": 0.0056489259004592896
+      },
+      {
+        "term": "pretty",
+        "weight": 0.005332936067134142
+      },
+      {
+        "term": "combat",
+        "weight": 0.005044708959758282
+      },
+      {
+        "term": "graphic",
+        "weight": 0.00494812848046422
+      },
+      {
+        "term": "long",
+        "weight": 0.004134071059525013
+      },
+      {
+        "term": "pokemon",
+        "weight": 0.0041212341748178005
+      },
+      {
+        "term": "different",
+        "weight": 0.00396859273314476
+      },
+      {
+        "term": "could",
+        "weight": 0.0037196078337728977
+      },
+      {
+        "term": "pal",
+        "weight": 0.0037027986254543066
+      },
+      {
+        "term": "content",
+        "weight": 0.003691103309392929
+      },
+      {
+        "term": "hard",
+        "weight": 0.003593064844608307
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "label": "team_weapon_enemy",
+    "words": [
+      {
+        "term": "team",
+        "weight": 0.00783324334770441
+      },
+      {
+        "term": "weapon",
+        "weight": 0.0068398211151361465
+      },
+      {
+        "term": "enemy",
+        "weight": 0.006704161874949932
+      },
+      {
+        "term": "match",
+        "weight": 0.006266183685511351
+      },
+      {
+        "term": "tank",
+        "weight": 0.005389971658587456
+      },
+      {
+        "term": "map",
+        "weight": 0.0053213355131447315
+      },
+      {
+        "term": "mode",
+        "weight": 0.005261112470179796
+      },
+      {
+        "term": "skin",
+        "weight": 0.004570378921926022
+      },
+      {
+        "term": "think",
+        "weight": 0.0045601483434438705
+      },
+      {
+        "term": "hero",
+        "weight": 0.004405953921377659
+      },
+      {
+        "term": "kill",
+        "weight": 0.004174380097538233
+      },
+      {
+        "term": "point",
+        "weight": 0.004112851340323687
+      },
+      {
+        "term": "know",
+        "weight": 0.0036822627298533916
+      },
+      {
+        "term": "getting",
+        "weight": 0.0036292592994868755
+      },
+      {
+        "term": "damage",
+        "weight": 0.0035550098400563
+      }
+    ]
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "topic": 0,
+    "label": "dont_hate_life",
+    "words": [
+      {
+        "term": "dont",
+        "weight": 0.007990049198269844
+      },
+      {
+        "term": "hate",
+        "weight": 0.007534378208220005
+      },
+      {
+        "term": "life",
+        "weight": 0.0074917906895279884
+      },
+      {
+        "term": "democracy",
+        "weight": 0.007350184489041567
+      },
+      {
+        "term": "fuck",
+        "weight": 0.006443471182137728
+      },
+      {
+        "term": "fucking",
+        "weight": 0.006366084795445204
+      },
+      {
+        "term": "story",
+        "weight": 0.005922730080783367
+      },
+      {
+        "term": "suck",
+        "weight": 0.0056936414912343025
+      },
+      {
+        "term": "kill",
+        "weight": 0.005172111559659243
+      },
+      {
+        "term": "hard",
+        "weight": 0.00487414700910449
+      },
+      {
+        "term": "super",
+        "weight": 0.004747440572828054
+      },
+      {
+        "term": "as",
+        "weight": 0.004458016250282526
+      },
+      {
+        "term": "long",
+        "weight": 0.004320799373090267
+      },
+      {
+        "term": "love",
+        "weight": 0.004315863363444805
+      },
+      {
+        "term": "made",
+        "weight": 0.003931726329028606
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "server_match_work",
+    "words": [
+      {
+        "term": "server",
+        "weight": 0.006342386826872826
+      },
+      {
+        "term": "match",
+        "weight": 0.004636370111256838
+      },
+      {
+        "term": "work",
+        "weight": 0.004502740688621998
+      },
+      {
+        "term": "crash",
+        "weight": 0.004446892999112606
+      },
+      {
+        "term": "lot",
+        "weight": 0.004412083886563778
+      },
+      {
+        "term": "map",
+        "weight": 0.00414116820320487
+      },
+      {
+        "term": "weapon",
+        "weight": 0.00411064550280571
+      },
+      {
+        "term": "problem",
+        "weight": 0.003894979599863291
+      },
+      {
+        "term": "system",
+        "weight": 0.0037263548001646996
+      },
+      {
+        "term": "getting",
+        "weight": 0.003725609974935651
+      },
+      {
+        "term": "mode",
+        "weight": 0.0036003689747303724
+      },
+      {
+        "term": "first",
+        "weight": 0.0035842517390847206
+      },
+      {
+        "term": "point",
+        "weight": 0.0035797280725091696
+      },
+      {
+        "term": "friend",
+        "weight": 0.0035316108260303736
+      },
+      {
+        "term": "experience",
+        "weight": 0.0032731592655181885
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "label": "tank_change_support",
+    "words": [
+      {
+        "term": "tank",
+        "weight": 0.008333053439855576
+      },
+      {
+        "term": "change",
+        "weight": 0.007879749871790409
+      },
+      {
+        "term": "support",
+        "weight": 0.007018357515335083
+      },
+      {
+        "term": "team",
+        "weight": 0.006911031436175108
+      },
+      {
+        "term": "hero",
+        "weight": 0.0068765184842050076
+      },
+      {
+        "term": "country",
+        "weight": 0.0062238601967692375
+      },
+      {
+        "term": "damage",
+        "weight": 0.005866577383130789
+      },
+      {
+        "term": "steam",
+        "weight": 0.0055361418053507805
+      },
+      {
+        "term": "edit",
+        "weight": 0.005496995989233255
+      },
+      {
+        "term": "overwatch",
+        "weight": 0.0052352892234921455
+      },
+      {
+        "term": "community",
+        "weight": 0.005103650037199259
+      },
+      {
+        "term": "arrowhead",
+        "weight": 0.004848343785852194
+      },
+      {
+        "term": "data",
+        "weight": 0.00435745669528842
+      },
+      {
+        "term": "playstation",
+        "weight": 0.004226284567266703
+      },
+      {
+        "term": "decision",
+        "weight": 0.0039883023127913475
+      }
+    ]
+  }
+]

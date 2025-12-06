@@ -1,0 +1,266 @@
+[
+  {
+    "topic": 0,
+    "label": "super_shit_dont",
+    "words": [
+      {
+        "term": "super",
+        "weight": 0.012672127224504948
+      },
+      {
+        "term": "shit",
+        "weight": 0.008781413547694683
+      },
+      {
+        "term": "dont",
+        "weight": 0.00821324996650219
+      },
+      {
+        "term": "life",
+        "weight": 0.008138211444020271
+      },
+      {
+        "term": "hate",
+        "weight": 0.007469439413398504
+      },
+      {
+        "term": "earth",
+        "weight": 0.007443638518452644
+      },
+      {
+        "term": "cool",
+        "weight": 0.0061540789902210236
+      },
+      {
+        "term": "kill",
+        "weight": 0.005610468797385693
+      },
+      {
+        "term": "buy",
+        "weight": 0.005521933548152447
+      },
+      {
+        "term": "fucking",
+        "weight": 0.005475704558193684
+      },
+      {
+        "term": "nice",
+        "weight": 0.005230083130300045
+      },
+      {
+        "term": "know",
+        "weight": 0.0050889854319393635
+      },
+      {
+        "term": "fuck",
+        "weight": 0.004966287408024073
+      },
+      {
+        "term": "suck",
+        "weight": 0.004921869374811649
+      },
+      {
+        "term": "war",
+        "weight": 0.004852619953453541
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "gameplay_world_character",
+    "words": [
+      {
+        "term": "gameplay",
+        "weight": 0.008421485312283039
+      },
+      {
+        "term": "world",
+        "weight": 0.00805929210036993
+      },
+      {
+        "term": "character",
+        "weight": 0.007719235960394144
+      },
+      {
+        "term": "experience",
+        "weight": 0.007366813253611326
+      },
+      {
+        "term": "worth",
+        "weight": 0.005975938867777586
+      },
+      {
+        "term": "combat",
+        "weight": 0.005083827767521143
+      },
+      {
+        "term": "graphic",
+        "weight": 0.004965160507708788
+      },
+      {
+        "term": "long",
+        "weight": 0.004341456573456526
+      },
+      {
+        "term": "different",
+        "weight": 0.004239879082888365
+      },
+      {
+        "term": "pokemon",
+        "weight": 0.004114452283829451
+      },
+      {
+        "term": "could",
+        "weight": 0.0038405461236834526
+      },
+      {
+        "term": "pal",
+        "weight": 0.0037595515605062246
+      },
+      {
+        "term": "far",
+        "weight": 0.0036970351357012987
+      },
+      {
+        "term": "content",
+        "weight": 0.0036436000373214483
+      },
+      {
+        "term": "bit",
+        "weight": 0.0036399895325303078
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "label": "account_psn_community",
+    "words": [
+      {
+        "term": "account",
+        "weight": 0.025930609554052353
+      },
+      {
+        "term": "psn",
+        "weight": 0.024394933134317398
+      },
+      {
+        "term": "community",
+        "weight": 0.020747074857354164
+      },
+      {
+        "term": "helldivers",
+        "weight": 0.012722879648208618
+      },
+      {
+        "term": "steam",
+        "weight": 0.010568717494606972
+      },
+      {
+        "term": "arrowhead",
+        "weight": 0.010023422539234161
+      },
+      {
+        "term": "devs",
+        "weight": 0.009905554354190826
+      },
+      {
+        "term": "edit",
+        "weight": 0.009660081937909126
+      },
+      {
+        "term": "country",
+        "weight": 0.007378492038697004
+      },
+      {
+        "term": "change",
+        "weight": 0.0071511780843138695
+      },
+      {
+        "term": "developer",
+        "weight": 0.006633496377617121
+      },
+      {
+        "term": "company",
+        "weight": 0.006545315962284803
+      },
+      {
+        "term": "together",
+        "weight": 0.006335339043289423
+      },
+      {
+        "term": "order",
+        "weight": 0.005993199069052935
+      },
+      {
+        "term": "decision",
+        "weight": 0.005944728385657072
+      }
+    ]
+  },
+  {
+    "topic": 3,
+    "label": "issue_server_cheater",
+    "words": [
+      {
+        "term": "issue",
+        "weight": 0.008542126044631004
+      },
+      {
+        "term": "server",
+        "weight": 0.0076612490229308605
+      },
+      {
+        "term": "cheater",
+        "weight": 0.007283634506165981
+      },
+      {
+        "term": "fix",
+        "weight": 0.006503373384475708
+      },
+      {
+        "term": "team",
+        "weight": 0.006238259375095367
+      },
+      {
+        "term": "match",
+        "weight": 0.005537121091037989
+      },
+      {
+        "term": "crash",
+        "weight": 0.004958501551300287
+      },
+      {
+        "term": "tank",
+        "weight": 0.004719877149909735
+      },
+      {
+        "term": "weapon",
+        "weight": 0.004639426711946726
+      },
+      {
+        "term": "problem",
+        "weight": 0.004396150354295969
+      },
+      {
+        "term": "map",
+        "weight": 0.00419247942045331
+      },
+      {
+        "term": "mode",
+        "weight": 0.004192290361970663
+      },
+      {
+        "term": "getting",
+        "weight": 0.004015840124338865
+      },
+      {
+        "term": "skin",
+        "weight": 0.003991920035332441
+      },
+      {
+        "term": "point",
+        "weight": 0.00398509344086051
+      }
+    ]
+  }
+]

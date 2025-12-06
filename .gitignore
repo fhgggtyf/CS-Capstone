@@ -1,1 +1,21 @@
 *.db
+
+**/venv/
+**/.venv/
+__pycache__/
+
+# Ignore common virtual environment folders
+venv/
+.venv/
+ENV/
+env/
+.virtualenv/
+.virtualenvs/
+
+# Ignore Python virtual environment metadata
+pyvenv.cfg
+
+**/corpus.mm
+**/reviews_with_topics.csv
+**/doc_topic_weights.csv
+

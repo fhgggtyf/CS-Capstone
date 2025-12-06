@@ -14,7 +14,7 @@ game_list = [
     # "https://www.metacritic.com/game/the-master-chief-collection/",
     # "https://www.metacritic.com/game/fallout-76/",
     # "https://www.metacritic.com/game/mass-effect-andromeda/",
-    # "https://www.metacritic.com/game/battlefield-2042/",
+    "https://www.metacritic.com/game/battlefield-2042/",
     # "https://www.metacritic.com/game/batman-arkham-knight/",
     # "https://www.metacritic.com/game/no-mans-sky/",
     # "https://www.metacritic.com/game/anthem/",
@@ -42,11 +42,11 @@ game_list = [
     # "https://www.metacritic.com/game/helldivers-2/",
     # "https://www.metacritic.com/game/overwatch-2/",
     # "https://www.metacritic.com/game/delta-force/",
-    "https://www.metacritic.com/game/ea-sports-fc-25/",
+    # "https://www.metacritic.com/game/ea-sports-fc-25/",
     "https://www.metacritic.com/game/warcraft-iii-reforged/",
     "https://www.metacritic.com/game/valorant/",
-    "https://www.metacritic.com/game/genshin-impact/",
-    "https://www.metacritic.com/game/furi/"
+    # "https://www.metacritic.com/game/genshin-impact/",
+    # "https://www.metacritic.com/game/furi/"
     # Add more as needed
 ]
 

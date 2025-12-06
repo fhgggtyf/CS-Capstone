@@ -1,0 +1,200 @@
+[
+  {
+    "topic": 0,
+    "label": "dont_hate_democracy",
+    "words": [
+      {
+        "term": "dont",
+        "weight": 0.009446658194065094
+      },
+      {
+        "term": "hate",
+        "weight": 0.008259560912847519
+      },
+      {
+        "term": "democracy",
+        "weight": 0.008244522847235203
+      },
+      {
+        "term": "life",
+        "weight": 0.008216826245188713
+      },
+      {
+        "term": "fuck",
+        "weight": 0.007068886887282133
+      },
+      {
+        "term": "fucking",
+        "weight": 0.006984536070376635
+      },
+      {
+        "term": "suck",
+        "weight": 0.006352507974952459
+      },
+      {
+        "term": "kill",
+        "weight": 0.005437418818473816
+      },
+      {
+        "term": "story",
+        "weight": 0.005127093754708767
+      },
+      {
+        "term": "super",
+        "weight": 0.005021495278924704
+      },
+      {
+        "term": "hard",
+        "weight": 0.004958083387464285
+      },
+      {
+        "term": "as",
+        "weight": 0.004890718962997198
+      },
+      {
+        "term": "love",
+        "weight": 0.0045311301946640015
+      },
+      {
+        "term": "long",
+        "weight": 0.004365484695881605
+      },
+      {
+        "term": "buy",
+        "weight": 0.0042608389630913734
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "server_lot_work",
+    "words": [
+      {
+        "term": "server",
+        "weight": 0.006361359730362892
+      },
+      {
+        "term": "lot",
+        "weight": 0.004522720817476511
+      },
+      {
+        "term": "work",
+        "weight": 0.0044619315303862095
+      },
+      {
+        "term": "crash",
+        "weight": 0.004460248164832592
+      },
+      {
+        "term": "map",
+        "weight": 0.004098533187061548
+      },
+      {
+        "term": "weapon",
+        "weight": 0.004067596979439259
+      },
+      {
+        "term": "first",
+        "weight": 0.0037624065298587084
+      },
+      {
+        "term": "problem",
+        "weight": 0.0037173328455537558
+      },
+      {
+        "term": "match",
+        "weight": 0.0036226282827556133
+      },
+      {
+        "term": "friend",
+        "weight": 0.003484983230009675
+      },
+      {
+        "term": "getting",
+        "weight": 0.003426250535994768
+      },
+      {
+        "term": "system",
+        "weight": 0.003397907130420208
+      },
+      {
+        "term": "experience",
+        "weight": 0.003292520297691226
+      },
+      {
+        "term": "mode",
+        "weight": 0.003290522610768676
+      },
+      {
+        "term": "point",
+        "weight": 0.0032895992044359446
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "label": "team_tank_change",
+    "words": [
+      {
+        "term": "team",
+        "weight": 0.008335083723068237
+      },
+      {
+        "term": "tank",
+        "weight": 0.007718038745224476
+      },
+      {
+        "term": "change",
+        "weight": 0.007104076910763979
+      },
+      {
+        "term": "support",
+        "weight": 0.0061961812898516655
+      },
+      {
+        "term": "hero",
+        "weight": 0.006099991500377655
+      },
+      {
+        "term": "country",
+        "weight": 0.005521037150174379
+      },
+      {
+        "term": "damage",
+        "weight": 0.0052887676283717155
+      },
+      {
+        "term": "steam",
+        "weight": 0.004794929642230272
+      },
+      {
+        "term": "overwatch",
+        "weight": 0.0046441201120615005
+      },
+      {
+        "term": "edit",
+        "weight": 0.004350677132606506
+      },
+      {
+        "term": "community",
+        "weight": 0.004327579867094755
+      },
+      {
+        "term": "arrowhead",
+        "weight": 0.004011937417089939
+      },
+      {
+        "term": "banned",
+        "weight": 0.003910875879228115
+      },
+      {
+        "term": "data",
+        "weight": 0.0038426637183874846
+      },
+      {
+        "term": "playstation",
+        "weight": 0.0037479079328477383
+      }
+    ]
+  }
+]

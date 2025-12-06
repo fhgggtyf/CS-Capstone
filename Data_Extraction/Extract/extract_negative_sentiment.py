@@ -6,8 +6,8 @@ import sqlite3
 DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment_time_filtered.db"
 
 # Table names
-SOURCE_TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined"
-OUTPUT_TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined_negative_only"
+SOURCE_TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined_english_only"
+OUTPUT_TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined_english_only_negative_only"
 
 # Connect to the database
 conn = sqlite3.connect(DB_PATH)
@@ -24,9 +24,6 @@ cur.execute(f"DELETE FROM {OUTPUT_TABLE};")
 
 # 3) Build the filter condition
 condition = "final_label = 'NEGATIVE'"
-if "steam" in SOURCE_TABLE.lower():
-    # Exclude rows where voted_up = 1
-    condition += " AND (voted_up IS NULL OR voted_up != 1)"
 
 # 4) Insert rows with filtering
 cur.execute(f"""

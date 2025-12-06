@@ -1,0 +1,134 @@
+[
+  {
+    "topic": 0,
+    "label": "account_server_cheater",
+    "words": [
+      {
+        "term": "account",
+        "weight": 0.0062056598253548145
+      },
+      {
+        "term": "server",
+        "weight": 0.005773475859314203
+      },
+      {
+        "term": "cheater",
+        "weight": 0.005691914819180965
+      },
+      {
+        "term": "dont",
+        "weight": 0.004887948743999004
+      },
+      {
+        "term": "review",
+        "weight": 0.00465483870357275
+      },
+      {
+        "term": "crash",
+        "weight": 0.004592968616634607
+      },
+      {
+        "term": "buy",
+        "weight": 0.004584768321365118
+      },
+      {
+        "term": "hate",
+        "weight": 0.0045501734130084515
+      },
+      {
+        "term": "fuck",
+        "weight": 0.003962429706007242
+      },
+      {
+        "term": "fucking",
+        "weight": 0.0038770101964473724
+      },
+      {
+        "term": "cant",
+        "weight": 0.0038552407640963793
+      },
+      {
+        "term": "psn",
+        "weight": 0.003823608858510852
+      },
+      {
+        "term": "day",
+        "weight": 0.0037786546163260937
+      },
+      {
+        "term": "edit",
+        "weight": 0.003757672617211938
+      },
+      {
+        "term": "devs",
+        "weight": 0.0036805658601224422
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "team_enemy_feel",
+    "words": [
+      {
+        "term": "team",
+        "weight": 0.004622164182364941
+      },
+      {
+        "term": "enemy",
+        "weight": 0.004180260002613068
+      },
+      {
+        "term": "feel",
+        "weight": 0.004149228800088167
+      },
+      {
+        "term": "tank",
+        "weight": 0.004080155398696661
+      },
+      {
+        "term": "weapon",
+        "weight": 0.003971980419009924
+      },
+      {
+        "term": "map",
+        "weight": 0.003935912158340216
+      },
+      {
+        "term": "character",
+        "weight": 0.0038150434847921133
+      },
+      {
+        "term": "point",
+        "weight": 0.0035805930383503437
+      },
+      {
+        "term": "mode",
+        "weight": 0.0032655419781804085
+      },
+      {
+        "term": "feel_like",
+        "weight": 0.0032458549831062555
+      },
+      {
+        "term": "level",
+        "weight": 0.003154186997562647
+      },
+      {
+        "term": "skin",
+        "weight": 0.0031084956135600805
+      },
+      {
+        "term": "hero",
+        "weight": 0.003101813141256571
+      },
+      {
+        "term": "damage",
+        "weight": 0.0029335960280150175
+      },
+      {
+        "term": "kill",
+        "weight": 0.002886200789362192
+      }
+    ]
+  }
+]

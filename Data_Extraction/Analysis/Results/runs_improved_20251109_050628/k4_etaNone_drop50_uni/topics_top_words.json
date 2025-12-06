@@ -1,0 +1,266 @@
+[
+  {
+    "topic": 0,
+    "label": "dont_match_hate",
+    "words": [
+      {
+        "term": "dont",
+        "weight": 0.009493556804955006
+      },
+      {
+        "term": "match",
+        "weight": 0.007377021946012974
+      },
+      {
+        "term": "hate",
+        "weight": 0.007149000186473131
+      },
+      {
+        "term": "fucking",
+        "weight": 0.006032729987055063
+      },
+      {
+        "term": "team",
+        "weight": 0.005937261041253805
+      },
+      {
+        "term": "skin",
+        "weight": 0.005843084305524826
+      },
+      {
+        "term": "suck",
+        "weight": 0.005775799509137869
+      },
+      {
+        "term": "cant",
+        "weight": 0.005573609843850136
+      },
+      {
+        "term": "life",
+        "weight": 0.0053897155448794365
+      },
+      {
+        "term": "fuck",
+        "weight": 0.005374429281800985
+      },
+      {
+        "term": "kill",
+        "weight": 0.0052061486057937145
+      },
+      {
+        "term": "worst",
+        "weight": 0.005061587318778038
+      },
+      {
+        "term": "buy",
+        "weight": 0.004502384457737207
+      },
+      {
+        "term": "say",
+        "weight": 0.004258327651768923
+      },
+      {
+        "term": "cheat",
+        "weight": 0.004221520386636257
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "democracy_edit_steam",
+    "words": [
+      {
+        "term": "democracy",
+        "weight": 0.010743665508925915
+      },
+      {
+        "term": "edit",
+        "weight": 0.00940643809735775
+      },
+      {
+        "term": "steam",
+        "weight": 0.00859196949750185
+      },
+      {
+        "term": "helldivers",
+        "weight": 0.008120985701680183
+      },
+      {
+        "term": "community",
+        "weight": 0.00784449465572834
+      },
+      {
+        "term": "change",
+        "weight": 0.007773196324706078
+      },
+      {
+        "term": "country",
+        "weight": 0.007223892956972122
+      },
+      {
+        "term": "arrowhead",
+        "weight": 0.007065797224640846
+      },
+      {
+        "term": "devs",
+        "weight": 0.0067579541355371475
+      },
+      {
+        "term": "super",
+        "weight": 0.0062742396257817745
+      },
+      {
+        "term": "data",
+        "weight": 0.005064085591584444
+      },
+      {
+        "term": "playstation",
+        "weight": 0.00494540948420763
+      },
+      {
+        "term": "decision",
+        "weight": 0.004927789326757193
+      },
+      {
+        "term": "negative",
+        "weight": 0.0049069784581661224
+      },
+      {
+        "term": "support",
+        "weight": 0.004888671450316906
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "label": "crash_server_lot",
+    "words": [
+      {
+        "term": "crash",
+        "weight": 0.006764625199139118
+      },
+      {
+        "term": "server",
+        "weight": 0.006079334765672684
+      },
+      {
+        "term": "lot",
+        "weight": 0.005251109134405851
+      },
+      {
+        "term": "work",
+        "weight": 0.00480612413957715
+      },
+      {
+        "term": "first",
+        "weight": 0.0045786513946950436
+      },
+      {
+        "term": "mission",
+        "weight": 0.00452787522226572
+      },
+      {
+        "term": "gameplay",
+        "weight": 0.004337594844400883
+      },
+      {
+        "term": "character",
+        "weight": 0.004255414940416813
+      },
+      {
+        "term": "story",
+        "weight": 0.004043254069983959
+      },
+      {
+        "term": "problem",
+        "weight": 0.0037873967085033655
+      },
+      {
+        "term": "run",
+        "weight": 0.00361193111166358
+      },
+      {
+        "term": "experience",
+        "weight": 0.0035869155544787645
+      },
+      {
+        "term": "friend",
+        "weight": 0.0035045889671891928
+      },
+      {
+        "term": "content",
+        "weight": 0.0032471835147589445
+      },
+      {
+        "term": "world",
+        "weight": 0.0030659339390695095
+      }
+    ]
+  },
+  {
+    "topic": 3,
+    "label": "tank_enemy_weapon",
+    "words": [
+      {
+        "term": "tank",
+        "weight": 0.011479003354907036
+      },
+      {
+        "term": "enemy",
+        "weight": 0.010258568450808525
+      },
+      {
+        "term": "weapon",
+        "weight": 0.009181393310427666
+      },
+      {
+        "term": "hero",
+        "weight": 0.008697567507624626
+      },
+      {
+        "term": "damage",
+        "weight": 0.00836082361638546
+      },
+      {
+        "term": "team",
+        "weight": 0.006792937871068716
+      },
+      {
+        "term": "grind",
+        "weight": 0.006777153350412846
+      },
+      {
+        "term": "hard",
+        "weight": 0.005499054677784443
+      },
+      {
+        "term": "long",
+        "weight": 0.005276896990835667
+      },
+      {
+        "term": "support",
+        "weight": 0.004727013409137726
+      },
+      {
+        "term": "change",
+        "weight": 0.00455078948289156
+      },
+      {
+        "term": "second",
+        "weight": 0.004428415093570948
+      },
+      {
+        "term": "nerf",
+        "weight": 0.004203281830996275
+      },
+      {
+        "term": "easy",
+        "weight": 0.004112021531909704
+      },
+      {
+        "term": "ability",
+        "weight": 0.004020641557872295
+      }
+    ]
+  }
+]

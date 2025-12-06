@@ -7,8 +7,8 @@ DetectorFactory.seed = 42
 
 # Parameters
 DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment_time_filtered.db"
-SOURCE_TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined_negative_only"
-OUTPUT_TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined_negative_only_english_only"
+SOURCE_TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined"
+OUTPUT_TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined_english_only"
 
 # Connect to database
 conn = sqlite3.connect(DB_PATH)
@@ -33,7 +33,10 @@ placeholders = ", ".join("?" * len(col_names))
 col_list = ", ".join(col_names)
 
 # 4) Detect English rows and insert with progress bar
+commit_interval = 1000
+commit_count = 0
 for row in tqdm(rows, desc="Processing rows", unit="row"):
+    commit_count += 1
     row_dict = dict(zip(col_names, row))
     text = row_dict.get("main_text", "")
     try:
@@ -42,6 +45,9 @@ for row in tqdm(rows, desc="Processing rows", unit="row"):
                 f"INSERT INTO {OUTPUT_TABLE} ({col_list}) VALUES ({placeholders});",
                 row
             )
+            if commit_count >= commit_interval:
+                conn.commit()
+                commit_count = 0
     except Exception:
         # Skip rows that fail detection (empty / bad input)
         continue

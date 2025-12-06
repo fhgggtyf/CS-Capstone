@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import os
 
 # ---------- CONFIGURATION ----------
-SOURCE_DB = "Data_Extraction/Database/CS_Capstone_Sentiment.db"
+SOURCE_DB = "Data_Extraction/Database/CS_Capstone_Sentiment_trial.db"
 OUTPUT_DB = "Data_Extraction/Database/CS_Capstone_Sentiment_time_filtered.db"
 
 TIME_CANDIDATES = [
@@ -24,7 +24,10 @@ KNOWN_TIME_FORMATS = [
     "%m-%d-%Y %H:%M:%S","%m-%d-%Y %H:%M:%S.%f","%m-%d-%Y %H:%M","%m-%d-%Y",
     "%b %d, %Y","%d %b %Y","%a, %d %b %Y %H:%M:%S %Z","%a %b %d %H:%M:%S %Y",
     "%Y.%m.%d","%Y.%m.%d %H:%M:%S","%Y.%m.%d %H:%M:%S.%f",
-    "%Y%m%d","%Y%m%d%H%M","%Y%m%d%H%M%S","%Y%m%d%H%M%S%f","%Y%m%d%H%M%S.%f"
+    "%Y%m%d","%Y%m%d%H%M","%Y%m%d%H%M%S","%Y%m%d%H%M%S%f","%Y%m%d%H%M%S.%f",
+    "%d/%m/%y", "%d-%m-%y", "%m/%d/%y", "%y/%m/%d", "%y-%m-%d",
+    "%m/%d/%Y %I:%M %p", "%m/%d/%y %I:%M %p", "%d/%m/%Y %I:%M %p", "%d/%m/%y %I:%M %p",
+    "%Y-%m-%d %I:%M %p"
 ]
 # -----------------------------------
 

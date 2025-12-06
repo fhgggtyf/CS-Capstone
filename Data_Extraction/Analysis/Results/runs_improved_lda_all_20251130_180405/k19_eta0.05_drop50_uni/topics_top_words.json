@@ -1,0 +1,1256 @@
+[
+  {
+    "topic": 0,
+    "label": "cool_nice_pretty",
+    "words": [
+      {
+        "term": "cool",
+        "weight": 0.03595902398228645
+      },
+      {
+        "term": "nice",
+        "weight": 0.030329706147313118
+      },
+      {
+        "term": "pretty",
+        "weight": 0.024459121748805046
+      },
+      {
+        "term": "halo",
+        "weight": 0.015173392370343208
+      },
+      {
+        "term": "man",
+        "weight": 0.013460850343108177
+      },
+      {
+        "term": "old",
+        "weight": 0.008660412393510342
+      },
+      {
+        "term": "perfect",
+        "weight": 0.008472014218568802
+      },
+      {
+        "term": "peak",
+        "weight": 0.008030412718653679
+      },
+      {
+        "term": "funny",
+        "weight": 0.007591135334223509
+      },
+      {
+        "term": "cry",
+        "weight": 0.006662415340542793
+      },
+      {
+        "term": "hot",
+        "weight": 0.005747538525611162
+      },
+      {
+        "term": "addicting",
+        "weight": 0.005390960723161697
+      },
+      {
+        "term": "guy",
+        "weight": 0.005268790293484926
+      },
+      {
+        "term": "boy",
+        "weight": 0.005057376343756914
+      },
+      {
+        "term": "sex",
+        "weight": 0.005004020407795906
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "dont_shit_hate",
+    "words": [
+      {
+        "term": "dont",
+        "weight": 0.04553254693746567
+      },
+      {
+        "term": "shit",
+        "weight": 0.04180528596043587
+      },
+      {
+        "term": "hate",
+        "weight": 0.03667401149868965
+      },
+      {
+        "term": "life",
+        "weight": 0.027415992692112923
+      },
+      {
+        "term": "fucking",
+        "weight": 0.026368387043476105
+      },
+      {
+        "term": "fuck",
+        "weight": 0.026092564687132835
+      },
+      {
+        "term": "suck",
+        "weight": 0.02597583457827568
+      },
+      {
+        "term": "cant",
+        "weight": 0.023441489785909653
+      },
+      {
+        "term": "as",
+        "weight": 0.018703000620007515
+      },
+      {
+        "term": "stop",
+        "weight": 0.011888762004673481
+      },
+      {
+        "term": "wanna",
+        "weight": 0.011279777623713017
+      },
+      {
+        "term": "give",
+        "weight": 0.01104753278195858
+      },
+      {
+        "term": "please",
+        "weight": 0.010816301219165325
+      },
+      {
+        "term": "god",
+        "weight": 0.010561938397586346
+      },
+      {
+        "term": "worst",
+        "weight": 0.010554683394730091
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "label": "awesome_war_ive",
+    "words": [
+      {
+        "term": "awesome",
+        "weight": 0.05358466878533363
+      },
+      {
+        "term": "war",
+        "weight": 0.031561654061079025
+      },
+      {
+        "term": "ive",
+        "weight": 0.025651780888438225
+      },
+      {
+        "term": "russian",
+        "weight": 0.02294044755399227
+      },
+      {
+        "term": "top",
+        "weight": 0.020278749987483025
+      },
+      {
+        "term": "vehicle",
+        "weight": 0.01918460987508297
+      },
+      {
+        "term": "star",
+        "weight": 0.01835901290178299
+      },
+      {
+        "term": "tank",
+        "weight": 0.016268478706479073
+      },
+      {
+        "term": "tier",
+        "weight": 0.01569254696369171
+      },
+      {
+        "term": "alot",
+        "weight": 0.015593203715980053
+      },
+      {
+        "term": "beat",
+        "weight": 0.013973787426948547
+      },
+      {
+        "term": "highly",
+        "weight": 0.011765590868890285
+      },
+      {
+        "term": "simulator",
+        "weight": 0.011732606217265129
+      },
+      {
+        "term": "plane",
+        "weight": 0.011680249124765396
+      },
+      {
+        "term": "realistic",
+        "weight": 0.011283536441624165
+      }
+    ]
+  },
+  {
+    "topic": 3,
+    "label": "pokemon_pal_base",
+    "words": [
+      {
+        "term": "pokemon",
+        "weight": 0.044547729194164276
+      },
+      {
+        "term": "pal",
+        "weight": 0.04103797674179077
+      },
+      {
+        "term": "base",
+        "weight": 0.026122810319066048
+      },
+      {
+        "term": "early",
+        "weight": 0.024890463799238205
+      },
+      {
+        "term": "access",
+        "weight": 0.01959817484021187
+      },
+      {
+        "term": "survival",
+        "weight": 0.01924234814941883
+      },
+      {
+        "term": "building",
+        "weight": 0.0192305538803339
+      },
+      {
+        "term": "gun",
+        "weight": 0.01759740710258484
+      },
+      {
+        "term": "ark",
+        "weight": 0.015643781051039696
+      },
+      {
+        "term": "palworld",
+        "weight": 0.014712794683873653
+      },
+      {
+        "term": "world",
+        "weight": 0.01358067337423563
+      },
+      {
+        "term": "nintendo",
+        "weight": 0.009905948303639889
+      },
+      {
+        "term": "monster",
+        "weight": 0.009759031236171722
+      },
+      {
+        "term": "catch",
+        "weight": 0.008208228275179863
+      },
+      {
+        "term": "creature",
+        "weight": 0.00819380022585392
+      }
+    ]
+  },
+  {
+    "topic": 4,
+    "label": "money_buy_skin",
+    "words": [
+      {
+        "term": "money",
+        "weight": 0.03750970587134361
+      },
+      {
+        "term": "buy",
+        "weight": 0.036884382367134094
+      },
+      {
+        "term": "skin",
+        "weight": 0.022259758785367012
+      },
+      {
+        "term": "free",
+        "weight": 0.015900790691375732
+      },
+      {
+        "term": "worth",
+        "weight": 0.014074796810746193
+      },
+      {
+        "term": "company",
+        "weight": 0.01292591542005539
+      },
+      {
+        "term": "pay",
+        "weight": 0.012646538205444813
+      },
+      {
+        "term": "pas",
+        "weight": 0.009564951993525028
+      },
+      {
+        "term": "spend",
+        "weight": 0.008810403756797314
+      },
+      {
+        "term": "battle",
+        "weight": 0.007980023510754108
+      },
+      {
+        "term": "care",
+        "weight": 0.007787884678691626
+      },
+      {
+        "term": "price",
+        "weight": 0.007479255553334951
+      },
+      {
+        "term": "devs",
+        "weight": 0.0074463821947574615
+      },
+      {
+        "term": "bought",
+        "weight": 0.006389154586941004
+      },
+      {
+        "term": "buying",
+        "weight": 0.006208749487996101
+      }
+    ]
+  },
+  {
+    "topic": 5,
+    "label": "know_say_think",
+    "words": [
+      {
+        "term": "know",
+        "weight": 0.02422654628753662
+      },
+      {
+        "term": "say",
+        "weight": 0.021703505888581276
+      },
+      {
+        "term": "think",
+        "weight": 0.019437678158283234
+      },
+      {
+        "term": "something",
+        "weight": 0.014667742885649204
+      },
+      {
+        "term": "day",
+        "weight": 0.01316026970744133
+      },
+      {
+        "term": "see",
+        "weight": 0.011752547696232796
+      },
+      {
+        "term": "try",
+        "weight": 0.011506895534694195
+      },
+      {
+        "term": "going",
+        "weight": 0.011463755741715431
+      },
+      {
+        "term": "said",
+        "weight": 0.010641335509717464
+      },
+      {
+        "term": "since",
+        "weight": 0.009913785383105278
+      },
+      {
+        "term": "everyone",
+        "weight": 0.009086864069104195
+      },
+      {
+        "term": "actually",
+        "weight": 0.00875550415366888
+      },
+      {
+        "term": "could",
+        "weight": 0.008596593514084816
+      },
+      {
+        "term": "else",
+        "weight": 0.008456404320895672
+      },
+      {
+        "term": "always",
+        "weight": 0.008330904878675938
+      }
+    ]
+  },
+  {
+    "topic": 6,
+    "label": "issue_server_fix",
+    "words": [
+      {
+        "term": "issue",
+        "weight": 0.03628711402416229
+      },
+      {
+        "term": "server",
+        "weight": 0.029487600550055504
+      },
+      {
+        "term": "fix",
+        "weight": 0.023547204211354256
+      },
+      {
+        "term": "crash",
+        "weight": 0.019739562645554543
+      },
+      {
+        "term": "fixed",
+        "weight": 0.014251201413571835
+      },
+      {
+        "term": "problem",
+        "weight": 0.01320271473377943
+      },
+      {
+        "term": "work",
+        "weight": 0.0126020647585392
+      },
+      {
+        "term": "minute",
+        "weight": 0.008157674223184586
+      },
+      {
+        "term": "screen",
+        "weight": 0.00795594509691
+      },
+      {
+        "term": "patch",
+        "weight": 0.0069526792503893375
+      },
+      {
+        "term": "unplayable",
+        "weight": 0.0067553832195699215
+      },
+      {
+        "term": "performance",
+        "weight": 0.006304505746811628
+      },
+      {
+        "term": "launch",
+        "weight": 0.0062470645643770695
+      },
+      {
+        "term": "crashing",
+        "weight": 0.006241487804800272
+      },
+      {
+        "term": "getting",
+        "weight": 0.005932122468948364
+      }
+    ]
+  },
+  {
+    "topic": 7,
+    "label": "super_helldivers_earth",
+    "words": [
+      {
+        "term": "super",
+        "weight": 0.053178198635578156
+      },
+      {
+        "term": "helldivers",
+        "weight": 0.04321112856268883
+      },
+      {
+        "term": "earth",
+        "weight": 0.03511140123009682
+      },
+      {
+        "term": "managed",
+        "weight": 0.022749755531549454
+      },
+      {
+        "term": "together",
+        "weight": 0.022344041615724564
+      },
+      {
+        "term": "community",
+        "weight": 0.02158263511955738
+      },
+      {
+        "term": "freedom",
+        "weight": 0.021300058811903
+      },
+      {
+        "term": "dive",
+        "weight": 0.020051492378115654
+      },
+      {
+        "term": "liberty",
+        "weight": 0.016274400055408478
+      },
+      {
+        "term": "fight",
+        "weight": 0.015953319147229195
+      },
+      {
+        "term": "order",
+        "weight": 0.015198426321148872
+      },
+      {
+        "term": "major",
+        "weight": 0.01457665953785181
+      },
+      {
+        "term": "spread",
+        "weight": 0.012381529435515404
+      },
+      {
+        "term": "join",
+        "weight": 0.009754499420523643
+      },
+      {
+        "term": "automaton",
+        "weight": 0.009236562065780163
+      }
+    ]
+  },
+  {
+    "topic": 8,
+    "label": "world_gameplay_experience",
+    "words": [
+      {
+        "term": "world",
+        "weight": 0.03207220137119293
+      },
+      {
+        "term": "gameplay",
+        "weight": 0.028333161026239395
+      },
+      {
+        "term": "experience",
+        "weight": 0.022610841318964958
+      },
+      {
+        "term": "graphic",
+        "weight": 0.018951652571558952
+      },
+      {
+        "term": "fan",
+        "weight": 0.013587351888418198
+      },
+      {
+        "term": "character",
+        "weight": 0.012612187303602695
+      },
+      {
+        "term": "combat",
+        "weight": 0.01094202883541584
+      },
+      {
+        "term": "gate",
+        "weight": 0.01064639538526535
+      },
+      {
+        "term": "rpg",
+        "weight": 0.008995880372822285
+      },
+      {
+        "term": "immersive",
+        "weight": 0.008544308133423328
+      },
+      {
+        "term": "action",
+        "weight": 0.008325769565999508
+      },
+      {
+        "term": "mechanic",
+        "weight": 0.007872268557548523
+      },
+      {
+        "term": "baldur",
+        "weight": 0.007859031669795513
+      },
+      {
+        "term": "beautiful",
+        "weight": 0.007779217790812254
+      },
+      {
+        "term": "open",
+        "weight": 0.007752808276563883
+      }
+    ]
+  },
+  {
+    "topic": 9,
+    "label": "content_worth_release",
+    "words": [
+      {
+        "term": "content",
+        "weight": 0.013302523642778397
+      },
+      {
+        "term": "worth",
+        "weight": 0.012440311722457409
+      },
+      {
+        "term": "release",
+        "weight": 0.01156543754041195
+      },
+      {
+        "term": "far",
+        "weight": 0.011296971701085567
+      },
+      {
+        "term": "definitely",
+        "weight": 0.010590266436338425
+      },
+      {
+        "term": "since",
+        "weight": 0.010443095117807388
+      },
+      {
+        "term": "launch",
+        "weight": 0.010436594486236572
+      },
+      {
+        "term": "absolutely",
+        "weight": 0.010350349359214306
+      },
+      {
+        "term": "space",
+        "weight": 0.009558848105370998
+      },
+      {
+        "term": "experience",
+        "weight": 0.009269907139241695
+      },
+      {
+        "term": "gaming",
+        "weight": 0.00919767189770937
+      },
+      {
+        "term": "see",
+        "weight": 0.009125839918851852
+      },
+      {
+        "term": "developer",
+        "weight": 0.009072571061551571
+      },
+      {
+        "term": "come",
+        "weight": 0.008877946995198727
+      },
+      {
+        "term": "favorite",
+        "weight": 0.008829968050122261
+      }
+    ]
+  },
+  {
+    "topic": 10,
+    "label": "skill_point_issue",
+    "words": [
+      {
+        "term": "skill",
+        "weight": 0.006224675104022026
+      },
+      {
+        "term": "point",
+        "weight": 0.006140453740954399
+      },
+      {
+        "term": "issue",
+        "weight": 0.0054733590222895145
+      },
+      {
+        "term": "think",
+        "weight": 0.005422279238700867
+      },
+      {
+        "term": "change",
+        "weight": 0.004999195225536823
+      },
+      {
+        "term": "level",
+        "weight": 0.0048965588212013245
+      },
+      {
+        "term": "take",
+        "weight": 0.004422691185027361
+      },
+      {
+        "term": "could",
+        "weight": 0.004415314644575119
+      },
+      {
+        "term": "however",
+        "weight": 0.004324071109294891
+      },
+      {
+        "term": "system",
+        "weight": 0.004051110707223415
+      },
+      {
+        "term": "design",
+        "weight": 0.00399604719132185
+      },
+      {
+        "term": "use",
+        "weight": 0.003887929255142808
+      },
+      {
+        "term": "often",
+        "weight": 0.0037658484652638435
+      },
+      {
+        "term": "making",
+        "weight": 0.003637326182797551
+      },
+      {
+        "term": "experience",
+        "weight": 0.0036291799042373896
+      }
+    ]
+  },
+  {
+    "topic": 11,
+    "label": "character_combat_different",
+    "words": [
+      {
+        "term": "character",
+        "weight": 0.02852731943130493
+      },
+      {
+        "term": "combat",
+        "weight": 0.015719102695584297
+      },
+      {
+        "term": "different",
+        "weight": 0.015131230466067791
+      },
+      {
+        "term": "bit",
+        "weight": 0.013421932235360146
+      },
+      {
+        "term": "quest",
+        "weight": 0.013072105124592781
+      },
+      {
+        "term": "boring",
+        "weight": 0.009713275358080864
+      },
+      {
+        "term": "main",
+        "weight": 0.00940768327564001
+      },
+      {
+        "term": "turn",
+        "weight": 0.009266873821616173
+      },
+      {
+        "term": "side",
+        "weight": 0.009089807979762554
+      },
+      {
+        "term": "little",
+        "weight": 0.008985809981822968
+      },
+      {
+        "term": "choice",
+        "weight": 0.008223836310207844
+      },
+      {
+        "term": "based",
+        "weight": 0.008155391551554203
+      },
+      {
+        "term": "act",
+        "weight": 0.007847458124160767
+      },
+      {
+        "term": "option",
+        "weight": 0.007249364163726568
+      },
+      {
+        "term": "pretty",
+        "weight": 0.00722415279597044
+      }
+    ]
+  },
+  {
+    "topic": 12,
+    "label": "cheater_cheat_match",
+    "words": [
+      {
+        "term": "cheater",
+        "weight": 0.05259757488965988
+      },
+      {
+        "term": "cheat",
+        "weight": 0.02472802996635437
+      },
+      {
+        "term": "match",
+        "weight": 0.02341465651988983
+      },
+      {
+        "term": "anti",
+        "weight": 0.021001193672418594
+      },
+      {
+        "term": "hacker",
+        "weight": 0.015171834267675877
+      },
+      {
+        "term": "toxic",
+        "weight": 0.01421035174280405
+      },
+      {
+        "term": "system",
+        "weight": 0.013567104004323483
+      },
+      {
+        "term": "full",
+        "weight": 0.013209070079028606
+      },
+      {
+        "term": "valve",
+        "weight": 0.012945151887834072
+      },
+      {
+        "term": "ban",
+        "weight": 0.012054936029016972
+      },
+      {
+        "term": "banned",
+        "weight": 0.011813090182840824
+      },
+      {
+        "term": "ranked",
+        "weight": 0.010937501676380634
+      },
+      {
+        "term": "matchmaking",
+        "weight": 0.01092222798615694
+      },
+      {
+        "term": "team",
+        "weight": 0.010459874756634235
+      },
+      {
+        "term": "cheating",
+        "weight": 0.010190588422119617
+      }
+    ]
+  },
+  {
+    "topic": 13,
+    "label": "team_hero_tank",
+    "words": [
+      {
+        "term": "team",
+        "weight": 0.028367260470986366
+      },
+      {
+        "term": "hero",
+        "weight": 0.025189053267240524
+      },
+      {
+        "term": "tank",
+        "weight": 0.023304449394345284
+      },
+      {
+        "term": "overwatch",
+        "weight": 0.014608773402869701
+      },
+      {
+        "term": "support",
+        "weight": 0.014041517861187458
+      },
+      {
+        "term": "damage",
+        "weight": 0.013753016479313374
+      },
+      {
+        "term": "win",
+        "weight": 0.013256938196718693
+      },
+      {
+        "term": "buff",
+        "weight": 0.01002343650907278
+      },
+      {
+        "term": "season",
+        "weight": 0.00998885277658701
+      },
+      {
+        "term": "dp",
+        "weight": 0.008818483911454678
+      },
+      {
+        "term": "match",
+        "weight": 0.00875013042241335
+      },
+      {
+        "term": "change",
+        "weight": 0.008556072600185871
+      },
+      {
+        "term": "nerf",
+        "weight": 0.007947550155222416
+      },
+      {
+        "term": "role",
+        "weight": 0.007403568364679813
+      },
+      {
+        "term": "rank",
+        "weight": 0.00722223985940218
+      }
+    ]
+  },
+  {
+    "topic": 14,
+    "label": "hard_soul_long",
+    "words": [
+      {
+        "term": "hard",
+        "weight": 0.05081024393439293
+      },
+      {
+        "term": "soul",
+        "weight": 0.040814775973558426
+      },
+      {
+        "term": "long",
+        "weight": 0.03289833664894104
+      },
+      {
+        "term": "yes",
+        "weight": 0.030901910737156868
+      },
+      {
+        "term": "grind",
+        "weight": 0.02831132896244526
+      },
+      {
+        "term": "easy",
+        "weight": 0.028113115578889847
+      },
+      {
+        "term": "worth",
+        "weight": 0.025587808340787888
+      },
+      {
+        "term": "average",
+        "weight": 0.01903020218014717
+      },
+      {
+        "term": "dark",
+        "weight": 0.01791718602180481
+      },
+      {
+        "term": "learn",
+        "weight": 0.0177968330681324
+      },
+      {
+        "term": "decent",
+        "weight": 0.017514703795313835
+      },
+      {
+        "term": "recommended",
+        "weight": 0.01741647906601429
+      },
+      {
+        "term": "big",
+        "weight": 0.01621021144092083
+      },
+      {
+        "term": "price",
+        "weight": 0.01486392505466938
+      },
+      {
+        "term": "life",
+        "weight": 0.013938824646174908
+      }
+    ]
+  },
+  {
+    "topic": 15,
+    "label": "fps_battlefield_run",
+    "words": [
+      {
+        "term": "fps",
+        "weight": 0.03159427270293236
+      },
+      {
+        "term": "battlefield",
+        "weight": 0.024911552667617798
+      },
+      {
+        "term": "run",
+        "weight": 0.023601975291967392
+      },
+      {
+        "term": "map",
+        "weight": 0.02240910567343235
+      },
+      {
+        "term": "setting",
+        "weight": 0.013985805213451385
+      },
+      {
+        "term": "console",
+        "weight": 0.012463342398405075
+      },
+      {
+        "term": "mode",
+        "weight": 0.012256631627678871
+      },
+      {
+        "term": "version",
+        "weight": 0.011873018927872181
+      },
+      {
+        "term": "graphic",
+        "weight": 0.01160524319857359
+      },
+      {
+        "term": "controller",
+        "weight": 0.010965809226036072
+      },
+      {
+        "term": "cod",
+        "weight": 0.010679361410439014
+      },
+      {
+        "term": "steam",
+        "weight": 0.010183044709265232
+      },
+      {
+        "term": "http",
+        "weight": 0.009703980758786201
+      },
+      {
+        "term": "use",
+        "weight": 0.009154170751571655
+      },
+      {
+        "term": "xbox",
+        "weight": 0.0087175527587533
+      }
+    ]
+  },
+  {
+    "topic": 16,
+    "label": "weapon_shooter_mission",
+    "words": [
+      {
+        "term": "weapon",
+        "weight": 0.027860820293426514
+      },
+      {
+        "term": "shooter",
+        "weight": 0.020788896828889847
+      },
+      {
+        "term": "mission",
+        "weight": 0.015731073915958405
+      },
+      {
+        "term": "gameplay",
+        "weight": 0.010759882628917694
+      },
+      {
+        "term": "solo",
+        "weight": 0.00996056292206049
+      },
+      {
+        "term": "difficulty",
+        "weight": 0.00967402569949627
+      },
+      {
+        "term": "devs",
+        "weight": 0.009404219686985016
+      },
+      {
+        "term": "community",
+        "weight": 0.008608024567365646
+      },
+      {
+        "term": "gun",
+        "weight": 0.008201049640774727
+      },
+      {
+        "term": "level",
+        "weight": 0.008165418170392513
+      },
+      {
+        "term": "pve",
+        "weight": 0.0076792072504758835
+      },
+      {
+        "term": "enemy",
+        "weight": 0.007645233068615198
+      },
+      {
+        "term": "content",
+        "weight": 0.007538392208516598
+      },
+      {
+        "term": "multiplayer",
+        "weight": 0.007465040311217308
+      },
+      {
+        "term": "mode",
+        "weight": 0.007241935934871435
+      }
+    ]
+  },
+  {
+    "topic": 17,
+    "label": "kill_enemy_fire",
+    "words": [
+      {
+        "term": "kill",
+        "weight": 0.03776969388127327
+      },
+      {
+        "term": "enemy",
+        "weight": 0.02339204214513302
+      },
+      {
+        "term": "fire",
+        "weight": 0.018156157806515694
+      },
+      {
+        "term": "shot",
+        "weight": 0.017385849729180336
+      },
+      {
+        "term": "die",
+        "weight": 0.01641077920794487
+      },
+      {
+        "term": "shoot",
+        "weight": 0.015508558601140976
+      },
+      {
+        "term": "hit",
+        "weight": 0.0153062604367733
+      },
+      {
+        "term": "head",
+        "weight": 0.010831361636519432
+      },
+      {
+        "term": "gun",
+        "weight": 0.010149755515158176
+      },
+      {
+        "term": "killed",
+        "weight": 0.009947104379534721
+      },
+      {
+        "term": "second",
+        "weight": 0.008902493864297867
+      },
+      {
+        "term": "spawn",
+        "weight": 0.008582772687077522
+      },
+      {
+        "term": "wall",
+        "weight": 0.008432457223534584
+      },
+      {
+        "term": "teammate",
+        "weight": 0.008245861157774925
+      },
+      {
+        "term": "shooting",
+        "weight": 0.008024397306144238
+      }
+    ]
+  },
+  {
+    "topic": 18,
+    "label": "account_psn_edit",
+    "words": [
+      {
+        "term": "account",
+        "weight": 0.0587429516017437
+      },
+      {
+        "term": "psn",
+        "weight": 0.055256325751543045
+      },
+      {
+        "term": "edit",
+        "weight": 0.017699209973216057
+      },
+      {
+        "term": "country",
+        "weight": 0.016804026439785957
+      },
+      {
+        "term": "arrowhead",
+        "weight": 0.015103314071893692
+      },
+      {
+        "term": "steam",
+        "weight": 0.014368810690939426
+      },
+      {
+        "term": "change",
+        "weight": 0.013110923580825329
+      },
+      {
+        "term": "requirement",
+        "weight": 0.011939870193600655
+      },
+      {
+        "term": "decision",
+        "weight": 0.011723223142325878
+      },
+      {
+        "term": "playstation",
+        "weight": 0.011638897471129894
+      },
+      {
+        "term": "community",
+        "weight": 0.01110320445150137
+      },
+      {
+        "term": "linking",
+        "weight": 0.010814475826919079
+      },
+      {
+        "term": "data",
+        "weight": 0.010257014073431492
+      },
+      {
+        "term": "positive",
+        "weight": 0.010015998035669327
+      },
+      {
+        "term": "negative",
+        "weight": 0.009244641289114952
+      }
+    ]
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "topic": 0,
+    "label": "dont_hate_life",
+    "words": [
+      {
+        "term": "dont",
+        "weight": 0.0077308244071900845
+      },
+      {
+        "term": "hate",
+        "weight": 0.007504011504352093
+      },
+      {
+        "term": "life",
+        "weight": 0.007461709901690483
+      },
+      {
+        "term": "democracy",
+        "weight": 0.007238525431603193
+      },
+      {
+        "term": "fuck",
+        "weight": 0.006417609751224518
+      },
+      {
+        "term": "fucking",
+        "weight": 0.0063401805236935616
+      },
+      {
+        "term": "story",
+        "weight": 0.005901664961129427
+      },
+      {
+        "term": "suck",
+        "weight": 0.0056227585300803185
+      },
+      {
+        "term": "kill",
+        "weight": 0.0050879004411399364
+      },
+      {
+        "term": "hard",
+        "weight": 0.004848698619753122
+      },
+      {
+        "term": "super",
+        "weight": 0.004712796304374933
+      },
+      {
+        "term": "as",
+        "weight": 0.0044401283375918865
+      },
+      {
+        "term": "long",
+        "weight": 0.004317082930356264
+      },
+      {
+        "term": "love",
+        "weight": 0.00429133977741003
+      },
+      {
+        "term": "world",
+        "weight": 0.003962544724345207
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "server_match_work",
+    "words": [
+      {
+        "term": "server",
+        "weight": 0.006377698387950659
+      },
+      {
+        "term": "match",
+        "weight": 0.004739653784781694
+      },
+      {
+        "term": "work",
+        "weight": 0.004512912128120661
+      },
+      {
+        "term": "crash",
+        "weight": 0.0044716717675328255
+      },
+      {
+        "term": "lot",
+        "weight": 0.004361450206488371
+      },
+      {
+        "term": "map",
+        "weight": 0.004164401441812515
+      },
+      {
+        "term": "weapon",
+        "weight": 0.004128699656575918
+      },
+      {
+        "term": "problem",
+        "weight": 0.0039154174737632275
+      },
+      {
+        "term": "system",
+        "weight": 0.0037675616331398487
+      },
+      {
+        "term": "getting",
+        "weight": 0.003767431015148759
+      },
+      {
+        "term": "mode",
+        "weight": 0.0036270376294851303
+      },
+      {
+        "term": "point",
+        "weight": 0.0035868866834789515
+      },
+      {
+        "term": "friend",
+        "weight": 0.0035584736615419388
+      },
+      {
+        "term": "first",
+        "weight": 0.0035282636526972055
+      },
+      {
+        "term": "team",
+        "weight": 0.003295332193374634
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "label": "tank_change_support",
+    "words": [
+      {
+        "term": "tank",
+        "weight": 0.008153602480888367
+      },
+      {
+        "term": "change",
+        "weight": 0.007855737581849098
+      },
+      {
+        "term": "support",
+        "weight": 0.00695055304095149
+      },
+      {
+        "term": "hero",
+        "weight": 0.006829055026173592
+      },
+      {
+        "term": "team",
+        "weight": 0.006595243234187365
+      },
+      {
+        "term": "country",
+        "weight": 0.006180915981531143
+      },
+      {
+        "term": "damage",
+        "weight": 0.005820883437991142
+      },
+      {
+        "term": "edit",
+        "weight": 0.005502721294760704
+      },
+      {
+        "term": "steam",
+        "weight": 0.005493160802870989
+      },
+      {
+        "term": "overwatch",
+        "weight": 0.005199164152145386
+      },
+      {
+        "term": "community",
+        "weight": 0.005082075484097004
+      },
+      {
+        "term": "arrowhead",
+        "weight": 0.004826052114367485
+      },
+      {
+        "term": "data",
+        "weight": 0.004330047406256199
+      },
+      {
+        "term": "playstation",
+        "weight": 0.004197103902697563
+      },
+      {
+        "term": "decision",
+        "weight": 0.004013042896986008
+      }
+    ]
+  }
+]

@@ -1,0 +1,398 @@
+[
+  {
+    "topic": 0,
+    "label": "dont_hate_life",
+    "words": [
+      {
+        "term": "dont",
+        "weight": 0.01683981716632843
+      },
+      {
+        "term": "hate",
+        "weight": 0.013797094114124775
+      },
+      {
+        "term": "life",
+        "weight": 0.013139595277607441
+      },
+      {
+        "term": "fucking",
+        "weight": 0.011333395726978779
+      },
+      {
+        "term": "suck",
+        "weight": 0.010841148905456066
+      },
+      {
+        "term": "fuck",
+        "weight": 0.010612440295517445
+      },
+      {
+        "term": "as",
+        "weight": 0.008034863509237766
+      },
+      {
+        "term": "hard",
+        "weight": 0.007178755477070808
+      },
+      {
+        "term": "grind",
+        "weight": 0.006359351333230734
+      },
+      {
+        "term": "long",
+        "weight": 0.005978237837553024
+      },
+      {
+        "term": "worst",
+        "weight": 0.005915994755923748
+      },
+      {
+        "term": "buy",
+        "weight": 0.005324122495949268
+      },
+      {
+        "term": "cant",
+        "weight": 0.005249555688351393
+      },
+      {
+        "term": "free",
+        "weight": 0.004727361723780632
+      },
+      {
+        "term": "made",
+        "weight": 0.004700701218098402
+      }
+    ]
+  },
+  {
+    "topic": 1,
+    "label": "democracy_cheat_super",
+    "words": [
+      {
+        "term": "democracy",
+        "weight": 0.02870691753923893
+      },
+      {
+        "term": "cheat",
+        "weight": 0.020316189154982567
+      },
+      {
+        "term": "super",
+        "weight": 0.017786985263228416
+      },
+      {
+        "term": "hacker",
+        "weight": 0.01740272529423237
+      },
+      {
+        "term": "anti",
+        "weight": 0.017064247280359268
+      },
+      {
+        "term": "earth",
+        "weight": 0.012191984802484512
+      },
+      {
+        "term": "bot",
+        "weight": 0.011946018785238266
+      },
+      {
+        "term": "dive",
+        "weight": 0.011901234276592731
+      },
+      {
+        "term": "valve",
+        "weight": 0.011488999240100384
+      },
+      {
+        "term": "helldivers",
+        "weight": 0.01103085745126009
+      },
+      {
+        "term": "strike",
+        "weight": 0.010251390747725964
+      },
+      {
+        "term": "together",
+        "weight": 0.009449237026274204
+      },
+      {
+        "term": "cheating",
+        "weight": 0.009182685986161232
+      },
+      {
+        "term": "kill",
+        "weight": 0.00901835598051548
+      },
+      {
+        "term": "full",
+        "weight": 0.008007138036191463
+      }
+    ]
+  },
+  {
+    "topic": 2,
+    "label": "steam_community_edit",
+    "words": [
+      {
+        "term": "steam",
+        "weight": 0.01024973951280117
+      },
+      {
+        "term": "community",
+        "weight": 0.00980407651513815
+      },
+      {
+        "term": "edit",
+        "weight": 0.00935982633382082
+      },
+      {
+        "term": "country",
+        "weight": 0.008925274945795536
+      },
+      {
+        "term": "change",
+        "weight": 0.008428527042269707
+      },
+      {
+        "term": "arrowhead",
+        "weight": 0.007795841433107853
+      },
+      {
+        "term": "company",
+        "weight": 0.007570415269583464
+      },
+      {
+        "term": "devs",
+        "weight": 0.006010439712554216
+      },
+      {
+        "term": "negative",
+        "weight": 0.005739831365644932
+      },
+      {
+        "term": "refund",
+        "weight": 0.005618274211883545
+      },
+      {
+        "term": "decision",
+        "weight": 0.005501505918800831
+      },
+      {
+        "term": "support",
+        "weight": 0.005490648560225964
+      },
+      {
+        "term": "month",
+        "weight": 0.005478811450302601
+      },
+      {
+        "term": "playstation",
+        "weight": 0.005392475984990597
+      },
+      {
+        "term": "requirement",
+        "weight": 0.005154410842806101
+      }
+    ]
+  },
+  {
+    "topic": 3,
+    "label": "team_tank_match",
+    "words": [
+      {
+        "term": "team",
+        "weight": 0.014171821065247059
+      },
+      {
+        "term": "tank",
+        "weight": 0.01121935062110424
+      },
+      {
+        "term": "match",
+        "weight": 0.008508487604558468
+      },
+      {
+        "term": "hero",
+        "weight": 0.00831651221960783
+      },
+      {
+        "term": "damage",
+        "weight": 0.00793503038585186
+      },
+      {
+        "term": "enemy",
+        "weight": 0.006888072472065687
+      },
+      {
+        "term": "season",
+        "weight": 0.006429045461118221
+      },
+      {
+        "term": "skin",
+        "weight": 0.006270579993724823
+      },
+      {
+        "term": "overwatch",
+        "weight": 0.006229178048670292
+      },
+      {
+        "term": "support",
+        "weight": 0.005080860108137131
+      },
+      {
+        "term": "point",
+        "weight": 0.005045200232416391
+      },
+      {
+        "term": "kill",
+        "weight": 0.004930879920721054
+      },
+      {
+        "term": "change",
+        "weight": 0.004687384702265263
+      },
+      {
+        "term": "shot",
+        "weight": 0.004582377150654793
+      },
+      {
+        "term": "see",
+        "weight": 0.004419106058776379
+      }
+    ]
+  },
+  {
+    "topic": 4,
+    "label": "weapon_lot_character",
+    "words": [
+      {
+        "term": "weapon",
+        "weight": 0.006322961766272783
+      },
+      {
+        "term": "lot",
+        "weight": 0.005700590088963509
+      },
+      {
+        "term": "character",
+        "weight": 0.005123825278133154
+      },
+      {
+        "term": "map",
+        "weight": 0.004916745703667402
+      },
+      {
+        "term": "gameplay",
+        "weight": 0.004702005069702864
+      },
+      {
+        "term": "first",
+        "weight": 0.004517243709415197
+      },
+      {
+        "term": "story",
+        "weight": 0.004478088114410639
+      },
+      {
+        "term": "content",
+        "weight": 0.0041673691011965275
+      },
+      {
+        "term": "experience",
+        "weight": 0.004112647380679846
+      },
+      {
+        "term": "world",
+        "weight": 0.0038032284937798977
+      },
+      {
+        "term": "level",
+        "weight": 0.003443701658397913
+      },
+      {
+        "term": "boring",
+        "weight": 0.003280721139162779
+      },
+      {
+        "term": "well",
+        "weight": 0.003167008049786091
+      },
+      {
+        "term": "something",
+        "weight": 0.0031325197778642178
+      },
+      {
+        "term": "enemy",
+        "weight": 0.0030876274686306715
+      }
+    ]
+  },
+  {
+    "topic": 5,
+    "label": "server_crash_work",
+    "words": [
+      {
+        "term": "server",
+        "weight": 0.02165089175105095
+      },
+      {
+        "term": "crash",
+        "weight": 0.015309727750718594
+      },
+      {
+        "term": "work",
+        "weight": 0.009755440056324005
+      },
+      {
+        "term": "problem",
+        "weight": 0.008492032997310162
+      },
+      {
+        "term": "friend",
+        "weight": 0.008083171211183071
+      },
+      {
+        "term": "fixed",
+        "weight": 0.007370421197265387
+      },
+      {
+        "term": "unplayable",
+        "weight": 0.007150002755224705
+      },
+      {
+        "term": "cant",
+        "weight": 0.006734686437994242
+      },
+      {
+        "term": "run",
+        "weight": 0.006691285874694586
+      },
+      {
+        "term": "minute",
+        "weight": 0.006685588043183088
+      },
+      {
+        "term": "screen",
+        "weight": 0.006575764622539282
+      },
+      {
+        "term": "match",
+        "weight": 0.006016258616000414
+      },
+      {
+        "term": "fps",
+        "weight": 0.005723601672798395
+      },
+      {
+        "term": "recommend",
+        "weight": 0.005698229651898146
+      },
+      {
+        "term": "day",
+        "weight": 0.005514987278729677
+      }
+    ]
+  }
+]

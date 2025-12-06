@@ -9,17 +9,14 @@ from functools import wraps
 # based on the Prefiltered data documentation. Keys and values are lower-cased
 # for case-insensitive matching.
 MAIN_TEXT_FIELD_MAP = {
-    "metacritic": "main text",
+    "league_of_legends_reddit_comments": "body",
+    "ea_forum_posts": "body text",
+    "baldurs_gate_official_forum_posts": "content",
+    "escape_from_Tarkov_Official_Forum_Replies": "main text",
+    "overwatch_2_official_forum_posts": "post text",
+    "metacritic": "review text",
     "reddit": "body",
     "steam": "review",
-    "ea forum posts": "body text",
-    "baldur’s gate 3 official forum": "content",
-    # "cyberpunk 2077 official forum": "main text",
-    "escape from tarkov official forum posts": "main text",
-    "escape from tarkov official forum replies": "main text",
-    "escape from tarkov official forum": "main text",
-    "league of legends reddit": "body",
-    "overwatch 2 official forum": "post text",
 }
 
 # OPTIONAL: install vaderSentiment ahead of time in your env (login node)
@@ -27,6 +24,7 @@ try:
     from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
     vader = SentimentIntensityAnalyzer()
 except ImportError:
+    print("⚪ vaderSentiment not installed; skipping VADER analysis.")
     vader = None
 
 # Configure device (GPU if available)
@@ -229,7 +227,7 @@ def main():
     `Raw_Reviews.db`.
     """
     input_db_path = "Data_Extraction/Database/Raw_Reviews.db"
-    output_db_path = "Data_Extraction/Database/CS_Capstone_Sentiment.db"
+    output_db_path = "Data_Extraction/Database/CS_Capstone_Sentiment_trial.db"
 
     conn_in = sqlite3.connect(input_db_path)
     conn_out = sqlite3.connect(output_db_path)

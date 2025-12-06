@@ -21,9 +21,9 @@
 #   removing ubiquitous words that slip past the stopword list.
 #
 # * Export of topic word lists and document–topic weights.  After
-#   training, the script writes ``outputs/topics_top_words.json`` (the
+#   training, the script writes ``args.output_dir/topics_top_words.json`` (the
 #   top terms and their probabilities per topic) and
-#   ``outputs/doc_topic_weights.csv`` (one row per document with the
+#   ``args.output_dir/doc_topic_weights.csv`` (one row per document with the
 #   per-topic probabilities and dominant topic).  These files make it
 #   straightforward to inspect the model output in Excel or other tools.
 #
@@ -171,13 +171,13 @@ class SQLiteBatchTextStream:
     def __iter__(self):
         conn = sqlite3.connect(self.db_path)
         cur = conn.cursor()
-        cur.execute(f"SELECT {self.text_col} FROM {self.table}")
+        cur.execute(f"SELECT id, {self.text_col} FROM {self.table} ORDER BY id")
         while True:
             rows = cur.fetchmany(self.batch_size)
             if not rows:
                 break
-            for (txt,) in rows:
-                yield txt
+            for (id_val, txt) in rows:
+                yield (id_val, txt)
         conn.close()
 
 
@@ -195,12 +195,12 @@ class TokenStream:
         self.bigram_phraser = bigram_phraser
 
     def __iter__(self):
-        for t in self.raw_iter:
+        for (id_val, t) in self.raw_iter:
             tokens = simple_tokenize(t)
             tokens = preprocess_tokens(tokens, self.sw, self.lemm)
             if self.bigram_phraser is not None:
                 tokens = self.bigram_phraser[tokens]
-            yield tokens
+            yield (id_val, tokens)
 
 
 def build_bigram_phraser(sample_texts, min_count: int = 20, threshold: float = 10.0):
@@ -245,13 +245,20 @@ def main():
     parser.add_argument("--bigram-min-count", type=int, default=20, help="Min count for bigram detection (when enabled)")
     parser.add_argument("--bigram-threshold", type=float, default=10.0, help="Threshold for bigram detection (when enabled)")
     parser.add_argument("--assign-themes", default="none", choices=["none", "simple"], help="Automatically assign a label/theme to each topic")
-    parser.add_argument("--topics-file", default="outputs/topics_top_words.json", help="Path to JSON file for topic words")
-    parser.add_argument("--doc-topics-file", default="outputs/doc_topic_weights.csv", help="Path to CSV file for document-topic weights")
+    parser.add_argument("--output-dir", default="outputs", help="Directory to save outputs")
+    parser.add_argument("--topics-file", default=None, help="Path to JSON file for topic words")
+    parser.add_argument("--doc-topics-file", default=None, help="Path to CSV file for document-topic weights")
     args = parser.parse_args()
+
+    # Set default paths based on output-dir if not specified
+    if args.topics_file is None:
+        args.topics_file = os.path.join(args.output_dir, "topics_top_words.json")
+    if args.doc_topics_file is None:
+        args.doc_topics_file = os.path.join(args.output_dir, "doc_topic_weights.csv")
 
     random.seed(args.seed)
     np.random.seed(args.seed)
-    os.makedirs("outputs", exist_ok=True)
+    os.makedirs(args.output_dir, exist_ok=True)
 
     # NLTK preparation
     ensure_nltk()
@@ -263,7 +270,7 @@ def main():
     raw_stream_pass1 = SQLiteBatchTextStream(args.db, args.table, args.text_col, args.batch_size)
     sample_texts = []  # reservoir sample for coherence and bigram training
     n_docs_seen = 0
-    for text in tqdm(raw_stream_pass1, desc="Pass1 (docs)"):
+    for (id_val, text) in tqdm(raw_stream_pass1, desc="Pass1 (docs)"):
         tokens = simple_tokenize(text)
         tokens = preprocess_tokens(tokens, sw, lemm)
         n_docs_seen += 1
@@ -299,7 +306,7 @@ def main():
     dictionary = corpora.Dictionary()
     raw_stream_pass2 = SQLiteBatchTextStream(args.db, args.table, args.text_col, args.batch_size)
     token_stream_pass2 = TokenStream(raw_stream_pass2, sw, lemm, bigram_phraser)
-    for toks in tqdm(token_stream_pass2, total=n_docs_seen, desc="Pass2 (dict)"):
+    for (id_val, toks) in tqdm(token_stream_pass2, total=n_docs_seen, desc="Pass2 (dict)"):
         dictionary.add_documents([toks], prune_at=None)
 
     # Filter extremes
@@ -311,14 +318,31 @@ def main():
     print(f"Dictionary size after filtering: {len(dictionary)}")
 
     # ----------------- Pass 3: Stream BOWs into MmCorpus -----------------
-    print("Pass 3/3: Serializing corpus to outputs/corpus.mm …")
-    corpus_mm_path = "outputs/corpus.mm"
+    print(f"Pass 3/3: Serializing corpus to {args.output_dir}/corpus.mm …")
+    corpus_mm_path = os.path.join(args.output_dir, "corpus.mm")
     raw_stream_pass3 = SQLiteBatchTextStream(args.db, args.table, args.text_col, args.batch_size)
     token_stream_pass3 = TokenStream(raw_stream_pass3, sw, lemm, bigram_phraser)
+    doc_ids = []
 
     def bow_stream_with_progress():
-        for toks in tqdm(token_stream_pass3, total=n_docs_seen, desc="Pass3 (serialize)"):
-            yield dictionary.doc2bow(toks)
+        skipped = 0
+        for (id_val, toks) in tqdm(token_stream_pass3, total=n_docs_seen, desc="Pass3 (serialize)"):
+            # Skip empty token lists
+            if not toks:
+                skipped += 1
+                continue
+
+            bow = dictionary.doc2bow(toks)
+            if not bow:  # Skip if no words remain in the dictionary
+                skipped += 1
+                continue
+
+            doc_ids.append(id_val)
+
+            yield bow
+
+        print(f"Skipped {skipped} empty documents during serialization.")
+
 
     # Serialize to disk using the built dictionary
     MmCorpus.serialize(corpus_mm_path, bow_stream_with_progress(), id2word=dictionary)
@@ -355,7 +379,7 @@ def main():
         chunksize=args.chunksize,
         workers=args.workers,
         alpha=alpha_param,
-        eta=args.eta,
+        eta='auto' if args.eta is None else args.eta,
         eval_every=None
     )
     print(f"Training done in {time.time() - start:.1f}s.")
@@ -412,7 +436,7 @@ def main():
             "gini": float(gini)
         }
     }
-    with open("outputs/metrics_summary.json", "w") as f:
+    with open(args.output_dir + "/metrics_summary.json", "w") as f:
         json.dump(summary, f, indent=2)
     print("\n=== Metrics (summary) ===")
     print(json.dumps(summary, indent=2))
@@ -436,7 +460,7 @@ def main():
     print("Exporting document-topic weights…")
     # Prepare header
     topic_headers = [f"topic_{k}" for k in range(args.k)]
-    header = ["doc_index"] + topic_headers + ["dominant_topic"]
+    header = ["id"] + topic_headers + ["dominant_topic"]
     with open(args.doc_topics_file, "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(header)
@@ -452,7 +476,7 @@ def main():
                 if p > max_prob:
                     max_prob = p
                     dom = t
-            writer.writerow([i] + row + [dom])
+            writer.writerow([doc_ids[i]] + row + [dom])
     print(f"Document-topic weights saved to {args.doc_topics_file}")
 
     # ----------------- Visualizations -----------------
@@ -464,7 +488,7 @@ def main():
     plt.ylabel("Estimated docs")
     plt.title("Topic Sizes (scaled from train)")
     plt.tight_layout()
-    plt.savefig("outputs/topic_sizes.png", dpi=150)
+    plt.savefig(args.output_dir + "/topic_sizes.png", dpi=150)
     plt.close()
 
     # JSD heatmap
@@ -475,7 +499,7 @@ def main():
     plt.ylabel("Topic")
     plt.colorbar()
     plt.tight_layout()
-    plt.savefig("outputs/intertopic_js_heatmap.png", dpi=150)
+    plt.savefig(args.output_dir + "/intertopic_js_heatmap.png", dpi=150)
     plt.close()
 
     # Dendrogram (1 - cosine)
@@ -487,7 +511,7 @@ def main():
     dendrogram(Z, labels=[f"T{k}" for k in range(args.k)])
     plt.title("Topic Hierarchy (1 - cosine)")
     plt.tight_layout()
-    plt.savefig("outputs/topic_dendrogram.png", dpi=150)
+    plt.savefig(args.output_dir + "/topic_dendrogram.png", dpi=150)
     plt.close()
 
     # 2D doc scatter
@@ -503,10 +527,10 @@ def main():
             dom_colors[i_sel] = max(dist_i, key=lambda x: x[1])[0] if dist_i else -1
         if HAS_UMAP:
             emb = umap.UMAP(random_state=args.seed).fit_transform(DT)
-            title, outp = "Document Embedding (UMAP of doc-topic, sample)", "outputs/doc_scatter_umap.png"
+            title, outp = "Document Embedding (UMAP of doc-topic, sample)", args.output_dir + "/doc_scatter_umap.png"
         else:
             emb = PCA(n_components=2, random_state=args.seed).fit_transform(DT)
-            title, outp = "Document Embedding (PCA of doc-topic, sample)", "outputs/doc_scatter_pca.png"
+            title, outp = "Document Embedding (PCA of doc-topic, sample)", args.output_dir + "/doc_scatter_pca.png"
         plt.figure(figsize=(8, 6))
         plt.scatter(emb[:, 0], emb[:, 1], s=6, alpha=0.7, c=dom_colors)
         plt.title(title)
@@ -525,11 +549,11 @@ def main():
             sel = np.random.choice(len(corpus_train), min(args.pyldavis_sample, len(corpus_train)), replace=False)
             corpus_py = [corpus_train[i] for i in tqdm(sel, desc="pyLDAvis sample", unit="docs")]
             vis = gensimvis.prepare(lda, corpus_py, dictionary)
-            pyLDAvis.save_html(vis, "outputs/pyldavis_sample.html")
+            pyLDAvis.save_html(vis, args.output_dir + "/pyldavis_sample.html")
         except Exception as e:
             print(f"pyLDAvis failed to generate: {e}")
 
-    print("Artifacts saved in outputs/")
+    print(f"Artifacts saved in {args.output_dir}/")
 
 
 if __name__ == "__main__":
