@@ -1,0 +1,38 @@
+import sqlite3
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# -----------------------------
+# CONFIGURATION
+# -----------------------------
+DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment_time_filtered.db"               # Your SQLite DB
+TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined"           # Table name
+COLUMN = "comment_platform"                  # Column containing platform/source names
+OUTPUT = "platform_counts.png"       # Output PNG
+# -----------------------------
+
+# Connect to the database
+conn = sqlite3.connect(DB_PATH)
+
+# Load counts per category
+query = f"""
+SELECT {COLUMN}, COUNT(*) AS count
+FROM {TABLE}
+GROUP BY {COLUMN}
+ORDER BY count DESC;
+"""
+
+df = pd.read_sql_query(query, conn)
+conn.close()
+
+# Plot
+plt.figure(figsize=(10, 6))
+plt.bar(df[COLUMN], df["count"])
+plt.xticks(rotation=45, ha="right")
+plt.ylabel("Number of Reviews")
+plt.xlabel("Platform / Source Category")
+plt.title("Review Counts by Platform/Source")
+plt.tight_layout()
+plt.savefig(OUTPUT, dpi=300)
+
+print(f"Saved figure to {OUTPUT}")

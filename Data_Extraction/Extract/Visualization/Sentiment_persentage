@@ -1,0 +1,41 @@
+import sqlite3
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# -----------------------------------
+# CONFIGURATION — CHANGE THESE
+# -----------------------------------
+DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment_time_filtered.db"          # your database
+TABLE = "frustrated_sentiment_pos_neg_v2_sentiment_combined_english_only"      # table containing sentiment labels
+COLUMN = "final_label"            # column storing sentiment categories
+OUTPUT = "sentiment_pie.png"      # output figure file
+# -----------------------------------
+
+# Connect to SQLite
+conn = sqlite3.connect(DB_PATH)
+
+# Load sentiment counts
+query = f"""
+SELECT {COLUMN}, COUNT(*) AS count
+FROM {TABLE}
+GROUP BY {COLUMN}
+ORDER BY count DESC;
+"""
+
+df = pd.read_sql_query(query, conn)
+conn.close()
+
+# Pie chart
+plt.figure(figsize=(8, 8))
+plt.pie(
+    df["count"],
+    labels=df[COLUMN],
+    autopct="%1.1f%%",
+    startangle=90,
+    explode=[0.05 if lbl.lower() == "negative" else 0 for lbl in df[COLUMN]], 
+)
+plt.title("Sentiment Distribution of Reviews")
+plt.tight_layout()
+plt.savefig(OUTPUT, dpi=300)
+
+print(f"Saved pie chart to {OUTPUT}")

@@ -1,0 +1,97 @@
+import sqlite3
+import pandas as pd
+
+# -----------------------------------
+# CONFIGURATION — CHANGE AS NEEDED
+# -----------------------------------
+
+RAW_DB_PATH = "Data_Extraction/Database/Raw_Reviews.db"          # DB containing raw tables
+FILTERED_DB_PATH = "Data_Extraction/Database/CS_Capstone_Sentiment_time_filtered.db"       # DB with filtered tables
+
+TABLE_TIME = "frustrated_sentiment_pos_neg_v2_sentiment_combined"
+TABLE_LANG = "frustrated_sentiment_pos_neg_v2_sentiment_combined_english_only"
+TABLE_SENTIMENT = "frustrated_sentiment_pos_neg_v2_sentiment_combined_english_only_negative_only"
+
+OUTPUT_CSV = "review_counts_summary.csv"
+# -----------------------------------
+
+
+# -----------------------------------
+# 1. COUNT RAW ROWS FROM RAW DB
+# -----------------------------------
+conn_raw = sqlite3.connect(RAW_DB_PATH)
+
+query_tables = """
+SELECT name FROM sqlite_master
+WHERE type='table' AND name NOT LIKE 'sqlite_%';
+"""
+tables_raw = [row[0] for row in conn_raw.execute(query_tables).fetchall()]
+
+raw_total = 0
+raw_counts = {}
+
+for t in tables_raw:
+    try:
+        count = conn_raw.execute(f"SELECT COUNT(*) FROM {t};").fetchone()[0]
+        raw_counts[t] = count
+        raw_total += count
+    except:
+        continue
+
+conn_raw.close()
+
+
+# -----------------------------------
+# 2. COUNT FILTERED ROWS FROM FILTERED DB
+# -----------------------------------
+conn_f = sqlite3.connect(FILTERED_DB_PATH)
+
+def safe_count(conn, table):
+    try:
+        return conn.execute(f"SELECT COUNT(*) FROM {table};").fetchone()[0]
+    except:
+        return None
+
+time_count = safe_count(conn_f, TABLE_TIME)
+lang_count = safe_count(conn_f, TABLE_LANG)
+sentiment_count = safe_count(conn_f, TABLE_SENTIMENT)
+
+conn_f.close()
+
+
+# -----------------------------------
+# 3. BUILD SUMMARY TABLE
+# -----------------------------------
+summary = pd.DataFrame({
+    "Stage": [
+        "Raw (sum of all tables in raw DB)",
+        "After Time Filter",
+        "After Language Filter",
+        "After Sentiment Filter"
+    ],
+    "Count": [
+        raw_total,
+        time_count,
+        lang_count,
+        sentiment_count
+    ]
+})
+
+print("\n=== Summary Table ===\n")
+print(summary)
+
+# Save CSV
+summary.to_csv(OUTPUT_CSV, index=False)
+
+
+# -----------------------------------
+# 4. OPTIONAL: Output LaTeX Table
+# -----------------------------------
+latex = summary.to_latex(
+    index=False,
+    caption="Review Counts Across Filtering Stages",
+    label="tab:review_counts"
+)
+
+print("\n=== LaTeX Table ===\n")
+print(latex)
