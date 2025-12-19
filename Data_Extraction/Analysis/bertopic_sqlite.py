@@ -360,8 +360,15 @@ def run_bertopic(
     embedding_model_name: str = "all-MiniLM-L6-v2",
     min_topic_size: int = 30,
     nr_topics: str | int | None = None,
-) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Run BERTopic on a list of documents and return topic assignments and summaries.
+    random_state: int | None = None,
+) -> tuple[pd.DataFrame, pd.DataFrame, BERTopic]:
+    """Run BERTopic on a list of documents and return topic assignments, summaries and the model.
+
+    This helper wraps BERTopic to produce reproducible results via a controllable
+    ``random_state`` parameter. When provided, the random state is used to seed
+    the underlying UMAP dimensionality reduction. If ``random_state`` is ``None``,
+    BERTopic will use its default randomness which may lead to different topic
+    assignments across runs.
 
     Parameters
     ----------
@@ -373,23 +380,34 @@ def run_bertopic(
     min_topic_size : int, optional
         Minimum size of topics; smaller clusters will be merged. Defaults to 30.
     nr_topics : str | int | None, optional
-        If None, no topic reduction is performed. If "auto", BERTopic will
+        If ``None``, no topic reduction is performed. If ``"auto"``, BERTopic will
         automatically merge similar topics. Otherwise, you can specify the
         desired number of topics as an integer.
+    random_state : int | None, optional
+        An optional integer to seed the underlying UMAP model for reproducibility.
+        When ``None``, randomness is uncontrolled.
 
     Returns
     -------
-    tuple[pd.DataFrame, pd.DataFrame]
+    tuple[pd.DataFrame, pd.DataFrame, BERTopic]
         A tuple containing:
-        * reviews_with_topics – a DataFrame of the original documents with an
-          assigned topic id
-        * topic_info – a DataFrame summarizing each topic (topic id, size,
-          and cTF‑IDF keywords)
+        * reviews_with_topics – a DataFrame of the documents with an assigned topic id
+        * topic_info – a DataFrame summarising each topic (topic id, size, and keywords)
+        * topic_model – the fitted BERTopic instance for further inspection/visualisation
     """
 
     # Initialize BERTopic
     from sentence_transformers import SentenceTransformer
     from bertopic.representation import KeyBERTInspired
+
+    # UMAP will be seeded for reproducibility when random_state is provided. UMAP
+    # (from the umap‑learn package) must be imported here because
+    # ``bertopic`` does not expose a top‑level ``random_state`` argument.
+    try:
+        from umap import UMAP  # type: ignore
+    except ImportError:
+        # Fallback: If UMAP isn't available, simply leave the model unseeded.
+        UMAP = None  # type: ignore
 
     # Use ONE embedding model for everything
     embed_model = SentenceTransformer(embedding_model_name)
@@ -398,13 +416,30 @@ def run_bertopic(
     # Representation model
     rep_model = KeyBERTInspired()
 
-    # Initialize BERTopic using the SAME embedding model
+    # Construct a UMAP model seeded with the provided random state (if available).
+    umap_model = None
+    if random_state is not None and UMAP is not None:
+        # Default UMAP settings from BERTopic; adjust as desired.
+        umap_model = UMAP(
+            n_neighbors=15,
+            n_components=5,
+            min_dist=0.0,
+            metric="cosine",
+            random_state=random_state,
+        )
+
+    # Initialize BERTopic using the same embedding model. When ``umap_model`` is
+    # provided, BERTopic will use it for dimensionality reduction; otherwise it
+    # falls back to its own defaults.
     topic_model = BERTopic(
         embedding_model=embed_model,
         representation_model=rep_model,
+        umap_model=umap_model,
         min_topic_size=min_topic_size,
         nr_topics=nr_topics,
         calculate_probabilities=False,
+        # Enable low_memory to reduce memory usage during UMAP and cTF‑IDF【53561172673549†L299-L324】.
+        low_memory=True,
         verbose=True,
     )
 
@@ -417,7 +452,7 @@ def run_bertopic(
     # Get topic information
     topic_info = topic_model.get_topic_info()
 
-    return reviews_with_topics, topic_info
+    return reviews_with_topics, topic_info, topic_model
 
 
 def save_outputs(reviews_with_topics: pd.DataFrame, topic_info: pd.DataFrame, output_dir: Path) -> None:
@@ -488,8 +523,89 @@ def main() -> None:
         help="Number of topics to reduce to (int) or 'auto'. Default: None",
     )
 
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=None,
+        help=(
+            "Random seed for reproducibility. Overrides the DEFAULT_SEED constant. "
+            "When not provided and DEFAULT_SEED is set, the constant will be used; "
+            "otherwise the current time (seconds since epoch) will be used."
+        ),
+    )
+
+    # Additional visualisation options. Datamap relies on datashader and is suitable for
+    # extremely large corpora. When enabled, the regular visualize_documents scatter will
+    # be skipped and a datashader-based plot will be generated instead.
+    parser.add_argument(
+        "--doc-datamap",
+        action="store_true",
+        help=(
+            "Generate a DataMapPlot (datashader) visualisation of documents coloured by topic. "
+            "Recommended for corpora with hundreds of thousands of documents."
+        ),
+    )
+    parser.add_argument(
+        "--doc-datamap-interactive",
+        action="store_true",
+        help=(
+            "When using --doc-datamap, save an interactive HTML instead of a static PNG. "
+            "If omitted, a static PNG will be written."
+        ),
+    )
+    parser.add_argument(
+        "--doc-datamap-subsample",
+        type=int,
+        default=None,
+        help=(
+            "Optional number of documents to sample when fitting the 2D UMAP for the DataMapPlot. "
+            "Fitting UMAP on all documents may be slow and memory intensive. When provided, a random "
+            "subset of this size will be used to fit UMAP, after which all documents will be transformed."
+        ),
+    )
+
+    # Maximum number of documents to include in the DataMapPlot. If the corpus
+    # contains more documents than this limit, a random subset of that size
+    # will be used for the datashader visualisation. This provides a hard cap
+    # on memory usage during the document‑level visualisation. A smaller
+    # sample trades off some precision in the scatter layout for guaranteed
+    # stability. When unset, all documents will be visualised (not
+    # recommended for very large datasets).
+    parser.add_argument(
+        "--doc-datamap-max-docs",
+        type=int,
+        default=None,
+        help=(
+            "Maximum number of documents to visualise in the DataMapPlot. When the number of "
+            "documents exceeds this limit, a random sample of this many documents will be used. "
+            "Setting this option provides a deterministic upper bound on memory use at the cost "
+            "of only showing a subset of documents. If omitted, all documents are used (not "
+            "recommended on very large corpora)."
+        ),
+    )
+
     args = parser.parse_args()
 
+    # Determine the random seed. Users can override via the --seed flag, or by
+    # editing the DEFAULT_SEED constant defined below. If both are None, fall
+    # back to using the current Unix timestamp.
+    # You can edit DEFAULT_SEED to a fixed integer to always obtain the same
+    # results without specifying --seed at the command line.
+    DEFAULT_SEED: int | None = None  # set to an integer for deterministic runs
+    import time, random as _py_random, numpy as _py_np
+
+    if args.seed is not None:
+        seed = args.seed
+    elif DEFAULT_SEED is not None:
+        seed = DEFAULT_SEED
+    else:
+        seed = int(time.time())
+
+    # Seed Python's and NumPy's random number generators. BERTopic relies on
+    # UMAP which uses NumPy's global random state when the random_state argument is None.
+    _py_random.seed(seed)
+    _py_np.random.seed(seed)
+    print(f"Using random seed: {seed}")
     # Load review data
     reviews = load_reviews(args.db_path, args.table, args.column)
     print(f"Loaded {len(reviews)} raw reviews from {args.db_path}")
@@ -502,19 +618,180 @@ def main() -> None:
     original_selected = reviews.iloc[idx_map].tolist()
 
     # Run BERTopic on preprocessed text
-    reviews_with_topics, topic_info = run_bertopic(
+    reviews_with_topics, topic_info, topic_model = run_bertopic(
         docs=preprocessed_docs,
         embedding_model_name=args.embedding_model,
         min_topic_size=args.min_topic_size,
         nr_topics=args.nr_topics,
+        random_state=seed,
     )
+
 
     # ADD original reviews to dataframe
     reviews_with_topics["original_review"] = original_selected
     reviews_with_topics["cleaned_review"] = preprocessed_docs
 
-    # Save outputs
+    # Persist outputs
     save_outputs(reviews_with_topics, topic_info, args.output_dir)
+
+    # Write the seed used for this run into the output directory so that
+    # downstream users can reproduce the exact same topic assignments.
+    try:
+        seed_file = args.output_dir / "seed.txt"
+        with open(seed_file, "w", encoding="utf-8") as f:
+            f.write(str(seed))
+        print(f"Saved random seed to {seed_file}")
+    except Exception as _exc:
+        print(f"Could not write seed file: {_exc}")
+
+    # ---------------------------------------------------------------------
+    # Visualisations
+    # ---------------------------------------------------------------------
+    # After fitting BERTopic, we can generate a suite of interactive
+    # visualisations to better understand the discovered topics. These
+    # visualisations are based on Plotly and will either display in a Jupyter
+    # notebook or save to HTML files in the output directory.
+    try:
+        # Generate an overview of the topics using a reduced 2D embedding. This
+        # is similar to the PyLDAvis intertopic distance map, showing topics as
+        # bubbles where size corresponds to frequency and distance corresponds
+        # roughly to similarity/dissimilarity.
+        fig_overview = topic_model.visualize_topics()
+        overview_path = args.output_dir / "topics_overview.html"
+        fig_overview.write_html(str(overview_path))
+        print(f"Saved topics overview visualisation to {overview_path}")
+
+        # Bar chart of the top terms per topic for the most frequent topics.
+        fig_barchart = topic_model.visualize_barchart(top_n_topics=10)
+        barchart_path = args.output_dir / "topics_barchart.html"
+        fig_barchart.write_html(str(barchart_path))
+        print(f"Saved topics bar chart to {barchart_path}")
+
+        # Hierarchical clustering of topics to inspect relationships between topics.
+        fig_hier = topic_model.visualize_hierarchy()
+        hier_path = args.output_dir / "topics_hierarchy.html"
+        fig_hier.write_html(str(hier_path))
+        print(f"Saved topics hierarchy to {hier_path}")
+
+        # Heatmap showing the similarity between topics.
+        fig_heatmap = topic_model.visualize_heatmap()
+        heatmap_path = args.output_dir / "topics_heatmap.html"
+        fig_heatmap.write_html(str(heatmap_path))
+        print(f"Saved topics heatmap to {heatmap_path}")
+
+        # Term rank distribution visualisation to explore term distributions within topics.
+        fig_termrank = topic_model.visualize_term_rank()
+        termrank_path = args.output_dir / "topics_term_rank.html"
+        fig_termrank.write_html(str(termrank_path))
+        print(f"Saved topics term rank visualisation to {termrank_path}")
+
+        # Document‑level visualisation. If the --doc-datamap flag is set, we generate a
+        # datashader‑based DataMapPlot instead of the interactive scatter, as the
+        # latter will consume excessive memory on very large datasets. Otherwise,
+        # fallback to the default Plotly scatter.
+        if args.doc_datamap:
+            print("Generating DataMapPlot for documents…")
+            try:
+                # Determine the set of documents and corresponding topic labels to include
+                # in the DataMapPlot. When the corpus size exceeds the max limit, sample
+                # that many documents uniformly at random. Sampling is deterministic
+                # using the provided seed. We also sample the topic labels using the
+                # same indices to ensure lengths match between docs, topics and
+                # embeddings. If no sampling is requested, use the full set.
+                docs_for_datamap = preprocessed_docs
+                topics_for_datamap = topic_model.topics_  # full topics for all docs
+                sample_indices = None
+                import numpy as _np
+                if (
+                    args.doc_datamap_max_docs is not None
+                    and args.doc_datamap_max_docs > 0
+                    and len(preprocessed_docs) > args.doc_datamap_max_docs
+                ):
+                    rng = _np.random.default_rng(seed)
+                    sample_indices = rng.choice(
+                        len(preprocessed_docs), size=args.doc_datamap_max_docs, replace=False
+                    )
+                    # Sort indices to maintain approximate original order
+                    sample_indices.sort()
+                    docs_for_datamap = [preprocessed_docs[i] for i in sample_indices]
+                    # Align the topic labels with the sampled documents. topics_ is a
+                    # list/array of length equal to the number of documents. We select
+                    # the same indices to get topics for the sampled docs. If topics_
+                    # is a list, list comprehension will work; if it is a numpy array,
+                    # indexing with an array also works.
+                    topics_arr = topic_model.topics_
+                    try:
+                        topics_for_datamap = [topics_arr[i] for i in sample_indices]
+                    except Exception:
+                        topics_for_datamap = topics_arr[sample_indices]
+
+                # Compute sentence embeddings for the selected documents using the same
+                # embedding model as BERTopic. Computing embeddings here avoids
+                # recomputation inside visualize_document_datamap. We encode only
+                # the sampled docs (or all docs if no sampling).
+                from sentence_transformers import SentenceTransformer
+                embed_model_dm = SentenceTransformer(args.embedding_model)
+                emb_dm = embed_model_dm.encode(docs_for_datamap, show_progress_bar=True)
+
+                # Construct a 2D UMAP model seeded with the random seed for reproducibility.
+                from umap import UMAP  # type: ignore
+                umap_2d = UMAP(
+                    n_neighbors=15,
+                    n_components=2,
+                    min_dist=0.0,
+                    metric="cosine",
+                    random_state=seed,
+                )
+                # Optionally sample a subset of the embeddings for fitting UMAP to
+                # further reduce memory and time during UMAP learning. Only apply
+                # subsampling if the requested subsample size is positive and
+                # smaller than the number of selected documents.
+                if (
+                    args.doc_datamap_subsample is not None
+                    and args.doc_datamap_subsample > 0
+                    and args.doc_datamap_subsample < len(emb_dm)
+                ):
+                    rng = _np.random.default_rng(seed)
+                    idx_umap = rng.choice(
+                        len(emb_dm), size=args.doc_datamap_subsample, replace=False
+                    )
+                    umap_2d.fit(emb_dm[idx_umap])
+                else:
+                    umap_2d.fit(emb_dm)
+                # Transform all selected embeddings to 2D.
+                reduced_embeddings = umap_2d.transform(emb_dm)
+
+                # Use BERTopic's datashader visualization. Passing both the reduced
+                # embeddings and the sampled topics ensures that lengths match
+                # across docs, topics and embeddings. When interactive=True, a
+                # Plotly HTML file is saved; otherwise a static PNG is saved.
+                fig_datamap = topic_model.visualize_document_datamap(
+                    docs_for_datamap,
+                    topics=topics_for_datamap,
+                    reduced_embeddings=reduced_embeddings,
+                    interactive=args.doc_datamap_interactive,
+                )
+                if args.doc_datamap_interactive:
+                    dm_path = args.output_dir / "documents_datamap.html"
+                    fig_datamap.write_html(str(dm_path))
+                else:
+                    dm_path = args.output_dir / "documents_datamap.png"
+                    fig_datamap.savefig(str(dm_path), dpi=300)
+                print(
+                    f"Saved documents DataMapPlot to {dm_path} (visualising {len(docs_for_datamap)} documents)"
+                )
+            except Exception as e:
+                print(f"Could not generate DataMapPlot: {e}")
+        else:
+            # Fallback: interactive Plotly scatter via visualize_documents. Be aware
+            # that this will be memory intensive on large datasets【913976633007349†L134-L150】.
+            fig_documents = topic_model.visualize_documents(preprocessed_docs)
+            docs_path = args.output_dir / "documents_umap.html"
+            fig_documents.write_html(str(docs_path))
+            print(f"Saved documents UMAP projection to {docs_path}")
+
+    except Exception as viz_e:
+        print(f"One or more visualisations could not be created: {viz_e}")
 
 
 
